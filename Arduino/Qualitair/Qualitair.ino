@@ -5,12 +5,12 @@
  *
  */
 
-
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
 #include <HTTPClient.h>
-
+#include "Adafruit_CCS811.h"
+#include <Adafruit_BME280.h>
 
 //////////////////////
 // WiFi Definitions //
@@ -23,13 +23,14 @@ const char WiFiPSK[] = "jube@simiane"; // WiFi password - empty string for open 
 //  modify for a specific platform instance //
 //////////////////////////////////////////////
 const char TWPlatformBaseURL[] = "http://ec2-35-180-37-49.eu-west-3.compute.amazonaws.com:8080";
-const char appKey[] = "2d4e9440-3e51-452f-a057-b55d45289264";
 const char APP_KEY[] = "29cd186c-7214-4739-b0c0-fb9382a761a0";
 const char THING_NAME[] = "HMW.Sensor001";
 const int INTERVAL = 5000; //refresh interval
 ////////////////////////////////////////////////////////
 // Pin Definitions - board specific for Adafruit board//
 ////////////////////////////////////////////////////////
+Adafruit_CCS811 ccs;
+Adafruit_BME280 bme; // I2C
 const int RED_LED = 0; // Thing's onboard, red LED - 
 const int BLUE_LED = 2; // Thing's onboard, blue LED
 const int ANALOG_PIN = 0; // The only analog pin on the Thing
@@ -88,18 +89,14 @@ String getUniqueDeviceName(){
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpGetPropertry(String thingName, String property){
-    //std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
-    //client->setInsecure();
-    HTTPClient https;
+        HTTPClient https;
         int httpCode = -1;
         String response = "";
         Serial.print("[httpsGetPropertry] begin...");
         String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ thingName +"/Properties/"+ property ;//"?appKey=" + String(appKey);
-
         https.begin(fullRequestURL);
         https.addHeader("Accept",ACCEPT_TYPE,false,false);
         https.addHeader("appKey",APP_KEY,false,false);
-
         Serial.println("GET URL>" + fullRequestURL +"<");
         // start connection and send HTTP header
         httpCode = https.GET();
@@ -124,9 +121,7 @@ int httpGetPropertry(String thingName, String property){
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpPutPropertry(String thingName, String property, String value){
-    //std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
-    //client->setInsecure();
-    HTTPClient httpClient;
+        HTTPClient httpClient;
         int httpCode = -1;
         String response = "";
         Serial.print("[httpPutPropertry] begin...");
@@ -165,16 +160,13 @@ int httpPutPropertry(String thingName, String property, String value){
 // returns HTTP response code from server
 ///////////////////////////////
 int postToThing(String nameOfThing, String endPoint, String postBody){
-  
-        std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
-      client->setInsecure();
-    HTTPClient https;
+        HTTPClient https;
         int httpCode = -1;
         String response = "";
         Serial.print("[postToThing] begin...");
-        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ nameOfThing +"/Services/"+ endPoint +"?appKey=" + String(appKey);
+        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ nameOfThing +"/Services/"+ endPoint;
         Serial.println("URL>" + fullRequestURL + "<");
-        https.begin(*client,fullRequestURL);
+        https.begin(fullRequestURL);
         https.addHeader("Accept","application/json",false,false);
         https.addHeader("Content-Type","application/json",false,false);
         https.addHeader("appKey",APP_KEY,false,false);
@@ -183,7 +175,6 @@ int postToThing(String nameOfThing, String endPoint, String postBody){
         httpCode = https.POST(postBody);
         // httpCode will be negative on error
         if(httpCode > 0) {
-
             response = https.getString();
             Serial.printf("[postToThing] response code:%d body>",httpCode);
             Serial.println(response + "<\n");
@@ -211,7 +202,16 @@ void setup() {
     }
 
     connectToWiFi(10);
+ if(!ccs.begin()){
+    Serial.println("Failed to start sensor! Please check your wiring.");
+    while(1);
+  }
 
+  // Wait for the sensor to be ready
+  while(!ccs.available());
+
+
+  bme.begin();  
 }
 
 void loop() {
@@ -221,12 +221,22 @@ void loop() {
     while (WiFi.status() == WL_CONNECTED) { //confirm WiFi is connected before looping as long as WiFi is connected
         //int getResponseCode = httpGetPropertry(thingName, "CO2");
         // Get property Values from the sensors
-        // TODO
+        if(ccs.available()){
+          if(!ccs.readData()){
+        float co2 = ccs.geteCO2();
+        float tvoc = ccs.getTVOC();
+        float temp = bme.readTemperature();
+        float hum = bme.readHumidity();
+        float pres = bme.readPressure();
         // publish properties : 
-        httpPutPropertry(thingName,"CO2",String(i));
-        httpPutPropertry(thingName,"Humidity",String(10+i));
-        httpPutPropertry(thingName,"Temperature",String(20+i));
+        httpPutPropertry(thingName,"CO2",String(co2));
+        httpPutPropertry(thingName,"TVOC",String(tvoc));
+        httpPutPropertry(thingName,"Humidity",String(hum));
+        httpPutPropertry(thingName,"Temperature",String(temp));
+        httpPutPropertry(thingName,"Pressure",String(pres));
         httpPutPropertry(thingName,"Location","{\"latitude\":\""+String(i)+"\",\"longitude\":\"0.0\",\"units\":\"WGS84\"}");
+         }
+        }
       i++;
       // Sends every INTERVAL mseconds
       delay(INTERVAL);
