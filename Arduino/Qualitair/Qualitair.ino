@@ -12,6 +12,7 @@
 #include "Adafruit_CCS811.h"
 #include <Adafruit_BME280.h>
 #include <TinyGPS++.h>
+#include <SoftwareSerial.h>
 
 //////////////////////
 // WiFi Definitions //
