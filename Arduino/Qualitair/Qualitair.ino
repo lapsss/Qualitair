@@ -1,10 +1,7 @@
 
 /**
- * 
- * ESP8266_ThingWorx_REST_Demo.ino
- *
- *  
- *  (c) PTC, Inc. 2016-2020
+* Qualit'Air Demo
+* AMU - MIAGE 2021
  *
  */
 
@@ -25,9 +22,11 @@ const char WiFiPSK[] = "jube@simiane"; // WiFi password - empty string for open 
 // ThingWorx server definitions            //
 //  modify for a specific platform instance //
 //////////////////////////////////////////////
-const char TWPlatformBaseURL[] = "https://pp-2007011431nt.devportal.ptc.io";
+const char TWPlatformBaseURL[] = "http://ec2-35-180-37-49.eu-west-3.compute.amazonaws.com:8080";
 const char appKey[] = "2d4e9440-3e51-452f-a057-b55d45289264";
-
+const char APP_KEY[] = "29cd186c-7214-4739-b0c0-fb9382a761a0";
+const char THING_NAME[] = "HMW.Sensor001";
+const int INTERVAL = 5000; //refresh interval
 ////////////////////////////////////////////////////////
 // Pin Definitions - board specific for Adafruit board//
 ////////////////////////////////////////////////////////
@@ -40,7 +39,7 @@ const int ON = LOW;
 
 // this will set as the Accept header for all the HTTP requests to the ThingWorx server
 // valid values are: application/json, text/xml, text/csv, text/html (default)
-#define ACCEPT_TYPE "text/csv"  
+#define ACCEPT_TYPE "application/json"  
 
 /////////////////////
 //Attempt to make a WiFi connection. Checks if connection has been made once per second until timeout is reached
@@ -78,10 +77,8 @@ boolean connectToWiFi(int timeout){
 ///////////////////////////////
 String getUniqueDeviceName(){ 
 
-    String uniqueName;
-    uniqueName = "Sensor001";
-    Serial.println("DeviceID>" + uniqueName);
-    return uniqueName;
+    Serial.println("DeviceID>" + String(THING_NAME));
+    return String(THING_NAME);
 }
 
 ///////////////////////////////
@@ -91,16 +88,18 @@ String getUniqueDeviceName(){
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpGetPropertry(String thingName, String property){
-    std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
-    client->setInsecure();
+    //std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
+    //client->setInsecure();
     HTTPClient https;
         int httpCode = -1;
         String response = "";
         Serial.print("[httpsGetPropertry] begin...");
-        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ thingName +"/Properties/"+ property +"?appKey=" + String(appKey);
+        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ thingName +"/Properties/"+ property ;//"?appKey=" + String(appKey);
 
-        https.begin(*client,fullRequestURL);
+        https.begin(fullRequestURL);
         https.addHeader("Accept",ACCEPT_TYPE,false,false);
+        https.addHeader("appKey",APP_KEY,false,false);
+
         Serial.println("GET URL>" + fullRequestURL +"<");
         // start connection and send HTTP header
         httpCode = https.GET();
@@ -124,29 +123,32 @@ int httpGetPropertry(String thingName, String property){
 // property - Property of thingName to make PUT request
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
-int httpPutPropertry(String thingName, String property){
-    std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
-    client->setInsecure();
-    HTTPClient https;
+int httpPutPropertry(String thingName, String property, String value){
+    //std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
+    //client->setInsecure();
+    HTTPClient httpClient;
         int httpCode = -1;
         String response = "";
-        Serial.print("[httpsGetPropertry] begin...");
-        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ thingName +"/Properties/"+ property +"?appKey=" + String(appKey);
-
-        https.begin(*client,fullRequestURL);
-        https.addHeader("Accept",ACCEPT_TYPE,false,false);
-        Serial.println("GET URL>" + fullRequestURL +"<");
+        Serial.print("[httpPutPropertry] begin...");
+        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ thingName +"/Properties/"+ property ; //+"?appKey=" + String(appKey);
+        httpClient.begin(fullRequestURL);
+        httpClient.addHeader("Accept",ACCEPT_TYPE,false,false);
+        httpClient.addHeader("Content-Type",ACCEPT_TYPE,false,false);
+        httpClient.addHeader("appKey",APP_KEY,false,false);
+        Serial.println("PUT URL>" + fullRequestURL +"<");
         // start connection and send HTTP header
-        httpCode = https.GET();
+        String putBody="{\""+property+"\":"+ value+"}";
+        httpCode = httpClient.PUT(putBody);
+        Serial.println(httpCode);
         // httpCode will be negative on error
         if(httpCode > 0) {
-            response = https.getString();
-            Serial.printf("[httpGetPropertry] response code:%d body>",httpCode);
+            response = httpClient.getString();
+            Serial.printf("[httpPutPropertry] response code:%d body>",httpCode);
             Serial.println(response + "<\n");
         } else {
-            Serial.printf("[httpGetPropertry] failed, error: %s\n\n", https.errorToString(httpCode).c_str());
+            Serial.printf("[httpPutPropertry] failed, error: %s\n\n", httpClient.errorToString(httpCode).c_str());
         }
-        https.end();
+        httpClient.end();
         return httpCode;
 
 }
@@ -173,8 +175,9 @@ int postToThing(String nameOfThing, String endPoint, String postBody){
         String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ nameOfThing +"/Services/"+ endPoint +"?appKey=" + String(appKey);
         Serial.println("URL>" + fullRequestURL + "<");
         https.begin(*client,fullRequestURL);
-        https.addHeader("Accept",ACCEPT_TYPE,false,false);
+        https.addHeader("Accept","application/json",false,false);
         https.addHeader("Content-Type","application/json",false,false);
+        https.addHeader("appKey",APP_KEY,false,false);
         Serial.println("[postToThing] POST body>" + postBody + "<");
         // start connection and send HTTP header
         httpCode = https.POST(postBody);
@@ -214,21 +217,19 @@ void setup() {
 void loop() {
 
     String thingName = getUniqueDeviceName(); //unique name for this Thing so many work on one ThingWorx server
-
+    int i = 12;
     while (WiFi.status() == WL_CONNECTED) { //confirm WiFi is connected before looping as long as WiFi is connected
-
-      int getResponseCode = httpGetPropertry(thingName, "SomeNumber");
-
-      if (getResponseCode == 404){ // a 404 means connected, but either no Thing or no property
-        
-        // Service invoke : 
-        //postResp = postToThing(thingName,"RestartThing",""); //POST to RestartThing endpoint with no body
-        // Property put : 
-        
-      }
-
-      delay(2000);
-
+        //int getResponseCode = httpGetPropertry(thingName, "CO2");
+        // Get property Values from the sensors
+        // TODO
+        // publish properties : 
+        httpPutPropertry(thingName,"CO2",String(i));
+        httpPutPropertry(thingName,"Humidity",String(10+i));
+        httpPutPropertry(thingName,"Temperature",String(20+i));
+        httpPutPropertry(thingName,"Location","{\"latitude\":\""+String(i)+"\",\"longitude\":\"0.0\",\"units\":\"WGS84\"}");
+      i++;
+      // Sends every INTERVAL mseconds
+      delay(INTERVAL);
     }// end WiFi connected while loop
     Serial.printf("****Wifi connection dropped****\n");
     WiFi.disconnect(true);
