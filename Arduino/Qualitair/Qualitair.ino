@@ -8,6 +8,7 @@
  *
  */
 
+
 #include <Arduino.h>
 #include <WiFi.h>
 #include <WiFiClientSecure.h>
@@ -78,7 +79,7 @@ boolean connectToWiFi(int timeout){
 String getUniqueDeviceName(){ 
 
     String uniqueName;
-    uniqueName = "ESP8266Board-TEST";
+    uniqueName = "Sensor001";
     Serial.println("DeviceID>" + uniqueName);
     return uniqueName;
 }
@@ -116,36 +117,43 @@ int httpGetPropertry(String thingName, String property){
 
 }
 
+
 ///////////////////////////////
-// makes HTTP POST to platform to CreateThing service using input string as the new Things's name. 
-// Returns server response code
+// make HTTP PUT to a specific Thing and Propertry on a ThingWorx server
+// thingName - Name of Thing on server to execute the PUT
+// property - Property of thingName to make PUT request
+// returns HTTP response code from server and prints full response
 ///////////////////////////////
-int createThing(String nameOfThing){
-        std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
-    //client->setInsecure();
+int httpPutPropertry(String thingName, String property){
+    std::unique_ptr<WiFiClientSecure>client(new WiFiClientSecure);
+    client->setInsecure();
     HTTPClient https;
         int httpCode = -1;
         String response = "";
-        Serial.print("[createThing] begin...");
-        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Resources/EntityServices/Services/CreateThing?appKey=" + String(appKey);
+        Serial.print("[httpsGetPropertry] begin...");
+        String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/"+ thingName +"/Properties/"+ property +"?appKey=" + String(appKey);
+
         https.begin(*client,fullRequestURL);
         https.addHeader("Accept",ACCEPT_TYPE,false,false);
-        https.addHeader("Content-Type","application/json",false,false);
-        Serial.println("POST URL>" + fullRequestURL + "<");
+        Serial.println("GET URL>" + fullRequestURL +"<");
         // start connection and send HTTP header
-        httpCode = https.POST("{\"name\": \""+ nameOfThing +"\",\"thingTemplateName\": \"GenericThing\"}");
+        httpCode = https.GET();
         // httpCode will be negative on error
         if(httpCode > 0) {
             response = https.getString();
-            Serial.printf("[createThing] response code:%d body>",httpCode);
+            Serial.printf("[httpGetPropertry] response code:%d body>",httpCode);
             Serial.println(response + "<\n");
-
         } else {
-            Serial.printf("[createThing] POST... failed, error: %s\n\n", https.errorToString(httpCode).c_str());
+            Serial.printf("[httpGetPropertry] failed, error: %s\n\n", https.errorToString(httpCode).c_str());
         }
         https.end();
         return httpCode;
+
 }
+
+
+
+
 
 ///////////////////////////////
 // make HTTP POST to ThingWorx server Thing service
@@ -191,10 +199,6 @@ void setup() {
 
     Serial.begin(115200);
     Serial.setDebugOutput(true);
-    Serial.println();
-    Serial.println();
-    Serial.println();
-
     Serial.printf("Starting...\n");
 
     for(uint8_t t = 4; t > 0; t--) {
@@ -216,22 +220,11 @@ void loop() {
       int getResponseCode = httpGetPropertry(thingName, "SomeNumber");
 
       if (getResponseCode == 404){ // a 404 means connected, but either no Thing or no property
-
-        // first we will try to create a new Thing on the platform
-        int postResp = createThing(thingName); // saving the response code for retry logic in the future
-
-        //  the newly crated Thing has to be enabled
-        postResp = postToThing(thingName,"EnableThing","");  //POST to EnableThing endpoint with no body
-
-        // after the new Thing is enabled it must be restarted
-        postResp = postToThing(thingName,"RestartThing","");  //POST to RestartThing endpoint with no body
-
-        // add a property to the Thing 3rd parameter is ugly because required quotes are escaped with backslashes
-        postResp = postToThing(thingName,"AddPropertyDefinition", "{\"name\":\"SomeNumber\",\"type\":\"NUMBER\"}"); 
-        //POST body contains JSON object with property name and property type 
-
-        // after changes to a Thing's structure it must be restarted
-        postResp = postToThing(thingName,"RestartThing",""); //POST to RestartThing endpoint with no body
+        
+        // Service invoke : 
+        //postResp = postToThing(thingName,"RestartThing",""); //POST to RestartThing endpoint with no body
+        // Property put : 
+        
       }
 
       delay(2000);
