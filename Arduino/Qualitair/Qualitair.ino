@@ -26,7 +26,7 @@ const char WiFiPSK[] = "jube@simiane"; // WiFi password - empty string for open 
 // ThingWorx server definitions            //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const char TWPlatformBaseURL[] = "http://ec2-15-188-239-16.eu-west-3.compute.amazonaws.com:8080";
+const char TWPlatformBaseURL[] = "http://ec2-15-237-75-188.eu-west-3.compute.amazonaws.com:8080";
 const char APP_KEY[] = "29cd186c-7214-4739-b0c0-fb9382a761a0";
 const char THING_NAME[] = "HMW.Sensor001";
 const int INTERVAL = 5000; //refresh interval
