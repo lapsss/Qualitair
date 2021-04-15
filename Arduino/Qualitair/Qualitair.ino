@@ -20,7 +20,7 @@
 //  TO CHANGE         //
 ///////////////////////
 const char WiFiSSID[] = "Jube"; // WiFi access point SSID
-const char WiFiPSK[] = "jube@simiane"; // WiFi password - empty string for open access points
+const char WiFiPSK[] = "supermotdepasse"; // WiFi password - empty string for open access points
 
 //////////////////////////////////////////////
 // ThingWorx server definitions            //
