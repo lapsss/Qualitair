@@ -35,7 +35,7 @@ const int INTERVAL = 5000; //refresh interval
 // Program execution settings              //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const bool debug=true;
+const bool debug=false;
 
 
 //////////////////////////////////////////////////////////
