@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Identity provider attributes used for user default"
+         documentationContent=""
+         homeMashup=""
+         name="UserProvisioningIdentityProviderAttributes"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Identity Provider Attribute containing the user's description"
+                 name="userIdentityProviderDescription"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Identity Provider Attribute containing the user's groups"
+                 name="userIdentityProviderGroups"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Identity Provider Attribute containing the user's home mashup"
+                 name="userIdentityProviderHomeMashup"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Identity Provider Attribute containing the user's mobile mashup"
+                 name="userIdentityProviderMobileMashup"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Identity Provider Attribute containing the user's tags"
+                 name="userIdentityProviderTags"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         className="com.thingworx.things.connected.IndustrialThingShape"
+         description="Industrial Connectivity Thing Shape"
+         documentationContent=""
+         homeMashup=""
+         name="IndustrialThingShape"
+         projectName=""
+         tags="">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="false"
+                 aspect.thingTemplate="IndustrialGateway"
+                 baseType="THINGNAME"
+                 category="Properties"
+                 description="Name of the agent with the tags"
+                 isLocalOnly="false"
+                 name="IndustrialThing"
+                 ordinal="0"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category=""
+                 description="Notify the edge of an industrial thing"
+                 isAllowOverride="false"
+                 isLocalOnly="true"
+                 isOpen="false"
+                 isPrivate="true"
+                 name="gatewayChanged">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="INFOTABLE"
+                         description="Event data"
+                         name="eventData"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event name"
+                         name="eventName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Event time"
+                         name="eventTime"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event source"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event source property"
+                         name="sourceProperty"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Properties"
+                 description="Get the diagnostics for a property on an Industrial Thing"
+                 isAllowOverride="false"
+                 isLocalOnly="true"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetPropertyDiagnostics">
+                    <ResultType
+                     aspect.dataShape="IndustrialDiagnosticDigest"
+                     baseType="INFOTABLE"
+                     description="The diagnostics for the property"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Name of the property for the diagnostics"
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Notify the edge of an industrial thing"
+                 handlerName="Reflection"
+                 name="gatewayChanged">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get the diagnostics for a property on an Industrial Thing"
+                 handlerName="Reflection"
+                 name="GetPropertyDiagnostics">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions>
+                <Subscription
+                 description=""
+                 enabled="true"
+                 eventName="DataChange"
+                 name="Event.DataChange:Property.IndustrialThing"
+                 source=""
+                 sourceProperty="IndustrialThing"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description="gatewayChanged"
+                     handlerName="Reflection"
+                     name="gatewayChanged">
+                        <ConfigurationTables></ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

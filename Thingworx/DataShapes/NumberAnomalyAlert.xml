@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Number anomaly alert"
+         documentationContent=""
+         homeMashup=""
+         name="NumberAnomalyAlert"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.defaultValue="5000"
+                 aspect.friendlyName="Anomaly Detection Rate"
+                 aspect.isRequired="true"
+                 aspect.minimumValue="0"
+                 baseType="LONG"
+                 description="Rate of Anomaly Detection (ms)"
+                 name="anomalyDetectionRate"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="true"
+                 aspect.friendlyName="Calibrate with Device Data"
+                 aspect.isHidden="true"
+                 baseType="BOOLEAN"
+                 description="Calibrate using device data"
+                 name="calibrateWithDeviceData"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="95.4"
+                 aspect.friendlyName="Certainty"
+                 aspect.isRequired="true"
+                 aspect.maxInclude="false"
+                 aspect.maximumValue="100.0"
+                 aspect.minInclude="false"
+                 aspect.minimumValue="50.0"
+                 baseType="NUMBER"
+                 description="Certainty Percentage"
+                 name="certainty"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Inbound Sampling Rate"
+                 aspect.isHidden="true"
+                 aspect.minimumValue="0"
+                 baseType="INTEGER"
+                 description="Rate of Inbound Sampling (ms)"
+                 name="inboundSamplingRate"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Model Identifier"
+                 aspect.isHidden="true"
+                 baseType="STRING"
+                 description="Unique Identifier for the PMML Model"
+                 name="modelID"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Secondary Properties"
+                 aspect.isHidden="true"
+                 baseType="STRING"
+                 description="Secondary Properties"
+                 name="secondaryProperties"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="true"
+                 aspect.friendlyName="Self Train"
+                 aspect.isHidden="true"
+                 baseType="BOOLEAN"
+                 description="Self Train"
+                 name="selfTrain"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="60000"
+                 aspect.friendlyName="Training Time"
+                 aspect.isRequired="true"
+                 aspect.minimumValue="0"
+                 baseType="INTEGER"
+                 description="Time Allowed for Training (ms)"
+                 name="trainingTime"
+                 ordinal="5"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

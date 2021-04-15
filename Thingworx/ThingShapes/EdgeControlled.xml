@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         className="com.thingworx.things.connected.EdgeControlled"
+         description="An edge device that controls when the platform sends messages to it."
+         documentationContent=""
+         homeMashup=""
+         name="EdgeControlled"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="EdgeControlled"
+                 description="Allow a maximum number of egress messages to be sent to the edge device.  Only one outstanding call to DequeueEgress can exist per Thing."
+                 isAllowOverride="true"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DequeueEgress">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="The number of dequeued egress messages to expect."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="The maximum number of messages desired by the edge device."
+                         name="maxCount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Allow a maximum number of egress messages to be sent to the edge device.  Only one outstanding call to DequeueEgress can exist per Thing."
+                 handlerName="Reflection"
+                 name="DequeueEgress">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

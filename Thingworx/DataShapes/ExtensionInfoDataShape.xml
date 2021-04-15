@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Extension info data shape"
+         documentationContent=""
+         homeMashup=""
+         name="ExtensionInfoDataShape"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Extension major version number"
+                 name="extensionMajor"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Extension minor version number"
+                 name="extensionMinor"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Extension name"
+                 name="extensionName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Extension patch version number"
+                 name="extensionPatch"
+                 ordinal="4"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

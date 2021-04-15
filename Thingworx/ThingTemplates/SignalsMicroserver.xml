@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="AnalyticsJobServer"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="SignalsMicroserver"
+         projectName=""
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CreateJob"
+                 sourceName="CreateJob"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveResult"
+                 sourceName="RetrieveResult"
+                 timeout="0"></RemoteServiceBinding>
+            </RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description="Compute mutual information for the fields in a dataset"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateJob">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="For a Categorical goal, select the category for which signals will be identified (optional)."
+                             name="categoryToAnalyze"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional description for this job"
+                             name="description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Field to check for mutual information"
+                             name="goalField"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Name for this job"
+                             name="jobName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1"
+                             baseType="INTEGER"
+                             description="For timeseries data, specify the number of time steps ahead to predict (cannot be negative)"
+                             name="lookahead"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description="For timeseries data, number of historical data points to consider (does not support auto-windowing)"
+                             name="lookbackSize"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1"
+                             baseType="INTEGER"
+                             description="Consider one or two fields at a time (affects runtime)"
+                             name="maxAtATime"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="For timeseries data, use the previous goal values to predict the expected goal value"
+                             name="useGoalHistory"
+                             ordinal="10"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             baseType="BOOLEAN"
+                             description="Iteratively ranks the features by the information gain they provide when considered together with previously selected features."
+                             name="useRedundancyFilter"
+                             ordinal="8"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve results of a signals job"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveResult">
+                        <ResultType
+                         aspect.dataShape="AnalyticsSignalsResult"
+                         baseType="INFOTABLE"
+                         description="The mutual information of all fields, and fields combinations, in relation to the specified goal"
+                         name="dataSignals"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job result to retrieve"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

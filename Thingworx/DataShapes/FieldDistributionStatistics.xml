@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="A set of calculated statistics about a field in a dataset"
+         documentationContent=""
+         homeMashup=""
+         name="FieldDistributionStatistics"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The coefficient of variation (aka: relative standard deviation) of all values in the field's distribution (standard deviation / mean)"
+                 name="coefficientOfVariation"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The corrected sum of squares of the field's distribution (∑(value - mean)^2)"
+                 name="correctedSumOfSquares"
+                 ordinal="11"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LONG"
+                 description="Number of records in the dataset"
+                 name="count"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The name of the analyzed field"
+                 name="fieldName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Kurtosis of the distribution. This is a measure of the &quot;tailedness&quot; or extremeness of outliers of the field's distribution. Gaussian (normal) distributions have a kurtosis of 3. Values below 3 have fewer outliers (example: uniform distribution). Values greater than 3 have larger tails, or more extreme outliers (example: laplace distribution)"
+                 name="kurtosis"
+                 ordinal="15"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The maximum observed value of the field's distribution"
+                 name="maximum"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The average of the field's distribution"
+                 name="mean"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The minimum observed value of the field's distribution"
+                 name="minimum"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The difference between the maximum and minimum values"
+                 name="range"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Skewness of the distribution. This is a measure of the asymmetry of the field's distribution, where 0 = perfectly balanced, &lt; 0 = distribution tilts to the right, and &gt; 0 = distribution tilts to the left"
+                 name="skewness"
+                 ordinal="14"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Measure of the amount of variation in the field's distribution"
+                 name="standardDeviation"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The standard error of the mean for the field's distribution (standard deviation / √count). Not to be confused with mean error"
+                 name="standardErrorOfTheMean"
+                 ordinal="13"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The sum of all of the values"
+                 name="sumOfAllObservations"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The uncorrected sum of squares of the field's distribution (∑(value)^2)"
+                 name="uncorrectedSumOfSquares"
+                 ordinal="12"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Measure of how far the field's distribution is spread from its mean"
+                 name="variance"
+                 ordinal="7"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

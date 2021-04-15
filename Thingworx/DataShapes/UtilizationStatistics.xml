@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Utilization Statistics"
+         documentationContent=""
+         homeMashup=""
+         name="UtilizationStatistics"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 50%"
+                 baseType="NUMBER"
+                 description="The 50th percentile"
+                 name="_50"
+                 ordinal="12"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 75%"
+                 baseType="NUMBER"
+                 description="The 75th percentile"
+                 name="_75"
+                 ordinal="11"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 80%"
+                 baseType="NUMBER"
+                 description="The 80th percentile"
+                 name="_80"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 90%"
+                 baseType="NUMBER"
+                 description="The 90th percentile"
+                 name="_90"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 95%"
+                 baseType="NUMBER"
+                 description="The 95th percentile"
+                 name="_95"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 99%"
+                 baseType="NUMBER"
+                 description="The 99th percentile"
+                 name="_99"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem 999%"
+                 baseType="NUMBER"
+                 description="The 99.9th percentile"
+                 name="_999"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem Count"
+                 baseType="LONG"
+                 description="The total count"
+                 name="count"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem Maximum Time (ms)"
+                 baseType="NUMBER"
+                 description="The maxium time in milliseconds for all invocations of the statistic"
+                 name="maxTime"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem Mean Time (ms)"
+                 baseType="NUMBER"
+                 description="The mean time in milliseconds for all invocations of the statistic"
+                 name="meanTime"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem Minimum Time (ms)"
+                 baseType="NUMBER"
+                 description="The minimum time in milliseconds for all invocations of the statistic"
+                 name="minTime"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem Statistic Name"
+                 baseType="STRING"
+                 description="The name of the utilization statistic statistic"
+                 name="statisticName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Utilization Subsystem Standard Deviation"
+                 baseType="NUMBER"
+                 description="The standard deviation"
+                 name="stddev"
+                 ordinal="5"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

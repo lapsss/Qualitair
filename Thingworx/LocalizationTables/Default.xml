@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <LocalizationTables>
+        <LocalizationTable
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         description="Default localization table"
+         documentationContent=""
+         homeMashup=""
+         languageCommon="English"
+         languageNative="English"
+         name="Default"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Localization tokens and usage"
+                 isMultiRow="true"
+                 name="LocalizationTokens"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Translation context"
+                             baseType="STRING"
+                             description="Translation context"
+                             name="context"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Token name"
+                             baseType="STRING"
+                             description="Token name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Token usage"
+                             baseType="STRING"
+                             description="Token usage"
+                             name="usage"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Localized value"
+                             baseType="STRING"
+                             description="Localized value"
+                             name="value"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </LocalizationTable>
+    </LocalizationTables>
+</Entities>

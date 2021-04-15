@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         className="com.thingworx.things.connected.RoutedEgress"
+         description="A device that delegates its outbound remote communication to an EgressGateway"
+         documentationContent=""
+         homeMashup=""
+         name="RoutedEgress"
+         projectName=""
+         tags="">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.dataChangeType="VALUE"
+                 aspect.isPersistent="true"
+                 aspect.thingShape="EgressGateway"
+                 baseType="THINGNAME"
+                 category=""
+                 description="RemoteThing to which outbound APIRequests will be sent"
+                 isLocalOnly="true"
+                 name="gatewayThing"
+                 ordinal="0"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category=""
+                 description="Private service to handle connectivity state changes"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="true"
+                 name="GatewayIsConnectedUpdated">
+                    <ResultType
+                     baseType="NOTHING"
+                     description=""
+                     name=""
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="INFOTABLE"
+                         description="Event data"
+                         name="eventData"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event name"
+                         name="eventName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Event time"
+                         name="eventTime"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event source"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event source property"
+                         name="sourceProperty"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isAsync="true"
+                 category=""
+                 description=""
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="true"
+                 name="GatewayThingUpdated">
+                    <ResultType
+                     baseType="NOTHING"
+                     description=""
+                     name=""
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="INFOTABLE"
+                         description="Event data"
+                         name="eventData"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event name"
+                         name="eventName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Event time"
+                         name="eventTime"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event source"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Event source property"
+                         name="sourceProperty"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Private service to handle connectivity state changes"
+                 handlerName="Reflection"
+                 name="GatewayIsConnectedUpdated">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description=""
+                 handlerName="Reflection"
+                 name="GatewayThingUpdated">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions>
+                <Subscription
+                 description=""
+                 enabled="true"
+                 eventName="DataChange"
+                 name="Event.DataChange:Property.gatewayThing"
+                 source=""
+                 sourceProperty="gatewayThing"
+                 sourceType="Thing">
+                    <ServiceImplementation
+                     description="GatewayThingUpdated"
+                     handlerName="Reflection"
+                     name="GatewayThingUpdated">
+                        <ConfigurationTables></ConfigurationTables>
+                    </ServiceImplementation>
+                </Subscription>
+            </Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

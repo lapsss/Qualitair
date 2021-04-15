@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.filetransfer.FileTransferSubsystem"
+         dependsOn=""
+         description="Handles File Transfers between Edge Things, Connected Things, File Repositories and Federated Servers"
+         documentationContent=""
+         enabled="true"
+         friendlyName="File Transfer"
+         homeMashup=""
+         name="FileTransferSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="File transfer settings"
+                 isMultiRow="false"
+                 name="FileTransferSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="600.0"
+                             aspect.friendlyName="Idle Timeout for Edge-Controlled File Transfers (sec)"
+                             baseType="NUMBER"
+                             description="FileTransfer Idle Timeout for Edge Controlled Transfers (sec)"
+                             name="edgeIdleTimeout"
+                             ordinal="12"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="30.0"
+                             aspect.friendlyName="FileTransfer Idle Timeout (sec)"
+                             baseType="NUMBER"
+                             description="Idle timeout for file transfers in seconds"
+                             name="idleTimeout"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="128000.0"
+                             aspect.friendlyName="Max FileTransfer block size (bytes)"
+                             baseType="NUMBER"
+                             description="Maximum block size to transfer in bytes"
+                             name="maxBlockSize"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="500.0"
+                             aspect.friendlyName="Total Max Edge-Controlled File Transfers Allowed"
+                             baseType="NUMBER"
+                             description="Maximum number of edge-controlled file transfers allowed concurrently on the platform"
+                             name="maxEdgeConcurrentTransfers"
+                             ordinal="10"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="2.0"
+                             aspect.friendlyName="Total Max Edge-Controlled File Transfers Allowed Per Thing"
+                             baseType="NUMBER"
+                             description="Maximum number of edge-controlled file transfers allowed per thing"
+                             name="maxEdgeConcurrentTransfersPerThing"
+                             ordinal="11"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="100000000"
+                             aspect.friendlyName="Max FileTransfer size (bytes)"
+                             baseType="LONG"
+                             description="Maximum file size to transfer in bytes"
+                             name="maxFileSize"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="100.0"
+                             aspect.friendlyName="Max Queue Entries Before Adding New Working Thread"
+                             baseType="NUMBER"
+                             description="Maximum number of entries to queue before adding an additional worker thread to the pool"
+                             name="maximumQueueSize"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="600000.0"
+                             aspect.friendlyName="Idle Thread Timeout (sec)"
+                             baseType="NUMBER"
+                             description="How long idle threads should remain in the pool in seconds"
+                             name="maximumThreadLife"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Max Threads Allocated to File Transfer Pool"
+                             baseType="NUMBER"
+                             description="Maximum number of threads allocated to the file transfer thread pool"
+                             name="maximumThreadPoolSize"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Max File Transfers Allowed Per Thing in Offline Queue"
+                             baseType="NUMBER"
+                             description="Maximum number of file transfers allowed per Thing in the offline queue"
+                             name="maxOfflineQueuePerThingSize"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="50000.0"
+                             aspect.friendlyName="Max File Transfers Allowed in Offline Queue"
+                             baseType="NUMBER"
+                             description="Maximum number of file transfers allowed in the offline queue"
+                             name="maxOfflineQueueSize"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Min Threads Allocated to File Transfer Pool"
+                             baseType="NUMBER"
+                             description="Minimum number of threads allocated to the file transfer thread pool"
+                             name="minimumThreadPoolSize"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="86400.0"
+                             aspect.friendlyName="Time To Live (sec) of a Queueable File Transfer"
+                             baseType="NUMBER"
+                             description="Time to live (in seconds) of a queueable file transfer"
+                             name="queueableTransferTimeToLive"
+                             ordinal="9"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <edgeIdleTimeout>600.0</edgeIdleTimeout>
+                            <idleTimeout>30.0</idleTimeout>
+                            <maxBlockSize>128000.0</maxBlockSize>
+                            <maxEdgeConcurrentTransfers>500.0</maxEdgeConcurrentTransfers>
+                            <maxEdgeConcurrentTransfersPerThing>2.0</maxEdgeConcurrentTransfersPerThing>
+                            <maxFileSize>100000000</maxFileSize>
+                            <maxOfflineQueuePerThingSize>10.0</maxOfflineQueuePerThingSize>
+                            <maxOfflineQueueSize>50000.0</maxOfflineQueueSize>
+                            <maximumQueueSize>100.0</maximumQueueSize>
+                            <maximumThreadLife>600000.0</maximumThreadLife>
+                            <maximumThreadPoolSize>10.0</maximumThreadPoolSize>
+                            <minimumThreadPoolSize>10.0</minimumThreadPoolSize>
+                            <queueableTransferTimeToLive>86400.0</queueableTransferTimeToLive>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Collaboration Entry List"
+         documentationContent=""
+         homeMashup=""
+         name="CollaborationEntry"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Content for the entry"
+                 name="content"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Containing entry id"
+                 name="entryId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Entry id"
+                 name="id"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LOCATION"
+                 description="Location of the entry"
+                 name="location"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Parent entry id"
+                 name="parentId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Average rating"
+                 name="ratingAverage"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Number of ratings"
+                 name="ratingCount"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Source of the entry"
+                 name="source"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Source type"
+                 name="sourceType"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.tagType="DataTags"
+                 baseType="TAGS"
+                 description="List of tags"
+                 name="tags"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="DATETIME"
+                 description="Time of entry"
+                 name="timestamp"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Title for the entry"
+                 name="title"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Entry type"
+                 name="type"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

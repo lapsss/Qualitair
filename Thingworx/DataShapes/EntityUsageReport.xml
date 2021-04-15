@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Entity usage"
+         documentationContent=""
+         homeMashup=""
+         name="EntityUsageReport"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="DATETIME"
+                 description="Date generated"
+                 name="dateGenerated"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Total things disabled"
+                 name="disabledThings"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Total things enabled"
+                 name="enabledThings"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntityUsage"
+                 baseType="INFOTABLE"
+                 description="Entities usage"
+                 name="entities"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Include system objects"
+                 name="includeSystemUsers"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Local hardware address"
+                 name="localHardwareAddress"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Local host name"
+                 name="localHostName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="System templates only"
+                 name="systemTemplatesOnly"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Thingworx version"
+                 name="thingworxVersion"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Total things"
+                 name="totalThings"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntityUsage"
+                 baseType="INFOTABLE"
+                 description="User entities usage"
+                 name="userEntities"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="User name"
+                 name="userName"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="RemoteThing"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="StatisticalMonitoringMicroserver"
+         projectName=""
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetNumberOfConsecutivePointsBasedOnARange"
+                 sourceName="GetNumberOfConsecutivePointsBasedOnARange"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetNumberOfConsecutivePointsBeyondAThreshold"
+                 sourceName="GetNumberOfConsecutivePointsBeyondAThreshold"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetNumberOfConsecutivePointsFollowingATrend"
+                 sourceName="GetNumberOfConsecutivePointsFollowingATrend"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetNumberOfPointsBasedOnARange"
+                 sourceName="GetNumberOfPointsBasedOnARange"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetNumberOfPointsBeyondAThreshold"
+                 sourceName="GetNumberOfPointsBeyondAThreshold"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetNumberOfPointsWithChangeRateOutOfRange"
+                 sourceName="GetNumberOfPointsWithChangeRateOutOfRange"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="VersionInfo"
+                 sourceName="VersionInfo"
+                 timeout="0"></RemoteServiceBinding>
+            </RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description="Monitor for the number of consecutive points in a series that remain inside or outside of a defined range."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNumberOfConsecutivePointsBasedOnARange">
+                        <ResultType
+                         baseType="INTEGER"
+                         description="Maximum number of consecutive points in a series that remain inside or outside of a defined range."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The range max is inclusive (Default is True)"
+                             name="includeMax"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The range min is inclusive (Default is True)"
+                             name="includeMin"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The maximum value of the range"
+                             name="max"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The minimum value of the range"
+                             name="min"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Calculate the number of points from INSIDE or OUTSIDE the range (inclusive)."
+                             name="regionOfInterest"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="NumberValueStream"
+                             baseType="INFOTABLE"
+                             description="The list of timed values."
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Monitor for the number of consecutive points in a series that are above or below a defined threshold."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNumberOfConsecutivePointsBeyondAThreshold">
+                        <ResultType
+                         baseType="INTEGER"
+                         description="Maximum number of consecutive points in a series that are above or below a defined threshold."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Either ABOVE or BELOW the threshold (inclusive)."
+                             name="direction"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The threshold is inclusive (Default is True)"
+                             name="includeThreshold"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="Threshold value."
+                             name="threshold"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="NumberValueStream"
+                             baseType="INFOTABLE"
+                             description="The list of timed values."
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Monitor for the number of consecutive points in a series that are increasing, decreasing, or alternating direction."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNumberOfConsecutivePointsFollowingATrend">
+                        <ResultType
+                         baseType="INTEGER"
+                         description="Maximum number of consecutive points in a series that are increasing, decreasing or alternating direction."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="NumberValueStream"
+                             baseType="INFOTABLE"
+                             description="The list of timed values."
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Data trend to evaluate [INCREASING, DECREASING, ALTERNATING]."
+                             name="trend"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Monitor for the number of points in a series that remain inside or outside of a defined range."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNumberOfPointsBasedOnARange">
+                        <ResultType
+                         baseType="INTEGER"
+                         description="Maximum number of points in a series that remain inside or outside of a defined range."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The range max is inclusive (Default is True)"
+                             name="includeMax"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The range min is inclusive (Default is True)"
+                             name="includeMin"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The maximum value of the range"
+                             name="max"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The minimum value of the range"
+                             name="min"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Calculate the number of points from INSIDE or OUTSIDE the range (inclusive)."
+                             name="regionOfInterest"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="NumberValueStream"
+                             baseType="INFOTABLE"
+                             description="The list of timed values."
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Monitor for the number of points in a series that are above or below a defined threshold."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNumberOfPointsBeyondAThreshold">
+                        <ResultType
+                         baseType="INTEGER"
+                         description="The number of points in a series that are below or above a threshold, inclusive."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Either ABOVE or BELOW the threshold (inclusive)."
+                             name="direction"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The threshold is inclusive (Default is True)"
+                             name="includeThreshold"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The threshold to use for comparing points."
+                             name="threshold"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="NumberValueStream"
+                             baseType="INFOTABLE"
+                             description="The list of timed values."
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Monitor for how many pairs of consecutive points in a series have a rate of change outside the defined range. If the first value in a pair is 0, the pair will not be considered for rate of change."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetNumberOfPointsWithChangeRateOutOfRange">
+                        <ResultType
+                         baseType="INTEGER"
+                         description="The number of pairs of consecutive points that have a change rate outside the defined range."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="The threshold percentage is inclusive (Default is True)"
+                             name="includeThresholdPercentage"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The rate of change threshold, expressed as a percentage, cannot be negative."
+                             name="thresholdPercentage"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="NumberValueStream"
+                             baseType="INFOTABLE"
+                             description="The list of timed values sorted in descending order by time, starting with the latest time/value pair."
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve version of the microservice"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="VersionInfo">
+                        <ResultType
+                         baseType="STRING"
+                         description="Platform version followed by microservice version"
+                         name="version"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Status of an analytics job"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsJobStatus"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Date and time the job was completed"
+                 name="endDateTime"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="FieldValuePair"
+                 baseType="INFOTABLE"
+                 description="Job types with corresponding job IDs"
+                 name="jobTypesWithId"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Extra information for reporting issues about the job"
+                 name="message"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Length of time the job was in the queue"
+                 name="queuedDuration"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Date and time the job was submitted"
+                 name="queuedStartDateTime"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="URI to the job result for reference, if applicable (Data, Training, Clusters)"
+                 name="referenceUri"
+                 ordinal="14"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Length of time the job took to run"
+                 name="runTime"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Date and time the job was started"
+                 name="startDateTime"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Current state of the job (COMPLETED,RUNNING,FAILED,EXPIRED,QUEUED,UNKNOWN,TERMINATED)"
+                 name="state"
+                 ordinal="1"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

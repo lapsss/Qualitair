@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isSystemObject="true"
+         aspect.mashupType="thingshape"
+         aspect.thingTemplate="clob6: 'Wiki'"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="WikiContributorMashup"
+         projectName=""
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height></height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width></width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description="The thing to display"
+                 name="Entity"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="STRING"
+                 description="Contibutor Name"
+                 name="Source"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes>
+                <ThingShape>Wiki</ThingShape>
+            </ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "DynamicThingShapes_Wiki" : {
+                  "DataName" : "DynamicThingShapes_Wiki",
+                  "EntityName" : "Wiki",
+                  "EntityType" : "DynamicThingShapes",
+                  "Id" : "901327211400493",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "541327211400530",
+                    "Name" : "QueryWikiPages",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "QueryWikiPages"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "811327211409680",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingShapes_Wiki"
+              }, {
+                "Id" : "191327211445931",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "QueryWikiPages",
+                "SourceSection" : "DynamicThingShapes_Wiki",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-1",
+                "TargetSection" : ""
+              }, {
+                "Id" : "431327211541548",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Source",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "source",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "QueryWikiPages",
+                "TargetSection" : "DynamicThingShapes_Wiki"
+              }, {
+                "Id" : "21327211618280",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "Wiki",
+                  "TargetPropertyBaseType" : "THINGNAME"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Wiki-2",
+                "TargetSection" : ""
+              }, {
+                "Id" : "11327211669849",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "id",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Data",
+                  "TargetProperty" : "WikiEntryIdToShow",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "SelectedRows",
+                "SourceId" : "QueryWikiPages",
+                "SourceSection" : "DynamicThingShapes_Wiki",
+                "TargetArea" : "UI",
+                "TargetId" : "Wiki-2",
+                "TargetSection" : ""
+              } ],
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_Wiki",
+                "EventHandlerService" : "QueryWikiPages",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "861327211494334"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_Wiki",
+                "EventHandlerService" : "QueryWikiPages",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "851327211499950"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_Wiki",
+                "EventHandlerService" : "QueryWikiPages",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "SourceChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "161327211547664"
+              } ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 600,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "ThingShape" : "Wiki",
+                  "Top" : 0,
+                  "Type" : "thingshapemashup",
+                  "Visible" : true,
+                  "Width" : 900,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "ThingShape Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "STRING",
+                    "Description" : "Contibutor Name",
+                    "ParameterName" : "Source"
+                  } ],
+                  "id_index" : 3
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "AlignHeader" : false,
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "CellTextWrapping" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "title",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "[[title]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "timestamp",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "[[timestamp]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      } ]
+                    },
+                    "CurrentScrollTop" : 0,
+                    "FocusStyle" : "DefaultFocusStyle",
+                    "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                    "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                    "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                    "GridHeaderTextCase" : "none",
+                    "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                    "Height" : 600,
+                    "Id" : "Grid-1",
+                    "IsEditable" : false,
+                    "IsPrintLayout" : false,
+                    "Left" : 0,
+                    "MultiSelect" : false,
+                    "ResponsiveLayout" : false,
+                    "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                    "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                    "RowFormat_StateParameters" : [ ],
+                    "RowHeight" : 30,
+                    "RowHoverStyle" : "DefaultRowHoverStyle",
+                    "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                    "ScrollTop" : 0,
+                    "ShowAllColumns" : false,
+                    "ShowDataLoading" : true,
+                    "TabSequence" : 0,
+                    "Top" : 0,
+                    "Type" : "dhxgrid",
+                    "Visible" : true,
+                    "Width" : 225,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "ExpandAllWikiTOC" : false,
+                    "Height" : 600,
+                    "Id" : "Wiki-2",
+                    "Left" : 225,
+                    "MaximumItems" : 5000,
+                    "PageTitleCharacterLimit" : -1,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "ShowWikiTOC" : false,
+                    "ShowWikiTimestamp" : false,
+                    "Top" : 0,
+                    "Type" : "wiki",
+                    "Visible" : true,
+                    "Width" : 675,
+                    "Wiki" : "",
+                    "WikiButtonStyle" : "DefaultWikiButtonStyle",
+                    "WikiContentStyle" : "DefaultWikiContentStyle",
+                    "WikiHeaderStyle" : "DefaultWikiHeaderStyle",
+                    "WikiNavigationSelectedStyle" : "DefaultWikiNavigationSelectedStyle",
+                    "WikiNavigationStyle" : "DefaultWikiNavigationStyle",
+                    "WikiSearchStyle" : "DefaultWikiSearchStyle",
+                    "WikiSidebarWidth" : 200,
+                    "WikiStyle" : "DefaultWikiStyle",
+                    "WikiToolbarStyle" : "DefaultWikiToolbarStyle",
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Wiki"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "BorderStyle" : "DefaultImageBorderStyle",
+                    "Height" : 600,
+                    "Id" : "Image-3",
+                    "Left" : 215,
+                    "PreventCaching" : false,
+                    "ResponsiveLayout" : false,
+                    "Scaling" : "width",
+                    "ShowDataLoading" : true,
+                    "SourceURL" : "/Thingworx/MediaEntities/VerticalShadowLeft",
+                    "ToolTipField" : "",
+                    "Top" : 0,
+                    "Type" : "image",
+                    "Visible" : true,
+                    "Width" : 10,
+                    "Z-index" : 12,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "thingshape"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

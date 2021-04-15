@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.wsexecution.WSExecutionProcessingSubsystem"
+         dependsOn=""
+         description="WebSocket (WS) Execution Processing"
+         documentationContent=""
+         enabled="true"
+         friendlyName="WS Execution Processing"
+         homeMashup=""
+         name="WSExecutionProcessingSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Execution Processor Settings"
+                 isMultiRow="false"
+                 name="ExecutionProcessorSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="100000.0"
+                             aspect.friendlyName="Max Queue Entries Before Adding New Working Thread"
+                             baseType="NUMBER"
+                             description="Maximum number of messages to queue before adding an additional worker thread to the pool"
+                             name="maximumQueueSize"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="600000.0"
+                             aspect.friendlyName="Idle Thread Timeout (sec)"
+                             baseType="NUMBER"
+                             description="How long idle threads should remain in the pool in seconds"
+                             name="maximumThreadLife"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1000.0"
+                             aspect.friendlyName="Max threads allocated to execution processing pool"
+                             baseType="NUMBER"
+                             description="Maximum number of threads allocated to the execution processing thread pool"
+                             name="maximumThreadPoolSize"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="100.0"
+                             aspect.friendlyName="Min threads allocated to execution processing pool"
+                             baseType="NUMBER"
+                             description="Minimum number of threads allocated to the execution processing thread pool"
+                             name="minimumThreadPoolSize"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <maximumQueueSize>100000.0</maximumQueueSize>
+                            <maximumThreadLife>600000.0</maximumThreadLife>
+                            <maximumThreadPoolSize>1000.0</maximumThreadPoolSize>
+                            <minimumThreadPoolSize>100.0</minimumThreadPoolSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

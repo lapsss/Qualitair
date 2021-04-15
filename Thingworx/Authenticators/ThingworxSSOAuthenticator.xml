@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Authenticators>
+        <Authenticator
+         aspect.isEditableSystemObject="true"
+         className="com.thingworx.security.authentication.sso.ThingworxSSOAuthenticator"
+         description="SSO Authenticator"
+         documentationContent=""
+         enabled="false"
+         homeMashup=""
+         name="ThingworxSSOAuthenticator"
+         priority="250"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Provisioning"
+                 isMultiRow="false"
+                 name="UserProvisioning"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="SSO All Credential Attributes Must be Provisioned"
+                             baseType="BOOLEAN"
+                             description="SSO All Credential Attributes Must be Provisioned"
+                             name="requireAllCredentialsAttributesAreProvisioned"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="SSO Terminate User Sessions On Authenticator Change"
+                             baseType="BOOLEAN"
+                             description="SSO Terminate User Sessions On Authenticator Change"
+                             name="terminateUserSessionsOnAuthenticatorChange"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="User Creation Enabled"
+                             baseType="BOOLEAN"
+                             description="User Creation Enabled"
+                             name="userCreationEnabled"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="User Modification Enabled"
+                             baseType="BOOLEAN"
+                             description="User Modification Enabled"
+                             name="userModificationEnabled"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <requireAllCredentialsAttributesAreProvisioned>false</requireAllCredentialsAttributesAreProvisioned>
+                            <terminateUserSessionsOnAuthenticatorChange>false</terminateUserSessionsOnAuthenticatorChange>
+                            <userCreationEnabled>true</userCreationEnabled>
+                            <userModificationEnabled>true</userModificationEnabled>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Provisioning Exclusion List"
+                 isMultiRow="true"
+                 name="UserProvisioningExclusionList"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx User Name"
+                             baseType="USERNAME"
+                             description="Thingworx User Name"
+                             name="exclusionListUserNames"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <exclusionListUserNames>
+                            <![CDATA[
+                            Administrator
+                            ]]>
+                            </exclusionListUserNames>
+                        </Row>
+                        <Row>
+                            <exclusionListUserNames>
+                            <![CDATA[
+                            SuperUser
+                            ]]>
+                            </exclusionListUserNames>
+                        </Row>
+                        <Row>
+                            <exclusionListUserNames>
+                            <![CDATA[
+                            System
+                            ]]>
+                            </exclusionListUserNames>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Default Settings"
+                 isMultiRow="false"
+                 name="UserDefaults"
+                 ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Description"
+                             baseType="STRING"
+                             description="SSO Provisioning Description"
+                             name="userDefaultDescription"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Home Mashup"
+                             baseType="MASHUPNAME"
+                             description="SSO Provisioning Home Mashup"
+                             name="userDefaultHomeMashupName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Mobile Mashup"
+                             baseType="MASHUPNAME"
+                             description="SSO Provisioning Mobile Mashup"
+                             name="userDefaultMobileMashupName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Tags"
+                             baseType="TAGS"
+                             description="SSO Provisioning Tags"
+                             name="userDefaultTags"
+                             ordinal="3"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <userDefaultDescription></userDefaultDescription>
+                            <userDefaultHomeMashupName></userDefaultHomeMashupName>
+                            <userDefaultMobileMashupName></userDefaultMobileMashupName>
+                            <userDefaultTags></userDefaultTags>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Default Settings"
+                 isMultiRow="false"
+                 name="UserIdentityProviderSettings"
+                 ordinal="3">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Description"
+                             baseType="STRING"
+                             description="SSO Provisioning Description"
+                             name="userIdentityProviderDescription"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Groups"
+                             baseType="STRING"
+                             description="SSO Provisioning Groups"
+                             name="userIdentityProviderGroups"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Home Mashup"
+                             baseType="STRING"
+                             description="SSO Provisioning Home Mashup"
+                             name="userIdentityProviderHomeMashup"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Mobile Mashup"
+                             baseType="STRING"
+                             description="SSO Provisioning Mobile Mashup"
+                             name="userIdentityProviderMobileMashup"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Tags"
+                             baseType="STRING"
+                             description="SSO Provisioning Tags"
+                             name="userIdentityProviderTags"
+                             ordinal="3"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <userIdentityProviderDescription></userIdentityProviderDescription>
+                            <userIdentityProviderGroups></userIdentityProviderGroups>
+                            <userIdentityProviderHomeMashup></userIdentityProviderHomeMashup>
+                            <userIdentityProviderMobileMashup></userIdentityProviderMobileMashup>
+                            <userIdentityProviderTags></userIdentityProviderTags>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Default User Groups"
+                 isMultiRow="true"
+                 name="UserDefaultGroups"
+                 ordinal="4">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx Group Name"
+                             baseType="STRING"
+                             description="Thingworx Group Name"
+                             name="userDefaultGroupNames"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Identity Provider Group Mappings"
+                 isMultiRow="true"
+                 name="IdentityProviderGroupMappings"
+                 ordinal="5">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Identity Provider Group Name"
+                             baseType="STRING"
+                             description="SSO Identity Provider Group Name"
+                             name="identityProviderGroupName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx Group Name"
+                             baseType="STRING"
+                             description="Thingworx Group Name"
+                             name="twxGroupName"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Default User Extension Properties"
+                 isMultiRow="true"
+                 name="UserExtensionProvisionNames"
+                 ordinal="6">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Extension Default Value"
+                             baseType="STRING"
+                             description="SSO Provisioning Extension Default Value"
+                             name="defaultValue"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Identity Provider Attribute"
+                             baseType="STRING"
+                             description="SSO Identity Provider Attribute"
+                             name="identityProviderAttribute"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SSO Provisioning Extension Property Name"
+                             baseType="STRING"
+                             description="SSO Provisioning Extension Property Name"
+                             name="propertyName"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Authenticator>
+    </Authenticators>
+</Entities>

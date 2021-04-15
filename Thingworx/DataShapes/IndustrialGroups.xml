@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Data shape representing an Industrial Connectivity group"
+         documentationContent=""
+         homeMashup=""
+         name="IndustrialGroups"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="FullPath"
+                 name="FullPath"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Whether the group has any subgroups at all"
+                 name="HasAnySubGroups"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Whether the group has any non-internal subgroups"
+                 name="HasNonSystemSubGroups"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Whether the group is an internal group"
+                 name="IsSystemGroup"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Name"
+                 name="Name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Parent"
+                 name="Parent"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

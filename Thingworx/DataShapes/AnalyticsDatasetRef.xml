@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Reference to a dataset"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsDatasetRef"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="An infotable necessary to pass data as part of a request body. Use this parameter ONLY when the datasetUri parameter is body:/. The infotable must be flat (cannot contain nested infotables) and its definition must match the corresponding infotable for the metadata parameter. This infotable must include a row of data for each record. For more information, see &lt;a href=&quot;https://support.ptc.com/help/thingworx_hc/thingworx_analytics_8/#page/analytics%2Fanalytics-data-key-infotables.html&quot;&gt;Key Analytics Infotables&lt;/a&gt; in the Analytics Help Center."
+                 name="data"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Location of the data"
+                 name="datasetUri"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Fields to remove from the dataset"
+                 name="exclusions"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="SQL WHERE clause to refine the dataset"
+                 name="filter"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Structure of the data (csv, parquet)"
+                 name="format"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsDatasetMetadata"
+                 baseType="INFOTABLE"
+                 description="Metadata of the dataset (for providing data as part of request)"
+                 name="metadata"
+                 ordinal="6"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

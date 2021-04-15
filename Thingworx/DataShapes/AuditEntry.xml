@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Audit Entry search results"
+         documentationContent=""
+         homeMashup=""
+         name="AuditEntry"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.friendlyName="application"
+                 baseType="STRING"
+                 description="Application generating the audit entry"
+                 name="application"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="audit-category"
+                 baseType="STRING"
+                 description="Category for the audit entry"
+                 name="auditCategory"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="id"
+                 baseType="STRING"
+                 description="Id of the audit entry"
+                 name="id"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Audit"
+                 baseType="STRING"
+                 description="Audit message text"
+                 name="message"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="message"
+                 baseType="INFOTABLE"
+                 description="Audit message arguments"
+                 name="messageArgs"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="source"
+                 baseType="STRING"
+                 description="Source generating the audit entry"
+                 name="source"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="source-type"
+                 baseType="STRING"
+                 description="Type of the source generating the audit entry"
+                 name="sourceType"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="timestamp"
+                 baseType="DATETIME"
+                 description="Time of audit entry generation"
+                 name="timestamp"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="user"
+                 baseType="STRING"
+                 description="User generating the audit entry"
+                 name="user"
+                 ordinal="5"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

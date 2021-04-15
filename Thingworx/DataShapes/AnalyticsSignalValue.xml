@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Signal information for specific fields"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsSignalValue"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Fields that define this signal"
+                 name="features"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The amount of additional information provided about the goal beyond that provided by the previously selected fields"
+                 name="informationGain"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Measure of correlation between the goal field and signal fields"
+                 name="normalizedMutualInformation"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Linear correlation between the goal field and signal fields (-1 to 1, where 0 = no correlation and -1 or 1 = high correlation)"
+                 name="pearsonsCorrelation"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The Feature/Field that the current Feature/Field is being compared for redundancy against"
+                 name="redundantWithFeature"
+                 ordinal="5"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

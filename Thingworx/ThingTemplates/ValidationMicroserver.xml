@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="AnalyticsJobServer"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="ValidationMicroserver"
+         projectName=""
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CreateJob"
+                 sourceName="CreateJob"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveConfidenceModel"
+                 sourceName="RetrieveConfidenceModel"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrievePVAS"
+                 sourceName="RetrievePVAS"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveResult"
+                 sourceName="RetrieveResult"
+                 timeout="0"></RemoteServiceBinding>
+            </RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description="Validate efficacy of specified model with specified dataset"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateJob">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="NumberArrayElement"
+                             baseType="INFOTABLE"
+                             description="Each confidence level represents the probability that the returned confidence interval contains the true value. Each confidence level must be between 0 and 1, exclusive (Default is .80). Larger confidence levels yield wider confidence intervals."
+                             name="confidenceLevels"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             baseType="BOOLEAN"
+                             description="If True, a confidence model is created (Default is False)."
+                             name="createConfidenceModel"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional description for this job"
+                             name="description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Goal to be validated"
+                             name="goalField"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Name for this job"
+                             name="jobName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the model"
+                             name="modelUri"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             baseType="BOOLEAN"
+                             description="If True, the validation job runs using only the training portion of the dataset (Default is False). This validation can indicate whether the model has overfit the training data."
+                             name="validateOnTraining"
+                             ordinal="8"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve Confidence model PMML"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveConfidenceModel">
+                        <ResultType
+                         baseType="STRING"
+                         description="Confidence model in PMML format"
+                         name="ConfidenceModel"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the validation job"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve PVAs of a validation job"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrievePVAS">
+                        <ResultType
+                         aspect.dataShape="AnalyticsPVAS"
+                         baseType="INFOTABLE"
+                         description="Predicted versus Actual values for GoalField"
+                         name="pvas"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job  to retrieve PVAs"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve results of a validation job"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveResult">
+                        <ResultType
+                         aspect.dataShape="AnalyticsValidationResult"
+                         baseType="INFOTABLE"
+                         description="Description of the model performance"
+                         name="validationMetrics"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job result to retrieve"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

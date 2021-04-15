@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.integration.IntegrationSubsystem"
+         dependsOn=""
+         description="Integration Subsystem - handles transport of integrations to backend systems"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Integration Subsystem"
+         homeMashup=""
+         name="IntegrationSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Message Store Settings"
+                 isHidden="true"
+                 isMultiRow="true"
+                 name="APIMappingStore"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description="The API/endpoint for which this mapping was created"
+                             name="ApiName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="The API/endpoint for which this mapping was created"
+                             name="ConnectorName"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.isPrimaryKey="true"
+                             baseType="STRING"
+                             description="Mapping Id"
+                             name="MappingId"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="JSON"
+                             description="The Mapping JSON"
+                             name="MappingJSON"
+                             ordinal="4"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="The result of the validation job"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsValidationResult"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Confidence model URI"
+                 name="confidenceModelUri"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Description of the job"
+                 name="description"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The evaluated field"
+                 name="goalField"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Name of the job"
+                 name="jobName"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="URI to the model"
+                 name="modelUri"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Result ID for the predicted vs actual scores"
+                 name="pvaId"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LONG"
+                 description="Total number of records evaluated"
+                 name="recordCount"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsValidationMetrics"
+                 baseType="INFOTABLE"
+                 description="Collection of statistics describing model performance"
+                 name="validationMetrics"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

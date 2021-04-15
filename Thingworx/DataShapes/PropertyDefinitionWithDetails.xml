@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="A more in-depth Thing property definition for use in the AddPropertyDefinitions service"
+         documentationContent=""
+         homeMashup=""
+         name="PropertyDefinitionWithDetails"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="BASETYPENAME"
+                 description="Base data type of the property"
+                 name="baseType"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Category of the property"
+                 name="category"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Data change threshold"
+                 name="dataChangeThreshold"
+                 ordinal="11"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Data change type"
+                 name="dataChangeType"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 baseType="DATASHAPENAME"
+                 description="DataShape"
+                 name="dataShape"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The default value for the property"
+                 name="defaultValue"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Description of the property"
+                 name="description"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 baseType="BOOLEAN"
+                 description="Flag indicating whether or not this property has a persistent value"
+                 name="isLogged"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 baseType="BOOLEAN"
+                 description="Flag indicating whether or not this property has a persistent value"
+                 name="isPersistent"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 baseType="BOOLEAN"
+                 description="Flag indicating whether or not this property is read only"
+                 name="isReadOnly"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 baseType="BOOLEAN"
+                 description="Flag indicating whether or not this property is bound to a remote property"
+                 name="isRemote"
+                 ordinal="12"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Name of the property"
+                 name="name"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="For remote properties only: Push threshold"
+                 name="pushThreshold"
+                 ordinal="16"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="For remote properties only: Push type"
+                 name="pushType"
+                 ordinal="15"></FieldDefinition>
+                <FieldDefinition
+                 baseType="JSON"
+                 description="For remote properties only: Remote binding aspects"
+                 name="remoteBindingAspects"
+                 ordinal="17"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="For remote properties only: The name of the remote property"
+                 name="remotePropertyName"
+                 ordinal="13"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="0"
+                 baseType="INTEGER"
+                 description="For remote properties only: Connection timeout"
+                 name="timeout"
+                 ordinal="14"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

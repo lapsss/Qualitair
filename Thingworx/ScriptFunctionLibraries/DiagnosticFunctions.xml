@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ScriptFunctionLibraries>
+        <ScriptFunctionLibrary
+         aspect.isSystemObject="true"
+         className="com.thingworx.dsl.functions.DiagnosticFunctions"
+         description="Diagnostic function library"
+         documentationContent=""
+         homeMashup=""
+         name="DiagnosticFunctions"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FunctionDefinitions>
+                <FunctionDefinition
+                 description="Disable verbose diagnostic tracing of script execution"
+                 name="disableDiagnosticTrace">
+                    <ResultType
+                     baseType="BOOLEAN"
+                     description="Previous trace state"
+                     name="state"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Enable verbose diagnostic tracing of script execution"
+                 name="enableDiagnosticTrace">
+                    <ResultType
+                     baseType="BOOLEAN"
+                     description="Previous trace state"
+                     name="state"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </FunctionDefinition>
+            </FunctionDefinitions>
+        </ScriptFunctionLibrary>
+    </ScriptFunctionLibraries>
+</Entities>

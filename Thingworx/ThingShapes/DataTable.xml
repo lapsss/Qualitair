@@ -1,0 +1,1084 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className="com.thingworx.datatables.DataTableThing"
+         description="Data table shape"
+         documentationContent=""
+         homeMashup=""
+         name="DataTable"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Add multiple data table entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddDataTableEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Add a new data table entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddDataTableEntry">
+                    <ResultType
+                     baseType="STRING"
+                     description="Newly created id"
+                     name="id"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Add or update multiple data table entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddOrUpdateDataTableEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Add a new data table entry, or if it exists, update an existing entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddOrUpdateDataTableEntry">
+                    <ResultType
+                     baseType="STRING"
+                     description="Newly created ID"
+                     name="id"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Replaces existing data table entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AssignDataTableEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Values"
+                 description="Create an empty info table of the correct datashape for this data table"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="CreateValues">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Created Infotable"
+                     name="Values"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Values"
+                 description="Create an info table of the correct datashape for this stream and include data values"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="CreateValuesWithData">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Created Infotable"
+                     name="Values"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="JSON"
+                         description="Data values (JSON Object)"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Delete all table entries that match the provided values"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteDataTableEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Add or update multiple data table entries based on a query"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteDataTableEntriesWithQuery">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Delete entries from data table entries based on a query, values, tags and source"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteDataTableEntriesWithQueryCriteria">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Delete an existing data table entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteDataTableEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Delete an existing data table entry using its key value"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteDataTableEntryByKey">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Key Value"
+                         name="key"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all table entries that match the provided values"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="FindDataTableEntries">
+                    <ResultType
+                     aspect.isDataTableEntry="true"
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         aspect.isQueryParameter="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataShape"
+                 description="Get the currently assigned data shape"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDataShape">
+                    <ResultType
+                     baseType="DATASHAPENAME"
+                     description="Data shape name"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all table entries up to max items number"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDataTableEntries">
+                    <ResultType
+                     aspect.isDataTableEntry="true"
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Get an existing data table entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDataTableEntry">
+                    <ResultType
+                     aspect.isDataTableEntry="true"
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Get an existing data table entry using its key value"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDataTableEntryByKey">
+                    <ResultType
+                     aspect.isDataTableEntry="true"
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Key Value"
+                         name="key"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category=""
+                 description="Get an count of data table entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDataTableEntryCount">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="Table entry count"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Fields"
+                 description="Retrieve a list of field names for the data shape associated with this stream"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetFieldNames">
+                    <ResultType
+                     aspect.dataShape="EntityList"
+                     baseType="INFOTABLE"
+                     description="Field names"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Fields"
+                 description="Retrieve a list of field names for the data shape associated with this stream, of a specific type"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetFieldNamesByType">
+                    <ResultType
+                     aspect.dataShape="EntityList"
+                     baseType="INFOTABLE"
+                     description="Field names"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="BASETYPENAME"
+                         description="Base type name"
+                         name="type"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Maintenance"
+                 description="Remove all data table entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="PurgeDataTableEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all table entries that match the query parameters"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryDataTableEntries">
+                    <ResultType
+                     aspect.isDataTableEntry="true"
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source (optional)"
+                         name="source"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags (optional)"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Indexing"
+                 description="Reindex the custom indexes on the data table"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="Reindex">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all table entries that match the search query parameters"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SearchDataTableEntries">
+                    <ResultType
+                     aspect.isDataTableEntry="true"
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Search expression"
+                         name="searchExpression"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source (optional)"
+                         name="source"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags (optional)"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataShape"
+                 description="Sets the data shape"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SetDataShape">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATASHAPENAME"
+                         description="Data shape name"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Update multiple data table entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateDataTableEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Add or update multiple data table entries based on a query"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateDataTableEntriesWithQuery">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values to be updated"
+                         name="updateValues"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values to search for"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataTableEntries"
+                 description="Update an existing data table entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateDataTableEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (optional)"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings>
+                <ServiceMapping
+                 deleteService="DeleteDataTableEntry"
+                 description="Mapped services for data table entries"
+                 listService="GetDataTableEntries"
+                 name="DataTableEntries"
+                 queryService="GetDataTableEntry"></ServiceMapping>
+            </ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Add multiple data table entries"
+                 handlerName="Reflection"
+                 name="AddDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add a new data table entry"
+                 handlerName="Reflection"
+                 name="AddDataTableEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add or update multiple data table entries"
+                 handlerName="Reflection"
+                 name="AddOrUpdateDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add a new data table entry, or if it exists, update an existing entry"
+                 handlerName="Reflection"
+                 name="AddOrUpdateDataTableEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Replaces existing data table entries"
+                 handlerName="Reflection"
+                 name="AssignDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Create an empty info table of the correct datashape for this data table"
+                 handlerName="Reflection"
+                 name="CreateValues">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Create an info table of the correct datashape for this stream and include data values"
+                 handlerName="Reflection"
+                 name="CreateValuesWithData">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete all table entries that match the provided values"
+                 handlerName="Reflection"
+                 name="DeleteDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add or update multiple data table entries based on a query"
+                 handlerName="Reflection"
+                 name="DeleteDataTableEntriesWithQuery">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete entries from data table entries based on a query, values, tags and source"
+                 handlerName="Reflection"
+                 name="DeleteDataTableEntriesWithQueryCriteria">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete an existing data table entry"
+                 handlerName="Reflection"
+                 name="DeleteDataTableEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete an existing data table entry using its key value"
+                 handlerName="Reflection"
+                 name="DeleteDataTableEntryByKey">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all table entries that match the provided values"
+                 handlerName="Reflection"
+                 name="FindDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get the currently assigned data shape"
+                 handlerName="Reflection"
+                 name="GetDataShape">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all table entries up to max items number"
+                 handlerName="Reflection"
+                 name="GetDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get an existing data table entry"
+                 handlerName="Reflection"
+                 name="GetDataTableEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get an existing data table entry using its key value"
+                 handlerName="Reflection"
+                 name="GetDataTableEntryByKey">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get an count of data table entries"
+                 handlerName="Reflection"
+                 name="GetDataTableEntryCount">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of field names for the data shape associated with this stream"
+                 handlerName="Reflection"
+                 name="GetFieldNames">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of field names for the data shape associated with this stream, of a specific type"
+                 handlerName="Reflection"
+                 name="GetFieldNamesByType">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Remove all data table entries"
+                 handlerName="Reflection"
+                 name="PurgeDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all table entries that match the query parameters"
+                 handlerName="Reflection"
+                 name="QueryDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Reindex the custom indexes on the data table"
+                 handlerName="Reflection"
+                 name="Reindex">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all table entries that match the search query parameters"
+                 handlerName="Reflection"
+                 name="SearchDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Sets the data shape"
+                 handlerName="Reflection"
+                 name="SetDataShape">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update multiple data table entries"
+                 handlerName="Reflection"
+                 name="UpdateDataTableEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add or update multiple data table entries based on a query"
+                 handlerName="Reflection"
+                 name="UpdateDataTableEntriesWithQuery">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update an existing data table entry"
+                 handlerName="Reflection"
+                 name="UpdateDataTableEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

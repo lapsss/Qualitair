@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.alerts.AlertProcessingSubsystem"
+         dependsOn=""
+         description="Handles Alert Summary and History"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Alert Processing"
+         homeMashup=""
+         name="AlertProcessingSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Alert Settings"
+                 isMultiRow="false"
+                 name="AlertProcessorSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.thingTemplate="AnalyticsGateway"
+                             baseType="THINGNAME"
+                             description="The instance of AnalyticsGateway to use for the training and results microservices"
+                             name="AnalyticsGateway"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="ThingworxPersistenceProvider"
+                             aspect.friendlyName="Data Persistence Provider"
+                             baseType="PERSISTENCEPROVIDERNAME"
+                             description="The Persistence Provider that contains the active data provider."
+                             name="dataPersistenceProvider"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Apply Visibility Checks On Alert Queries"
+                             baseType="BOOLEAN"
+                             description="Apply visibility checks on queries"
+                             name="isFiltered"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="50000.0"
+                             aspect.friendlyName="Max Queue Size"
+                             baseType="NUMBER"
+                             description="Maximum number of alert summary entries to queue (will be rejected after that)"
+                             name="maximumQueueSize"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <AnalyticsGateway></AnalyticsGateway>
+                            <dataPersistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </dataPersistenceProvider>
+                            <isFiltered>true</isFiltered>
+                            <maximumQueueSize>50000.0</maximumQueueSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

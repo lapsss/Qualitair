@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ScriptFunctionLibraries>
+        <ScriptFunctionLibrary
+         aspect.isSystemObject="true"
+         className="com.thingworx.dsl.functions.MiscFunctions"
+         description="Miscellaneous function library"
+         documentationContent=""
+         homeMashup=""
+         name="MiscFunctions"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FunctionDefinitions>
+                <FunctionDefinition
+                 description="Format a number"
+                 name="formatNumber">
+                    <ResultType
+                     baseType="STRING"
+                     description="Formatted number"
+                     name="id"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Value to format"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Format string"
+                         name="format"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Generate a globally unique identifier"
+                 name="generateGUID">
+                    <ResultType
+                     baseType="STRING"
+                     description="Unique identifier"
+                     name="id"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Get the IP address bound to a specific adapter"
+                 name="getAdapterIPAddress">
+                    <ResultType
+                     baseType="STRING"
+                     description="IP Address"
+                     name="address"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Adapter name"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Get the IP address bound to a specific host name"
+                 name="getHostIPAddress">
+                    <ResultType
+                     baseType="STRING"
+                     description="IP Address"
+                     name="address"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Host name"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Pause for a specified number of milliseconds"
+                 name="pause">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="Number of milliseconds"
+                     name="milliseconds"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </FunctionDefinition>
+            </FunctionDefinitions>
+        </ScriptFunctionLibrary>
+    </ScriptFunctionLibraries>
+</Entities>

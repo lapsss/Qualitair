@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Machine learning techniques and configurations"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsTrainingLearner"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Type of output transformation to apply to nodes in hidden layers in order to keep values within a manageable range. Valid values are: Sigmoid, TanH (hyperbolic tangent), ReLU (rectified linear units). Default is Sigmoid. (NEURAL_NET)"
+                 name="hiddenActivation"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Width of each hidden layer expressed as a percentage of the number of inputs to the neural net. Allowed values are between 0 (exclusive) and 1 (inclusive). (NEURAL_NET)"
+                 name="hiddenUnitPercentage"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="The number of layers. Allowed values: 2 - 4 (NEURAL_NET)"
+                 name="layerCount"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Type of output transformation to apply to nodes in the output layer in order to keep values within a manageable range. Valid values are: Linear and Sigmoid. If no value is specified, an activation function is automatically selected based on the OpType of the goal variable. (NEURAL_NET)"
+                 name="layerWithLoss"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Machine learning algorithm (NEURAL_NET, LINEAR_REGRESSION, LOGISTIC_REGRESSION, DECISION_TREE, RANDOM_FOREST, GRADIENT_BOOST, and SVM)"
+                 name="learningTechnique"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="The maximum tree depth. Allowed values: 2+ (DECISION_TREE, RANDOM_FOREST, and GRADIENT_BOOST only)"
+                 name="maxDepth"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Limit learner to use a specified number of fields (affects runtime)"
+                 name="maximumAllowedFields"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="The number of iterations to use. Allowed values: 1+ (GRADIENT_BOOST)"
+                 name="numberOfIterations"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Should identical columns be consolidated and columns with only one value be removed? (DECISION_TREE)"
+                 name="removeDuplicatesAndUniformColumns"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="The number of trees. Allowed values: 2+ (RANDOM_FOREST)"
+                 name="treeCount"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

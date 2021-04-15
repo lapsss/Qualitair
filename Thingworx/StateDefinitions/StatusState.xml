@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableSystemObject="true"
+         aspect.isSystemObject="true"
+         description="Status state"
+         documentationContent=""
+         homeMashup=""
+         name="StatusState"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "StatusAvailable",
+                "defaultValue" : "AVAILABLE",
+                "description" : "",
+                "displayString" : "AVAILABLE",
+                "name" : "AVAILABLE"
+              }, {
+                "defaultStyleDefinition" : "StatusOffline",
+                "defaultValue" : "OFFLINE",
+                "description" : "",
+                "displayString" : "OFFLINE",
+                "name" : "OFFLINE"
+              }, {
+                "defaultStyleDefinition" : "StatusBusy",
+                "defaultValue" : "BUSY",
+                "description" : "",
+                "displayString" : "BUSY",
+                "name" : "BUSY"
+              }, {
+                "defaultStyleDefinition" : "StatusError",
+                "defaultValue" : "ERROR",
+                "description" : "",
+                "displayString" : "ERROR",
+                "name" : "ERROR"
+              }, {
+                "defaultStyleDefinition" : "StatusUnknown",
+                "description" : "",
+                "displayString" : "UNKNOWN",
+                "name" : "UNKNOWN"
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Options used during user Provisioning"
+         documentationContent=""
+         homeMashup=""
+         name="UserProvisioningUserDefaults"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description=""
+                 name="userDefaultDescription"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="MASHUPNAME"
+                 description="Home Mashup"
+                 name="userDefaultHomeMashupName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="MASHUPNAME"
+                 description="Mobile Mashup"
+                 name="userDefaultMobileMashupName"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.tagType="ModelTags"
+                 baseType="TAGS"
+                 description=""
+                 name="userDefaultTags"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

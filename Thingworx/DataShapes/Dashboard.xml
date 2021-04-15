@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Dashboard definition"
+         documentationContent=""
+         homeMashup=""
+         name="Dashboard"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="DashboardGroup"
+                 baseType="INFOTABLE"
+                 description="Dashboard Groups"
+                 name="dashboardGroups"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Dashboard ID"
+                 name="id"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Current user can edit this dashboard"
+                 name="isEditable"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="Current user is owner of this dashboard"
+                 name="isOwner"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Dashboard title"
+                 name="title"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

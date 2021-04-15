@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="A row in the result from a distribution query"
+         documentationContent=""
+         homeMashup=""
+         name="DistributionQueryRow"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The average value of the goal field among the records in a group"
+                 name="averageGoal"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LONG"
+                 description="The number of records that fall into a group"
+                 name="count"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="FieldValuePair"
+                 baseType="INFOTABLE"
+                 description="The fields and corresponding values that define a group"
+                 name="groupByValues"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The total value of the goal field among the records in a group"
+                 name="totalGoal"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

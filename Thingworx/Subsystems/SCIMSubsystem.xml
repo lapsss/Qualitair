@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="false"
+         className="com.thingworx.system.subsystems.scim.SCIMSubsystem"
+         dependsOn=""
+         description="SCIM Identity Management Subsystem"
+         documentationContent=""
+         enabled="false"
+         friendlyName="SCIM Subsystem"
+         homeMashup=""
+         name="SCIMSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Provisioning"
+                 isMultiRow="false"
+                 name="UserProvisioning"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="SCIM Terminate User Sessions On Configuration Change"
+                             baseType="BOOLEAN"
+                             description="SCIM Terminate User Sessions On Configuration Change"
+                             name="terminateUserSessionsOnConfigChange"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <terminateUserSessionsOnConfigChange>false</terminateUserSessionsOnConfigChange>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Provisioning Exclusion List"
+                 isMultiRow="true"
+                 name="UserProvisioningExclusionList"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx User Name"
+                             baseType="USERNAME"
+                             description="Thingworx User Name"
+                             name="thingworxUserName"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <thingworxUserName>
+                            <![CDATA[
+                            Administrator
+                            ]]>
+                            </thingworxUserName>
+                        </Row>
+                        <Row>
+                            <thingworxUserName>
+                            <![CDATA[
+                            SuperUser
+                            ]]>
+                            </thingworxUserName>
+                        </Row>
+                        <Row>
+                            <thingworxUserName>
+                            <![CDATA[
+                            System
+                            ]]>
+                            </thingworxUserName>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User Default Settings"
+                 isMultiRow="false"
+                 name="UserDefaults"
+                 ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Description"
+                             baseType="STRING"
+                             description="SCIM Provisioning Description"
+                             name="userDefaultDescription"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Home Mashup"
+                             baseType="MASHUPNAME"
+                             description="SCIM Provisioning Home Mashup"
+                             name="userDefaultHomeMashupName"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Mobile Mashup"
+                             baseType="MASHUPNAME"
+                             description="SCIM Provisioning Mobile Mashup"
+                             name="userDefaultMobileMashupName"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Project"
+                             baseType="PROJECTNAME"
+                             description="SCIM Provisioning Project"
+                             name="userDefaultProjectName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Tags"
+                             baseType="TAGS"
+                             description="SCIM Provisioning Tags"
+                             name="userDefaultTags"
+                             ordinal="4"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <userDefaultDescription></userDefaultDescription>
+                            <userDefaultHomeMashupName></userDefaultHomeMashupName>
+                            <userDefaultMobileMashupName></userDefaultMobileMashupName>
+                            <userDefaultProjectName></userDefaultProjectName>
+                            <userDefaultTags></userDefaultTags>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Group Provisioning Exclusion List"
+                 isMultiRow="true"
+                 name="GroupProvisioningExclusionList"
+                 ordinal="3">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx Group Name"
+                             baseType="GROUPNAME"
+                             description="Thingworx Group Name"
+                             name="thingworxGroupName"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            Administrators
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            ComposerUsers
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            Designers
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            Developers
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            Users
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            SecurityAdministrators
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                        <Row>
+                            <thingworxGroupName>
+                            <![CDATA[
+                            Guests
+                            ]]>
+                            </thingworxGroupName>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Group Default Settings"
+                 isMultiRow="false"
+                 name="GroupDefaults"
+                 ordinal="4">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Description"
+                             baseType="STRING"
+                             description="SCIM Provisioning Description"
+                             name="groupDefaultDescription"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Project"
+                             baseType="PROJECTNAME"
+                             description="SCIM Provisioning Project"
+                             name="groupDefaultProjectName"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Provisioning Tags"
+                             baseType="TAGS"
+                             description="SCIM Provisioning Tags"
+                             name="groupDefaultTags"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <groupDefaultDescription></groupDefaultDescription>
+                            <groupDefaultProjectName></groupDefaultProjectName>
+                            <groupDefaultTags></groupDefaultTags>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="IdentityProviderGroupMappings"
+                 isMultiRow="true"
+                 name="IdentityProviderGroupMappings"
+                 ordinal="5">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="SCIM Identity Provider Group Name"
+                             baseType="STRING"
+                             description="SCIM Identity Provider Group Name"
+                             name="identityProviderGroupName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx Group Name"
+                             baseType="STRING"
+                             description="Thingworx Group Name"
+                             name="twxGroupName"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

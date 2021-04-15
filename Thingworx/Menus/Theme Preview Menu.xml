@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Menus>
+        <Menu
+         aspect.isSystemObject="true"
+         description="Sample Menu utilized by the Theme Preview"
+         documentationContent=""
+         homeMashup=""
+         imageURL=""
+         menuLabel=""
+         name="Theme Preview Menu"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="GetMenuItems">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="Composer"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <MenuItems>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget=""
+                 linkType="Mashup"
+                 title="Item 1">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 2">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 3">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 4">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 5">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 6">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 7">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 8">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 9">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+                <MenuItem
+                 description=""
+                 imageURL=""
+                 isDefault="false"
+                 linkDestination=""
+                 linkTarget="Self"
+                 linkType="Mashup"
+                 title="Item 10">
+                    <GroupReferences>
+                        <Members></Members>
+                    </GroupReferences>
+                </MenuItem>
+            </MenuItems>
+            <GroupReferences>
+                <Members></Members>
+            </GroupReferences>
+            <effectiveMenu>
+                <DataShape>
+                    <FieldDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Description for tooltip"
+                         name="description"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="IMAGELINK"
+                         description="Optional image URL"
+                         name="imageURL"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="false"
+                         baseType="BOOLEAN"
+                         description="Is a default menu item"
+                         name="isDefault"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isPrimaryKey="true"
+                         baseType="STRING"
+                         description="Link destination"
+                         name="linkDestination"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Link target (Popup, Mashup, New)"
+                         name="linkTarget"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isPrimaryKey="true"
+                         baseType="STRING"
+                         description="Link type (Mashup, Hyperlink, or Menu)"
+                         name="linkType"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Menu entry id"
+                         name="menuId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Menu entry parent id"
+                         name="parentMenuId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Menu entry title"
+                         name="title"
+                         ordinal="0"></FieldDefinition>
+                    </FieldDefinitions>
+                </DataShape>
+                <Rows>
+                    <Row>
+                        <description>
+                        <![CDATA[
+                        Sample Menu utilized by the Theme Preview
+                        ]]>
+                        </description>
+                        <imageURL></imageURL>
+                        <linkPriority>0.0</linkPriority>
+                        <linkType>
+                        <![CDATA[
+                        Menu
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </menuId>
+                        <parentMenuId></parentMenuId>
+                        <title></title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget></linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_0
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 1
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_1
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 2
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_2
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 3
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_3
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 4
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_4
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 5
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_5
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 6
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_6
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 7
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_7
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 8
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_8
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 9
+                        ]]>
+                        </title>
+                    </Row>
+                    <Row>
+                        <description></description>
+                        <imageURL></imageURL>
+                        <isDefault>false</isDefault>
+                        <linkDestination></linkDestination>
+                        <linkTarget>
+                        <![CDATA[
+                        Self
+                        ]]>
+                        </linkTarget>
+                        <linkType>
+                        <![CDATA[
+                        Mashup
+                        ]]>
+                        </linkType>
+                        <menuId>
+                        <![CDATA[
+                        Theme Preview Menu_9
+                        ]]>
+                        </menuId>
+                        <parentMenuId>
+                        <![CDATA[
+                        Theme Preview Menu
+                        ]]>
+                        </parentMenuId>
+                        <title>
+                        <![CDATA[
+                        Item 10
+                        ]]>
+                        </title>
+                    </Row>
+                </Rows>
+            </effectiveMenu>
+        </Menu>
+    </Menus>
+</Entities>

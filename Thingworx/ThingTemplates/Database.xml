@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="GenericThing"
+         description="Direct database connection via JDBC"
+         documentationContent=""
+         effectiveThingPackage="DatabaseThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="Database"
+         projectName=""
+         tags=""
+         thingPackage="DatabaseThing"
+         valueStream="">
+            <avatar>
+            <![CDATA[
+            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
+            AABJRU5ErkJggg==
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="JDBC Settings"
+                 isMultiRow="false"
+                 name="ConnectionInfo"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="SELECT NOW()"
+                             baseType="STRING"
+                             description="Connection test string/query"
+                             name="connectionValidationString"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="jdbc:mydb:/server:port/database?param=value"
+                             aspect.friendlyName="JDBC Connection String"
+                             baseType="STRING"
+                             description="JDBC Connection URL"
+                             name="jDBCConnectionURL"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="com.yourdatabase.yourDriver"
+                             aspect.friendlyName="JDBC Driver Class Name"
+                             baseType="STRING"
+                             description="JDBC Driver Class Name"
+                             name="jDBCDriverClass"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5.0"
+                             aspect.friendlyName="Maxium Number of Connections"
+                             baseType="NUMBER"
+                             description="Maximum number of connections in the pool"
+                             name="maxConnections"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Database Password"
+                             baseType="PASSWORD"
+                             description="Database password"
+                             name="password"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Database User Name"
+                             baseType="STRING"
+                             description="Database user name"
+                             name="userName"
+                             ordinal="4"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <connectionValidationString>
+                            <![CDATA[
+                            SELECT NOW()
+                            ]]>
+                            </connectionValidationString>
+                            <jDBCConnectionURL>
+                            <![CDATA[
+                            jdbc:mydb:/server:port/database?param=value
+                            ]]>
+                            </jDBCConnectionURL>
+                            <jDBCDriverClass>
+                            <![CDATA[
+                            com.yourdatabase.yourDriver
+                            ]]>
+                            </jDBCDriverClass>
+                            <maxConnections>5.0</maxConnections>
+                            <password></password>
+                            <userName></userName>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Connection Monitoring Settings"
+                 isMultiRow="false"
+                 name="ConnectionMonitoring"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="30000.0"
+                             aspect.friendlyName="Monitor Rate (seconds)"
+                             baseType="NUMBER"
+                             description="Monitor rate in milliseconds"
+                             name="connectionMonitorRate"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Monitoring"
+                             baseType="BOOLEAN"
+                             description="Enable connection monitoring"
+                             name="enableMonitor"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Number of Retries"
+                             baseType="NUMBER"
+                             description="Number of retries"
+                             name="numberOfRetries"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="2000.0"
+                             aspect.friendlyName="Retry Delay (milliseconds)"
+                             baseType="NUMBER"
+                             description="Retry delay in milliseconds"
+                             name="retryDelay"
+                             ordinal="3"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <connectionMonitorRate>30000.0</connectionMonitorRate>
+                            <enableMonitor>false</enableMonitor>
+                            <numberOfRetries>1.0</numberOfRetries>
+                            <retryDelay>2000.0</retryDelay>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Field/Column Name Aliases"
+                 isMultiRow="true"
+                 name="ColumnAliases"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Database Column Name"
+                             baseType="STRING"
+                             description="Database column name"
+                             name="columnName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Thingworx Field Name"
+                             baseType="STRING"
+                             description="Thingworx field name"
+                             name="fieldName"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions></ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

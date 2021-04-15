@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Navigation menu entry"
+         documentationContent=""
+         homeMashup=""
+         name="MenuEntry"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Description for tooltip"
+                 name="description"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="IMAGELINK"
+                 description="Optional image URL"
+                 name="imageURL"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 baseType="BOOLEAN"
+                 description="Is a default menu item"
+                 name="isDefault"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Link destination"
+                 name="linkDestination"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Link target (Popup, Mashup, New)"
+                 name="linkTarget"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Link type (Mashup, Hyperlink, or Menu)"
+                 name="linkType"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Menu entry id"
+                 name="menuId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Menu entry parent id"
+                 name="parentMenuId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Menu entry title"
+                 name="title"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

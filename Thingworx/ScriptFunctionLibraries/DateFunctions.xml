@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ScriptFunctionLibraries>
+        <ScriptFunctionLibrary
+         aspect.isSystemObject="true"
+         className="com.thingworx.dsl.functions.DateFunctions"
+         description="Date function library"
+         documentationContent=""
+         homeMashup=""
+         name="DateFunctions"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FunctionDefinitions>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of days to a date value"
+                 name="dateAddDays">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of hours to a date value"
+                 name="dateAddHours">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of milliseconds to a date value"
+                 name="dateAddMilliseconds">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of minutes to a date value"
+                 name="dateAddMinutes">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of months to a date value"
+                 name="dateAddMonths">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of seconds to a date value"
+                 name="dateAddSeconds">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Add (or subtract) a specified number of years to a date value"
+                 name="dateAddYears">
+                    <ResultType
+                     baseType="STRING"
+                     description="Calculated date value"
+                     name="calculatedDateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Amount to add"
+                         name="amount"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Get the day of week for a given date (Monday = 1, Sunday = 7)"
+                 name="dateDayOfWeek">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Day of week"
+                     name="dayOfWeek"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Get the day of the year (0-365) for a given date"
+                 name="dateDayOfYear">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Day of year"
+                     name="dayOfYear"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Calculate the difference between two dates"
+                 name="dateDifference">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Difference in milliseconds (date1 - date2)"
+                     name="difference"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="First date value"
+                         name="date1"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Second date value"
+                         name="date2"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Format a date using a specific format"
+                 name="dateFormat">
+                    <ResultType
+                     baseType="STRING"
+                     description="Formatted date"
+                     name="formattedDate"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value to format"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Date format"
+                         name="dateFormat"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Format a date using the ISO format"
+                 name="dateFormatISO">
+                    <ResultType
+                     baseType="STRING"
+                     description="Formatted date"
+                     name="formattedDate"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value to format"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Calculate the maximum of two dates"
+                 name="dateMax">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Maximum value of the two dates"
+                     name="maxDate"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="First date value"
+                         name="date1"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Second date value"
+                         name="date2"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Calculate the minimum of two dates"
+                 name="dateMin">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Minimum value of the two dates"
+                     name="minDate"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="First date value"
+                         name="date1"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Second date value"
+                         name="date2"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Calculate the offset in milliseconds from UTC time"
+                 name="dateOffset">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Offset in milliseconds"
+                     name="offset"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date value to offset"
+                         name="dateValue"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Parse a date using a specific format"
+                 name="parseDate">
+                    <ResultType
+                     baseType="DATETIME"
+                     description="Parsed date value"
+                     name="dateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value to parse"
+                         name="stringDate"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Date format"
+                         name="dateFormat"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Parse a date using the ISO format"
+                 name="parseDateISO">
+                    <ResultType
+                     baseType="DATETIME"
+                     description="Parsed date value"
+                     name="dateValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value to parse"
+                         name="stringDate"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+            </FunctionDefinitions>
+        </ScriptFunctionLibrary>
+    </ScriptFunctionLibraries>
+</Entities>

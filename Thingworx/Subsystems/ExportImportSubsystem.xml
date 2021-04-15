@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.contentmanagement.ExportImportSubsystem"
+         dependsOn=""
+         description="Export and Import Processing Settings"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Export and Import Processing Settings"
+         homeMashup=""
+         name="ExportImportSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Export and Import Processing Settings"
+                 isMultiRow="false"
+                 name="ExportImportSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="100"
+                             aspect.friendlyName="Data export file size MB"
+                             baseType="INTEGER"
+                             description="Data export file size in megabytes"
+                             name="dataExportFileSizeMb"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5"
+                             aspect.friendlyName="Max threads allocated to data export processing pool"
+                             baseType="INTEGER"
+                             description="Maximum number of threads allocated to data export processing thread pool"
+                             name="maxDataExportThreadPoolSize"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5"
+                             aspect.friendlyName="Max threads allocated to data import processing pool"
+                             baseType="INTEGER"
+                             description="Maximum number of threads allocated to data import processing thread pool"
+                             name="maxDataImportThreadPoolSize"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="3"
+                             aspect.friendlyName="Min threads allocated to data export processing pool"
+                             baseType="INTEGER"
+                             description="Minimum number of threads allocated to data export processing thread pool"
+                             name="minDataExportThreadPoolSize"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="3"
+                             aspect.friendlyName="Min threads allocated to data import processing pool"
+                             baseType="INTEGER"
+                             description="Minimum number of threads allocated to data import processing thread pool"
+                             name="minDataImportThreadPoolSize"
+                             ordinal="4"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <dataExportFileSizeMb>100</dataExportFileSizeMb>
+                            <maxDataExportThreadPoolSize>5</maxDataExportThreadPoolSize>
+                            <maxDataImportThreadPoolSize>5</maxDataImportThreadPoolSize>
+                            <minDataExportThreadPoolSize>3</minDataExportThreadPoolSize>
+                            <minDataImportThreadPoolSize>3</minDataImportThreadPoolSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Datashape for ImplementedThing with total count"
+         documentationContent=""
+         homeMashup=""
+         name="ImplementedThingsWithTotalCount"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="RootEntityList"
+                 aspect.isRequired="true"
+                 baseType="INFOTABLE"
+                 description="List of implemeted things"
+                 name="rootEntityList"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="NUMBER"
+                 description="Total count of implemented things"
+                 name="totalCount"
+                 ordinal="1"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

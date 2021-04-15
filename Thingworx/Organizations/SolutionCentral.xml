@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Organizations>
+        <Organization
+         aspect.isEditableSystemObject="true"
+         description="Solution Central organization"
+         documentationContent=""
+         homeMashup=""
+         loginButtonStyle=""
+         loginPrompt=""
+         loginResetPassword="false"
+         loginStyle=""
+         mobileMashup=""
+         name="SolutionCentral"
+         projectName=""
+         resetMailContent="&lt;p&gt;[[resetemail.requestmade]]&lt;/p&gt;&lt;p&gt;[[resetemail.instructions]]&lt;/p&gt;&lt;p&gt;[[resetemail.helpneeded]]&lt;/p&gt;"
+         resetMailServer=""
+         resetMailSubject="[[resetemail.subject]]"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <loginImage></loginImage>
+            <Connections>
+                <Connection
+                 from=""
+                 to="SolutionCentral"></Connection>
+            </Connections>
+            <OrganizationalUnits>
+                <OrganizationalUnit
+                 description="SolutionCentral Users and Groups"
+                 name="SolutionCentral">
+                    <Members>
+                        <Members>
+                            <Member
+                             name="SolutionCentralSiteAdministrators"
+                             type="Group"></Member>
+                            <Member
+                             name="SolutionCentralDevelopers"
+                             type="Group"></Member>
+                        </Members>
+                    </Members>
+                </OrganizationalUnit>
+            </OrganizationalUnits>
+        </Organization>
+    </Organizations>
+</Entities>

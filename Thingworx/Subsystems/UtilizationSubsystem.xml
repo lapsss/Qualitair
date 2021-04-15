@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.utilization.UtilizationSubsystem"
+         dependsOn=""
+         description="Utilization Subsystem Settings"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Utilization Subsystem Settings"
+         homeMashup=""
+         name="UtilizationSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Statistics Settings"
+                 isMultiRow="false"
+                 name="UtilizationStatistics"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Utilization Subsystem Enable Entity Name Aggregation"
+                             baseType="BOOLEAN"
+                             description="Whether or not to aggregate entity names for entity level statistics"
+                             name="enableEntityNameAggregation"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Utilization Subsystem Enable Statistics"
+                             baseType="BOOLEAN"
+                             description="Whether or not statistics will be collected"
+                             name="enableStatistics"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Utilization Subsystem Enable Statistics Persistence"
+                             baseType="BOOLEAN"
+                             description="Whether or not to persist statistics to the database"
+                             name="enableStatisticsPersistence"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Utilization Subsystem Show Percentiles"
+                             baseType="BOOLEAN"
+                             description="Whether or not to display values for percentile statistics"
+                             name="showPercentiles"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <enableEntityNameAggregation>true</enableEntityNameAggregation>
+                            <enableStatistics>false</enableStatistics>
+                            <enableStatisticsPersistence>false</enableStatisticsPersistence>
+                            <showPercentiles>false</showPercentiles>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

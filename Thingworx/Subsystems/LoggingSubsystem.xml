@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.logging.LoggingSubsystem"
+         dependsOn=""
+         description="Logging Subsystem - handles the various Logs (Application, Script, Communications, etc.)"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Logging"
+         homeMashup=""
+         name="LoggingSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Log Retention Settings"
+                 isMultiRow="false"
+                 name="LogRetentionSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Enable Script Stack Tracing"
+                             baseType="BOOLEAN"
+                             description="Whether or not to enable script stack traces in the script error log"
+                             name="enableScriptStackTracing"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Stack Tracing"
+                             baseType="BOOLEAN"
+                             description="Whether or not to enable stack traces in error logs"
+                             name="enableStackTracing"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="7"
+                             aspect.friendlyName="Maximum Number Days For Archive"
+                             baseType="INTEGER"
+                             description="Maximum number of days to retain archive files on disk"
+                             name="maxFileHistory"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="100000"
+                             aspect.friendlyName="Maximum File Size In KB"
+                             baseType="INTEGER"
+                             description="Maximum file size for each log file on disk."
+                             name="maxFileSizeInKB"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10"
+                             aspect.friendlyName="Total Size In GB Of All Log Files To Retain"
+                             baseType="INTEGER"
+                             description="The total size in GB of all log files to retain on disk"
+                             name="totalSizeCapInGB"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <enableScriptStackTracing>true</enableScriptStackTracing>
+                            <enableStackTracing>false</enableStackTracing>
+                            <maxFileHistory>7</maxFileHistory>
+                            <maxFileSizeInKB>100000</maxFileSizeInKB>
+                            <totalSizeCapInGB>10</totalSizeCapInGB>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isResponsive="true"
+         aspect.isSystemObject="true"
+         aspect.mashupType="mashup"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="DefaultMashupToEditGadget"
+         projectName=""
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height></height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width></width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="2"
+                 baseType="STRING"
+                 description=""
+                 name="dashboardId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="1"
+                 baseType="STRING"
+                 description=""
+                 name="groupId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="STRING"
+                 description=""
+                 name="itemId"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes></ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "Resources_DashboardFunctions" : {
+                  "DataName" : "Resources_DashboardFunctions",
+                  "EntityName" : "DashboardFunctions",
+                  "EntityType" : "Resources",
+                  "Id" : "a416098a-cf2e-494e-a38d-d5b26a264134",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "501c6f64-47ae-4e95-a4df-ef587cfb1bbd",
+                    "Name" : "GetDashboardItem",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDashboardItem"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "24e959ad-502d-4825-ade0-6503eb9a61d7",
+                    "Name" : "GetDashboardItemParameters",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetDashboardItemParameters"
+                  }, {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "3648dfb9-380f-4408-985b-104701680f3c",
+                    "Name" : "EditDashboardItemParameters",
+                    "Parameters" : { },
+                    "Properties" : {
+                      "CustomSuccessMessage" : "Parameters Updated Successfuly",
+                      "ShowErrorMessage" : true,
+                      "ShowSuccessMessage" : true
+                    },
+                    "RefreshInterval" : 0,
+                    "Target" : "EditDashboardItemParameters"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "38bf87ad-f768-4e0c-82e8-b13c87ee9301",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "title",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Field",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardItem",
+                "SourceSection" : "Resources_DashboardFunctions",
+                "TargetArea" : "UI",
+                "TargetId" : "Label-12",
+                "TargetSection" : ""
+              }, {
+                "Id" : "64d6c61c-6986-4117-b08e-e5b9f532e674",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "groupId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "groupID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItem",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "83f25dc4-e4c1-4c3f-9c29-4ae35b99ac12",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "dashboardId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "dashboardID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItem",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "a35a4e41-36dd-446f-8051-1dbc9437f9a9",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "itemId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "itemID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItem",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "7aa6b69a-270f-4b10-8dca-fb3cf4ab55d5",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "groupId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "groupID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItemConfig",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "119440eb-b324-434c-b254-48484ba5f7ec",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "itemId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "itemID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItemConfig",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "3c2eec17-35a5-4373-a2eb-266c6890c8f7",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "dashboardId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "dashboardID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItemConfig",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "069573ac-3ebe-48aa-9355-69f3368c5e7b",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "itemId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "itemID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemConfig",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "4d609c66-9fef-4826-845d-17f884ad9a2c",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "groupId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "groupID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemConfig",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "4af5f754-59aa-4795-997f-d19f6ed5a448",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "dashboardId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "dashboardID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemConfig",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "00f10cc7-894c-4fa3-b1b6-7b18b5c15480",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "GetDashboardItemParameters",
+                "SourceSection" : "Resources_DashboardFunctions",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "1bc3b12c-070d-4fe8-ad65-b396238df938",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "EditedTable",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "TargetProperty" : "parameters",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Grid-5",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "99b035d7-5bb9-422e-bb05-60a3503fb957",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "itemId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "itemID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "f3550528-0581-4265-822e-5fc353431493",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "groupId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "groupID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "0b0c928c-22dc-46d5-85e0-b73ebb830e96",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "dashboardId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "dashboardID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EditDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "e31bb443-4d42-457c-97ff-294ced2ced27",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "itemId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "itemID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "9d761908-5bb0-4095-8f4b-cbd8cf4f2812",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "groupId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "groupID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              }, {
+                "Id" : "2c61f6f9-e957-4862-afbe-eb5372898c66",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "dashboardId",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "dashboardID",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "GetDashboardItemParameters",
+                "TargetSection" : "Resources_DashboardFunctions"
+              } ],
+              "DesignTimePermissions" : { },
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Resources_DashboardFunctions",
+                "EventHandlerService" : "GetDashboardItem",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "2dc104c7-7c4f-4c94-8e0b-d164e8c4c3dc"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Resources_DashboardFunctions",
+                "EventHandlerService" : "GetDashboardItemParameters",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "52b3ab60-62ae-4a1c-883d-65a082ee5e1f"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "Resources_DashboardFunctions",
+                "EventHandlerService" : "EditDashboardItemParameters",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-8",
+                "EventTriggerSection" : "",
+                "Id" : "181cdb80-ebec-47a8-85ac-3e1fc4178505"
+              }, {
+                "EventHandlerArea" : "Mashup",
+                "EventHandlerId" : "mashup-root",
+                "EventHandlerService" : "CloseIfPopup",
+                "EventTriggerArea" : "Data",
+                "EventTriggerEvent" : "ServiceInvokeCompleted",
+                "EventTriggerId" : "EditDashboardItemParameters",
+                "EventTriggerSection" : "Resources_DashboardFunctions",
+                "Id" : "fcccd527-8f77-4385-8469-fc01237be1fe"
+              } ],
+              "RunTimePermissions" : { },
+              "UI" : {
+                "Properties" : {
+                  "AddToDashboardButtonStyle" : "DefaultAddToDashboardButtonStyle",
+                  "Area" : "Mashup",
+                  "BGImageRepeat" : "no-repeat",
+                  "BGImageSize" : "auto",
+                  "Columns" : 0,
+                  "ConfigureGadgetButtonStyle" : "DefaultConfigureGadgetButtonStyle",
+                  "DisplayName" : "Mashup",
+                  "EnableParameterEditing" : false,
+                  "Height" : 370,
+                  "Id" : "mashup-root",
+                  "IgnoreWarningsInViewMashup" : false,
+                  "IsPrintLayout" : false,
+                  "Left" : 0,
+                  "MashupToEditGadget" : "",
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "Rows" : 0,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "Title" : "",
+                  "TitleBar" : false,
+                  "TitleBarStyle" : "DefaultTitleBarStyle",
+                  "TitleBarText" : "Gadget Title Here",
+                  "Top" : 0,
+                  "Type" : "mashup",
+                  "Visible" : true,
+                  "Width" : 545,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "itemId"
+                  }, {
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "groupId"
+                  }, {
+                    "BaseType" : "STRING",
+                    "Description" : "",
+                    "ParameterName" : "dashboardId"
+                  } ],
+                  "id_index" : 12,
+                  "supportsAutoResize" : true
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "AlignHeader" : false,
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "CellTextWrapping" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "name",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "[[name]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "250"
+                      }, {
+                        "Align" : "left",
+                        "AllowEdit" : true,
+                        "FieldName" : "value",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "[[value]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "250"
+                      } ]
+                    },
+                    "CurrentScrollTop" : 0,
+                    "DisplayName" : "Grid-5",
+                    "FocusStyle" : "DefaultFocusStyle",
+                    "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                    "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                    "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                    "GridHeaderTextCase" : "none",
+                    "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                    "Height" : 240,
+                    "Id" : "Grid-5",
+                    "IsEditable" : true,
+                    "IsPrintLayout" : false,
+                    "Left" : 15,
+                    "MultiSelect" : false,
+                    "ResponsiveLayout" : false,
+                    "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                    "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                    "RowFormat_StateParameters" : [ ],
+                    "RowHeight" : 30,
+                    "RowHoverStyle" : "DefaultRowHoverStyle",
+                    "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                    "ScrollTop" : 0,
+                    "ShowAllColumns" : false,
+                    "ShowDataLoading" : true,
+                    "TabSequence" : 0,
+                    "Top" : 70,
+                    "Type" : "dhxgrid",
+                    "Visible" : true,
+                    "Width" : 515,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "ActiveStyle" : "DefaultButtonActiveStyle",
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "[[confirmationOptionYes]]",
+                    "ConfirmationButton2Label" : "[[confirmationOptionNo]]",
+                    "ConfirmationPrompt" : "[[updateGadgetParametersMessage]]",
+                    "ConfirmationRequired" : true,
+                    "ConfirmationTitle" : "[[updateGadgetParameters]]",
+                    "ContextId" : "",
+                    "DefaultConfirmationButton" : "button1",
+                    "Disabled" : false,
+                    "DisabledStyle" : "DefaultButtonDisabledStyle",
+                    "DisplayName" : "Button-8",
+                    "FocusStyle" : "DefaultButtonFocusStyle",
+                    "Height" : 28,
+                    "HoverStyle" : "DefaultButtonHoverStyle",
+                    "IconAlignment" : "left",
+                    "Id" : "Button-8",
+                    "Label" : "[[save]]",
+                    "Left" : 455,
+                    "ResponsiveLayout" : false,
+                    "RoundedCorners" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultButtonStyle",
+                    "TabSequence" : 0,
+                    "ToolTipField" : "",
+                    "Top" : 327,
+                    "Type" : "button",
+                    "Visible" : true,
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "center",
+                    "Area" : "UI",
+                    "Description" : "",
+                    "DisplayName" : "Label-12",
+                    "Height" : 27,
+                    "Id" : "Label-12",
+                    "Left" : 20,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : {
+                      "backgroundColor" : "",
+                      "displayString" : "",
+                      "fontEmphasisBold" : true,
+                      "fontEmphasisItalic" : false,
+                      "fontEmphasisUnderline" : false,
+                      "foregroundColor" : "#282828",
+                      "image" : "",
+                      "lineColor" : "",
+                      "lineStyle" : "solid",
+                      "lineThickness" : 1,
+                      "secondaryBackgroundColor" : "",
+                      "textSize" : "24px"
+                    },
+                    "ToolTipField" : "",
+                    "Top" : 25,
+                    "Type" : "label",
+                    "Visible" : true,
+                    "Width" : 510,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "mashup"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.audit.AuditSubsystem"
+         dependsOn=""
+         description="Handles Auditing"
+         documentationContent=""
+         enabled="false"
+         friendlyName="Audit"
+         homeMashup=""
+         name="AuditSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Audit Processing Settings"
+                 isMultiRow="false"
+                 name="AuditSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="ThingworxPersistenceProvider"
+                             aspect.friendlyName="Audit Persistence Provider"
+                             aspect.isReadOnly="true"
+                             baseType="PERSISTENCEPROVIDERNAME"
+                             description="The Persistence Provider where audit entries will be stored."
+                             name="auditPersistenceProvider"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="60"
+                             aspect.friendlyName="Number of days of online audit data to maintain. Audit entries older than this will be removed from online storage."
+                             aspect.minimumValue="0"
+                             baseType="INTEGER"
+                             description="Number of days of online audit data to maintain. Audit entries older than this will be removed from online storage."
+                             name="daysOnline"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Direct Persistence for Audit Subsystem"
+                             baseType="BOOLEAN"
+                             description="Enable Direct Persistence for Audit Subsystem"
+                             name="enableDirectAuditPersistenceProvider"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.0"
+                             aspect.friendlyName="Maximum entries for online audit data"
+                             baseType="NUMBER"
+                             description="Maximum number of audit entries that will be kept online."
+                             name="maxEntriesOnlineAuditData"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5000"
+                             aspect.friendlyName="Highest value that can be set for maxItems parameter for QueryAuditHistory"
+                             baseType="INTEGER"
+                             description="Highest value that can be set for maxItems parameter for QueryAuditHistory."
+                             name="maxItemsQueryUpperLimit"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="50000.0"
+                             aspect.friendlyName="Archive Audit Chunk Size"
+                             baseType="NUMBER"
+                             description="Number of audit entries that will be processed at a time, for a given day, when archiving Audit Messages offline."
+                             name="offlineAuditArchiveChunkSize"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <auditPersistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </auditPersistenceProvider>
+                            <daysOnline>60</daysOnline>
+                            <enableDirectAuditPersistenceProvider>false</enableDirectAuditPersistenceProvider>
+                            <maxEntriesOnlineAuditData>25000.0</maxEntriesOnlineAuditData>
+                            <maxItemsQueryUpperLimit>5000</maxItemsQueryUpperLimit>
+                            <offlineAuditArchiveChunkSize>50000.0</offlineAuditArchiveChunkSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

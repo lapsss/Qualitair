@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className=""
+         description="Remote tunneling"
+         documentationContent=""
+         homeMashup=""
+         name="Tunneling"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="Tunneling"
+                 description="Register a new tunnel endpoint at the edge"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddTunnel">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Location of the client app that will use this tunnel"
+                         name="appUri"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Description of the tunnel"
+                         name="description"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Host that the tunnel will connect to"
+                         name="host"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Name of the tunnel to add"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The number of connections required to initilaize the tunnel"
+                         name="numConnects"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Port that the tunnel will connect to"
+                         name="port"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Protocol used by the tunnel"
+                         name="proto"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Tunneling"
+                 description="Get information about a specific tunnel endpoint registered at the edge"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetTunnel">
+                    <ResultType
+                     aspect.dataShape="TunnelEndpoint"
+                     baseType="INFOTABLE"
+                     description="A tunnel endpoint"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Name of the tunnel to query"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Tunneling"
+                 description="Get a list of Tunnel names registered at the edge"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetTunnelNames">
+                    <ResultType
+                     aspect.dataShape="EntityList"
+                     baseType="INFOTABLE"
+                     description="Tunnel names"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Tunneling"
+                 description="Get a list of Tunnel Endpoints registered at the edge"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetTunnels">
+                    <ResultType
+                     aspect.dataShape="TunnelEndpoint"
+                     baseType="INFOTABLE"
+                     description="List of registered tunnel endpoints"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Tunneling"
+                 description="Get the status and proxy URL for accessing tunneling"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetTunnelStatus">
+                    <ResultType
+                     aspect.dataShape="TunnelStatus"
+                     baseType="INFOTABLE"
+                     description="A tunnel url"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Tunneling"
+                 description="Remove a tunnel endpoint from the edge"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="RemoveTunnel">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Name of the tunnel to remove"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations></ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

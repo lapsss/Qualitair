@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <StateDefinitions>
+        <StateDefinition
+         aspect.isEditableSystemObject="true"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="FederationConnectionStatus"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <content>
+            <![CDATA[
+            {
+              "stateDefinitions" : [ {
+                "defaultStyleDefinition" : "SubsystemRunningStyle",
+                "defaultValue" : "true",
+                "description" : "",
+                "displayString" : "Federation Server Connected",
+                "name" : "Federation Server Connected"
+              }, {
+                "defaultStyleDefinition" : "SubsystemNotRunningStyle",
+                "defaultValue" : "false",
+                "description" : "",
+                "displayString" : "Federation Server Not Connected",
+                "name" : "Federation Server Not Connected"
+              }, {
+                "defaultStyleDefinition" : "FederationUnknownStatus",
+                "description" : "",
+                "displayString" : "",
+                "name" : ""
+              } ],
+              "stateType" : "string"
+            }
+            ]]>
+            </content>
+        </StateDefinition>
+    </StateDefinitions>
+</Entities>

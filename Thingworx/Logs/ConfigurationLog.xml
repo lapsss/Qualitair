@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Logs>
+        <Log
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         description="Configuration Log"
+         documentationContent=""
+         homeMashup=""
+         logLevel="INFO"
+         name="ConfigurationLog"
+         projectName=""
+         tags="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAEZUlEQVR4XtWaXYgWVRjH3fxaN0wQ
+            M/wIlUxwZSMQFO0RS3AljDQlxNwNWVQKNtLwYiUhlGhdjBTxptJYrQtvlCzKW4X8ohLXukm9UJEt
+            NbISTYpc/49nps7895l5z8y8fuwffuCe8zz/85z3nTNz5rz26+np6deX6dXQ1ygtaWx8BCwE74HP
+            wXFwMuIo+Ap8Bt4H8zg/VMitB4fABu7LLZgMAIvBAfA36Amkm70qCTl1YBP4x/NZxHFBElf4cnDW
+            KC6UpeybJsS+CM5T/lUwgmMrCklzwI9GQcxlsA9sFDfZ+WA6eDqi4uCIeRjsN7yVVo7PFBIGgw8N
+            I+YL8Ax4iD3yStxE2V/pAgM4PlXiPgldiGzEvMG5ZQS/54wxlNkcmykkfGyYMEc5r6zg+Yoxzh6O
+            yxQShkly5aexi3PLCH4N4Irn/xs4CMZwbKaQ8IJRrEUX5xaVJIvXS3cUxwQLyVuMYtNYyPl5Jcni
+            9WE4jGOCheSh4m6HXGgaf4Dp7BMqqUbx4m6XM8UtoGNU4F/ivtLD4E/qKzUJSRZ/SgoW3+KZ+NwC
+            7WCoFzsIvAp+NuJzTUKSxf8AHuWYikLSCqOQmHc4Phb6JoKLRk7QJBAzTcoWr/JMLJ7keF9ScBLa
+            F8VorO6rihWvQvKnRgHKEY61JDknoW1RX1z8WI7JJRiMBBeMAoIf2+Im8S1YDZrBNnFrJDEJ/XfU
+            Vp3iY8HoCXHXYVx86rUfKnGL/TXQEv3tF6/f2OOcU0owrAVtUnBjhryBYKW4rXQnaPT6uPiJfu4D
+            IRS1NSrQR18ldWf5YBevQmFrjQn46N1uUhRbz/n3XSjqLaPoGN3VPhXFvQn+lWht3DeJW6QfgF1g
+            J7hmFO7zepS3zmtby773RBj4MfCNUWQWv4o7YRgu7huI2zeDGh7jrknc/uWcUWAIzZGHvtv67Z+A
+            /jxW1YVB5sr/d5QibIt8Dhp9eihWy2NWTTBvknyHWIye50wANaDb6Fd0Yvm305UE01ZjsBD0WtdF
+            vhu8FHnpORHH+ZyQMps7lrinMw8SSid56af/kxHH6D5pvJ9bSJK85RXhXcNT11HIpahP7QbOD5a4
+            Bw6b5uUj9lWh/WVJ3krT0COVGZxfUeLONNksL7+A0ewdC32rjByLG+B5zk8Vgp+VsK84C906zGJv
+            FmLeNnIttJ7Kp9oIGg0uGQZ5Cd6Si9uOcH4a2b7ifrDgpLxsZ98sibszdRo+adi/0KBjgRGcl/1S
+            YEugOVEu+6Wxvdc4aFhvBOZBD8PqEqY5hNwhYm8x0tgDBvkGy4ygUL6XKmwB1EPck5j90/jaTx4r
+            YfdmpvihlCH1AmeMcSyaOPlLIyiL76SKxceC5zixz5p87rwgceJkcN0IttCD3tKXTZrgPUXcSxCP
+            q6zh+P8k7qfNm0aSz14whHOrLXHHMfyBtnFcLyFoqqQvpg7hW9hdlCQ3f+3cnypxD5hGsAOcBr+D
+            JRx3LyRu89fB7XfE/3mir9Groa9xG2nbNNTx6YsFAAAAAElFTkSuQmCC
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Log>
+    </Logs>
+</Entities>

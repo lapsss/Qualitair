@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Logs>
+        <Log
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         description="Application Log"
+         documentationContent=""
+         homeMashup=""
+         logLevel="WARN"
+         name="ApplicationLog"
+         projectName=""
+         tags="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAA3UlEQVR4Xu2ZQQrDMBAD/RR/JNcW
+            +pY+Mj9zTwEjrWHXTkmVrmAuWplI55TWWlGGDDXIUIMMNchQgww1yFCDDDXK9ng2Ze4zQE054Grl
+            gKuVA3q995fJN5UDemHxHOBQDuiFxXOAQ/8zAEtZ5fBmZc5WDohmIjmPckA0E8l5lAOimUjOo58d
+            gDe8H8oB0Yw3hze8H8oB0Yw3hze8H6IBqtxiwJnQBwZU4+0UZCyCRUdU4+0U9MNghY2Ljqj4dhYy
+            VjCKjqj4dhYyVjCKjqC3s5ChBhlqkKEGGWqQocYHom9lhlL9fnwAAAAASUVORK5CYII=
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Log>
+    </Logs>
+</Entities>

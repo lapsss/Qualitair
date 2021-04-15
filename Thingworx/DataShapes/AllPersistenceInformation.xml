@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Persistence Information"
+         documentationContent=""
+         homeMashup=""
+         name="AllPersistenceInformation"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.friendlyName="Description"
+                 baseType="STRING"
+                 description="Description of the information property"
+                 name="description"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Name"
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Name of the information property"
+                 name="name"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="PersistenceProvider"
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Name of the persistence provider"
+                 name="persistenceProvider"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="PersistenceProviderPackage"
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Name of the persistence provider package"
+                 name="persistenceProviderPackage"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="Value"
+                 baseType="STRING"
+                 description="Value of the information property"
+                 name="value"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

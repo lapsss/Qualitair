@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Metadata describing the fields of a dataset"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsDatasetMetadata"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Format of the data (STRING,DOUBLE,BOOLEAN,INTEGER)"
+                 name="dataType"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Name of the field"
+                 name="fieldName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 baseType="BOOLEAN"
+                 description="If true, this field remains unchanged over time"
+                 name="isStatic"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Maximum observed value for Continuous fields"
+                 name="max"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="Minimum observed value for Continuous fields"
+                 name="min"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Behavior of the data (CONTINUOUS,CATEGORICAL,ORDINAL,BOOLEAN,TEMPORAL,ENTITY_ID)"
+                 name="opType"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Time between observations in a Temporal field"
+                 name="timeSamplingInterval"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="GenericStringList"
+                 baseType="INFOTABLE"
+                 description="Collection of possible values for Ordinal and Categorical fields"
+                 name="values"
+                 ordinal="6"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

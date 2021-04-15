@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingPackages>
+        <ThingPackage
+         aspect.isSystemObject="true"
+         baseThingTemplate="RemoteThing"
+         className="com.thingworx.things.connected.RemoteThingWithTunnels"
+         description="A remote thing that supports tunnels"
+         documentationContent=""
+         homeMashup=""
+         name="RemoteThingWithTunnels"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <HandlerDefinitions>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ExtensionServiceHandler"
+                 description="Extension handler"
+                 isUserDefinable="false"
+                 name="Extension"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.ReflectionServiceHandler"
+                 description="Reflection handler"
+                 isUserDefinable="false"
+                 name="Reflection"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.dsl.DSLServiceHandler"
+                 description="Script handler"
+                 isUserDefinable="true"
+                 name="Script"></HandlerDefinition>
+                <HandlerDefinition
+                 className="com.thingworx.handlers.WorkflowServiceHandler"
+                 description="Workflow handler"
+                 isUserDefinable="true"
+                 name="Workflow"></HandlerDefinition>
+            </HandlerDefinitions>
+            <ImplementedShapes>
+                <ImplementedShape
+                 name="Tunneling"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="Connectable"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="Remotable"
+                 type="ThingShape"></ImplementedShape>
+                <ImplementedShape
+                 name="RemoteMetadataBrowsing"
+                 type="ThingShape"></ImplementedShape>
+            </ImplementedShapes>
+        </ThingPackage>
+    </ThingPackages>
+</Entities>

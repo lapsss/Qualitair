@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Solution Information"
+         documentationContent=""
+         homeMashup=""
+         name="SolutionInfo"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Artifact Id of Solution"
+                 name="artifactId"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.datashape="SolutionDependency"
+                 aspect.isRequired="false"
+                 baseType="INFOTABLE"
+                 description="GAV of Dependent Solutions"
+                 name="dependencies"
+                 ordinal="13"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="BOOLEAN"
+                 description="Deploy status of the Solution on this instance"
+                 name="deployStatus"
+                 ordinal="14"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="STRING"
+                 description="Description"
+                 name="description"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Display name of Solution"
+                 name="displayName"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Artifactory download URL of this Solution"
+                 name="downloadURL"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Group Id of Solution"
+                 name="groupId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Solution Central URL for this Solution"
+                 name="href"
+                 ordinal="12"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="INTEGER"
+                 description="Other version count of this Solution"
+                 name="otherVersionsCount"
+                 ordinal="11"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="DATETIME"
+                 description="Solution published date"
+                 name="publishedAt"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Publisher name of the Solution"
+                 name="publishedBy"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Solution Id on Solution Central"
+                 name="solutionId"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Target platform name for the Solution"
+                 name="targetPlatform"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Minimum version of targeted platform"
+                 name="targetPlatformMinVersion"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Solution version"
+                 name="version"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Paginated list of job statuses"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsJobStatusPage"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="URI to the next page"
+                 name="next"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="URI to the previous page"
+                 name="previous"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LONG"
+                 description="Count of all records"
+                 name="total"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="AnalyticsJobStatus"
+                 baseType="INFOTABLE"
+                 description="List of job statuses"
+                 name="values"
+                 ordinal="4"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

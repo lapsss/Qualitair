@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.support.SupportSubsystem"
+         dependsOn=""
+         description="Support Tools Subsystem - runs tools used to gather data for support and diagnostics"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Support Tools"
+         homeMashup=""
+         name="SupportSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Settings for the Watchdog process, which collects stack dumps and heap dumps at a set interval"
+                 isMultiRow="false"
+                 name="WatchdogSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Heap Dumps"
+                             baseType="BOOLEAN"
+                             description="Whether or not to allow the heap dump service to be invoked."
+                             name="enableHeapDumps"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Watchdog"
+                             baseType="BOOLEAN"
+                             description="Whether or not to enable the Watchdog thread dump collection process."
+                             name="enableWatchdog"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="30"
+                             aspect.friendlyName="Watchdog Interval"
+                             baseType="INTEGER"
+                             description="Time interval between thread dump collection when Watchdog is enabled, in seconds."
+                             name="watchdogInterval"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <enableHeapDumps>false</enableHeapDumps>
+                            <enableWatchdog>false</enableWatchdog>
+                            <watchdogInterval>30</watchdogInterval>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

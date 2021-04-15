@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Logs>
+        <Log
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         description="Script Log"
+         documentationContent=""
+         homeMashup=""
+         logLevel="WARN"
+         name="ScriptLog"
+         projectName=""
+         tags="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAADYElEQVR4Xu1aO2gUURSNJpIQQYUg
+            ikpICn+VioL411RByGVRU4hRt5AYC0EhsVQxhY2CghhQCWkEQRDFD6QQrCxEYpAUAUFUBE0T/AY/
+            6Hqe7y6znJk1M2/frhnIgQOZd+4795357OzMpiqXy1WlmV4hIjPBA+Aj8DuYKzNHeQ3OgFk9OBjR
+            pJyc4HU4A2b9avoLPA+uBZs885IEi+8Dt/A6nACj5eBvNe5g3QfgOxf8oj16WC8JMDypxs9Z8wWx
+            15bp8QasYb0kwLAbHAD3suYL8L6iAfpYSwWw8Ica4AhrqQAW/kwD7Gbtn8CEZrFX/ys1KDfbeQ0G
+            EvTPsFYUKG4DJyKalJPdvA4DSRoAhcvAbzppBDyoY00euQb8JLbHS/AwuJDXYiAOAa7rhGGwnnUf
+            gO8Z7fEanM96IXQd8QKgqFaCvd/Gui+I3eumRydrjKQBNmixOf9nse4D8F2sPQwXsM5IGqBDi4dY
+            8wV4b9UeY6xFIWmAY1p8nzVfgPcu7RHr64drgNus+QK8s9pjmLUoeAmA7VaxDysu3ExeWfkPAVrM
+            mCPXk1flA/gEvNvTHiAzHaAYpgPEgEOAF2kPYJ6FTf1O1kKICoC/54GnHRnaaxLcieMG+Kr1G1kL
+            QaIDNIIfHHm50F/9shIzgNhXKqbWsJn1ECQigG/Ae1+CAKu01rw0q2U9hAoFyCQI0Km1I6xFYgoG
+            yD8dXmUtElMpgNgPj89au4f1SKCwpwIB9scMcE7rxsA61iMh9qPPTLrFmi/A+5D2eMxaHhJ8Uhke
+            Zb0oUHxBJ/Xrdg243ZEr2N8A4yfE9hjU7TliX7UsFXuPuKu64QOwmj2KAsU3deJZ3TbnYd4sKQfI
+            /i8wfrFQl+C6Y96QpK91MOGpTu7S7WpwtSMb2d8A43fE9ujV7cIAb8UuvIXnTQpMqgN/qNEm1n0B
+            3u+0R7KXtZMBhtvU2PxIl+zQxYTY8zy/txexXhJgeE2N77HmC/Du1R7x7qxxAcOVEpw+oW+QPmD2
+            OPhRexxn3RkwWwKOqvEQOINrSgU8G8An2sN8v5/NNYkBk3XgKXBcjX+K/V2gySPNa3Rzd38vtoc5
+            yjt4LU5Qs/wFVQmOg628DmdI8KhWTpqjOiT2SDfwGkoC//NE2hgaSBtDA2njH7AdoL1gWc9SAAAA
+            AElFTkSuQmCC
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Log>
+    </Logs>
+</Entities>

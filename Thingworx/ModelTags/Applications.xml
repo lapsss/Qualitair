@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ModelTags>
+        <ModelTagVocabulary
+         aspect.isEditableSystemObject="true"
+         description="Applications vocabulary for tagging application entities"
+         documentationContent=""
+         homeMashup=""
+         isDynamic="true"
+         name="Applications"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <VocabularyTerm
+             description=""
+             name="AndonLight"></VocabularyTerm>
+        </ModelTagVocabulary>
+    </ModelTags>
+</Entities>

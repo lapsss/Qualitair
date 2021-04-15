@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="AnalyticsJobServer"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="PredictionMicroserver"
+         projectName=""
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="BatchScore"
+                 sourceName="BatchScore"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RealtimeScore"
+                 sourceName="RealtimeScore"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveResult"
+                 sourceName="RetrieveResult"
+                 timeout="0"></RemoteServiceBinding>
+            </RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description="Run predictive scoring on a model (for large datasets)"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="BatchScore">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="FULL_RANGE"
+                             baseType="STRING"
+                             description="Metric for measuring field importance ( FULL_RANGE, DISTANCE_FROM_MAX, DISTANCE_FROM_MIN )"
+                             name="causalTechnique"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional description for this job"
+                             name="description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Field predicted by the model. Required only for Predictive Scoring jobs with Important Fields."
+                             name="goalField"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="List of fields to be included in the results as row identifiers"
+                             name="identifierFields"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0"
+                             baseType="INTEGER"
+                             description="Number of fields for which to calculate their contributing weight on the record's score (0 to skip. effects runtime)"
+                             name="importantFieldCount"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Name for this job"
+                             name="jobName"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the model used for scoring"
+                             name="modelUri"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Optionally limit categorical results to only the provided categories"
+                             name="preferredCategoricalValues"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Run synchronous predictive scoring on a model (for small datasets only. for large datasets use BatchScoring instead)"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RealtimeScore">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description="List of predictive model results and important fields, if requested"
+                         name="predictiveScores"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description="Optionally limit categorical results to the top N categories"
+                             name="categoricalLimit"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="FULL_RANGE"
+                             baseType="STRING"
+                             description="Metric for measuring field importance ( FULL_RANGE, DISTANCE_FROM_MAX, DISTANCE_FROM_MIN )"
+                             name="causalTechnique"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this scoring run (small datasets only)"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Field predicted by the model. Required only for Predictive Scoring jobs with Important Fields."
+                             name="goalField"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="List of fields to be included in the results as row identifiers"
+                             name="identifierFields"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0"
+                             baseType="INTEGER"
+                             description="Number of fields for which to calculate their contributing weight on the record's score (0 to skip. affects runtime)"
+                             name="importantFieldCount"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the model used for scoring"
+                             name="modelUri"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Optionally limit categorical results to only the specified categories"
+                             name="preferredCategoricalValues"
+                             ordinal="5"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve results of a prediction job (not safe for large datasets, use SaveJobResults instead)"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveResult">
+                        <ResultType
+                         baseType="INFOTABLE"
+                         description="List of predictive model results and important fields, if requested (in CSV format)"
+                         name="predictiveScores"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job result to retrieve"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

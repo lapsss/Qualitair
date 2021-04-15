@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.websockets.WSCommunicationsSubsystem"
+         dependsOn=""
+         description="Core WebSocket (WS) Communications"
+         documentationContent=""
+         enabled="true"
+         friendlyName="WS Communications"
+         homeMashup=""
+         name="WSCommunicationsSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Bind protection configuration"
+                 isMultiRow="false"
+                 name="BindProtectionConfigTable"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="FIRST_IN_WINS"
+                             aspect.friendlyName="Bind Protection Policy"
+                             aspect.selectOptions="FIRST_IN_WINS:First in wins|LAST_IN_WINS:Last in wins"
+                             baseType="STRING"
+                             description="Strategy used to resolve a new binding when it already exists on another endpoint"
+                             name="BindProtectionPolicy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <BindProtectionPolicy>
+                            <![CDATA[
+                            FIRST_IN_WINS
+                            ]]>
+                            </BindProtectionPolicy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Client Endpoints"
+                 isMultiRow="true"
+                 name="ClientEndpointsConfigTable"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Application Key"
+                             baseType="PASSWORD"
+                             description="Application key"
+                             name="appKey"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="45"
+                             aspect.friendlyName="Idle Ping Rate (secs)"
+                             baseType="INTEGER"
+                             description="rate (secs) that this client endpoint will ping if connection is idle"
+                             name="idlePingRate"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1"
+                             aspect.friendlyName="Max Endpoint Connections"
+                             baseType="INTEGER"
+                             description="max connections endpoint will create"
+                             name="maxConnections"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Endpoint Name"
+                             baseType="STRING"
+                             description="endpoint name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Endpoint URI"
+                             baseType="STRING"
+                             description="endpoint URI"
+                             name="uri"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Websocket Communication Settings"
+                 isMultiRow="false"
+                 name="CommonConfigTable"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="15"
+                             aspect.friendlyName="Amount of time to wait for authentication message (secs)"
+                             baseType="INTEGER"
+                             description="time to wait for an auth message"
+                             name="authTimeout"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="45"
+                             aspect.friendlyName="Idle Ping Rate (secs)"
+                             baseType="INTEGER"
+                             description="rate (secs) that a client endpoint will ping if connection is idle"
+                             name="idlePingRate"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="60"
+                             aspect.friendlyName="Idle Connection Timeout (sec)"
+                             baseType="INTEGER"
+                             description="idle timeout for a server connection (secs)"
+                             name="idleSessionTimeout"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Ping after send"
+                             baseType="BOOLEAN"
+                             description="whether or not to send a ping after sending a message or tunnel traffic"
+                             name="pingAfterSend"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="30"
+                             aspect.friendlyName="Amount of time a request will wait for the response message before timing out (secs)"
+                             baseType="INTEGER"
+                             description="time to wait for a response message"
+                             name="requestTimeout"
+                             ordinal="6"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <authTimeout>15</authTimeout>
+                            <idlePingRate>45</idlePingRate>
+                            <idleSessionTimeout>60</idleSessionTimeout>
+                            <pingAfterSend>false</pingAfterSend>
+                            <requestTimeout>30</requestTimeout>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Asynchronous edge dispatching configuration"
+                 isMultiRow="false"
+                 name="EdgeDispatcherConfigTable"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Max Thread Count"
+                             baseType="NUMBER"
+                             description="Maximum number of threads allocated to asynchronous dispatching"
+                             name="maximumThreadPoolSize"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <maximumThreadPoolSize>10.0</maximumThreadPoolSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

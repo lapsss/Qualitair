@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="DateTime range alert"
+         documentationContent=""
+         homeMashup=""
+         name="DateTimeRangeAlert"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.friendlyName="Maximum"
+                 aspect.isRequired="true"
+                 baseType="DATETIME"
+                 description="Maximum value"
+                 name="maximum"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="false"
+                 aspect.friendlyName="Include Maximum?"
+                 aspect.isRequired="false"
+                 baseType="BOOLEAN"
+                 description="Range includes maximum"
+                 name="maximumInclusive"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.compareField="maximum"
+                 aspect.compareType="le"
+                 aspect.friendlyName="Minimum"
+                 aspect.isRequired="true"
+                 baseType="DATETIME"
+                 description="Minimum value"
+                 name="minimum"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="true"
+                 aspect.friendlyName="Include Minimum?"
+                 aspect.isRequired="false"
+                 baseType="BOOLEAN"
+                 description="Range includes minimum"
+                 name="minimumInclusive"
+                 ordinal="1"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

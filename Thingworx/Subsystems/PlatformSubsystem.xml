@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.platform.PlatformSubsystem"
+         dependsOn=""
+         description="Overall platform monitoring and configuration"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Platform Subsystem"
+         homeMashup=""
+         name="PlatformSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions>
+                <Permissions
+                 resourceName="GetEntityUsageCount">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetMashupConfiguration">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetAllStateDefinitions">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetEntityCount">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetExtensionPackageList">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="SolutionCentralDevelopers"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="SolutionCentralSiteAdministrators"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetAllStyleThemes">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetBaseTypes">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetDataConnectSettings">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetExtensionPackageDetails">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="SolutionCentralDevelopers"
+                         type="Group"></Principal>
+                        <Principal
+                         isPermitted="true"
+                         name="SolutionCentralSiteAdministrators"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetAllStyleDefinitions">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetAspects">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="IsEvaluationVersion">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="IsInternalVersion">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetLicenseState">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+                <Permissions
+                 resourceName="GetLearningConnectorConfiguration">
+                    <PropertyRead></PropertyRead>
+                    <PropertyWrite></PropertyWrite>
+                    <ServiceInvoke>
+                        <Principal
+                         isPermitted="true"
+                         name="ComposerUsers"
+                         type="Group"></Principal>
+                    </ServiceInvoke>
+                    <EventInvoke></EventInvoke>
+                    <EventSubscribe></EventSubscribe>
+                </Permissions>
+            </RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility>
+                    <Principal
+                     isPermitted="true"
+                     name="SolutionCentral"
+                     type="Organization"></Principal>
+                </Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Platform Subsystem Settings"
+                 isMultiRow="false"
+                 name="PlatformInformation"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Allow Applicaiton key as URL Parameter"
+                             baseType="BOOLEAN"
+                             description="Allow Application Key as URL Parameter (false is not allowed)"
+                             name="allowAppKeyAsURLParam"
+                             ordinal="11"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Allow method switching"
+                             baseType="BOOLEAN"
+                             description="Allow method switching with request parameters (true is insecure)."
+                             name="allowMethodSwitch"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Beta Mashup Features"
+                             baseType="BOOLEAN"
+                             description="Enable beta features in mashup builder"
+                             name="betaMashupFeaturesEnabled"
+                             ordinal="13"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="ThingworxPersistenceProvider"
+                             aspect.friendlyName="Data Persistence Provider"
+                             baseType="PERSISTENCEPROVIDERNAME"
+                             description="The Persistence Provider that contains the active data provider."
+                             name="dataPersistenceProvider"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Enable Documentation Help Center"
+                             baseType="BOOLEAN"
+                             description="Enable support for the Documentation Help Center"
+                             name="documentationEnabled"
+                             ordinal="10"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Exclude Invalid Users and User Groups in Imports"
+                             baseType="BOOLEAN"
+                             description="Exclude Invalid Users and User Groups as members in Imports of Organization and User Groups"
+                             name="excludeInvalidMembers"
+                             ordinal="14"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Filter content type"
+                             baseType="BOOLEAN"
+                             description="Filter content type on requests (false is insecure)"
+                             name="filterContentType"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Required string to connect with Google for Google widgets"
+                             baseType="STRING"
+                             description="Required string to connect with Google for Google widgets"
+                             name="googleMapsConnectionString"
+                             ordinal="12"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Enable Learning Connector"
+                             baseType="BOOLEAN"
+                             description="Enable support for the Learning Connector"
+                             name="learningConnectorEnabled"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="https://precisionlms.ptc.com/ulc/ulc.html"
+                             aspect.friendlyName="Learning Connector location"
+                             baseType="HYPERLINK"
+                             description="The location of the Universal Learning Connector"
+                             name="learningConnectorSystem"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="ThingworxPersistenceProvider"
+                             aspect.friendlyName="Property Persistence Provider"
+                             baseType="PERSISTENCEPROVIDERNAME"
+                             description="The Persistence Provider that contains the active property provider."
+                             name="propertyPersistenceProvider"
+                             ordinal="6"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <allowAppKeyAsURLParam>false</allowAppKeyAsURLParam>
+                            <allowMethodSwitch>false</allowMethodSwitch>
+                            <betaMashupFeaturesEnabled>false</betaMashupFeaturesEnabled>
+                            <dataPersistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </dataPersistenceProvider>
+                            <documentationEnabled>true</documentationEnabled>
+                            <excludeInvalidMembers>true</excludeInvalidMembers>
+                            <filterContentType>true</filterContentType>
+                            <googleMapsConnectionString></googleMapsConnectionString>
+                            <learningConnectorEnabled>false</learningConnectorEnabled>
+                            <learningConnectorSystem>
+                            <![CDATA[
+                            https://precisionlms.ptc.com/ulc/ulc.html
+                            ]]>
+                            </learningConnectorSystem>
+                            <propertyPersistenceProvider>
+                            <![CDATA[
+                            ThingworxPersistenceProvider
+                            ]]>
+                            </propertyPersistenceProvider>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="ThingWorx Metrics Reporting Services Configuration"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MetricsReporting"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Customer name"
+                             aspect.isReadOnly="true"
+                             baseType="STRING"
+                             description="Customer name"
+                             name="customerName"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="15.0"
+                             aspect.friendlyName="Metrics Enrollment Delay"
+                             aspect.isHidden="true"
+                             baseType="NUMBER"
+                             description="Delay period (minutes) between metrics enrollment attempts."
+                             name="metricsEnrollmentDelayMinutes"
+                             ordinal="9"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="24.0"
+                             aspect.friendlyName="Metrics Reporting Period"
+                             aspect.isHidden="true"
+                             baseType="NUMBER"
+                             description="Period (hours) between metrics reporting."
+                             name="metricsReportingPeriodHours"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Opt in to metrics reporting"
+                             baseType="BOOLEAN"
+                             description="Opt in to metrics reporting"
+                             name="optIn"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Metrics Reporting Server"
+                             aspect.isHidden="true"
+                             baseType="HYPERLINK"
+                             description="Metrics server URL"
+                             name="remoteUrl"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Customer Number"
+                             aspect.isReadyOnly="true"
+                             baseType="INTEGER"
+                             description="Customer number"
+                             name="scn"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Customer Number"
+                             aspect.isReadyOnly="true"
+                             baseType="STRING"
+                             description="Trial edition customer number"
+                             name="trialScn"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <customerName>
+                            <![CDATA[
+                            trial_customer
+                            ]]>
+                            </customerName>
+                            <metricsEnrollmentDelayMinutes>15.0</metricsEnrollmentDelayMinutes>
+                            <metricsReportingPeriodHours>24.0</metricsReportingPeriodHours>
+                            <optIn>true</optIn>
+                            <remoteUrl>
+                            <![CDATA[
+                            wss://parec.ptc.com:8443/Thingworx/WS
+                            ]]>
+                            </remoteUrl>
+                            <scn>0</scn>
+                            <trialScn>
+                            <![CDATA[
+                            00000000-0000-0000-0000-000000000000
+                            ]]>
+                            </trialScn>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

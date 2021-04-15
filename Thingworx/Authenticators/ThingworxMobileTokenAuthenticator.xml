@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Authenticators>
+        <Authenticator
+         aspect.isEditableSystemObject="true"
+         className="com.thingworx.security.authentication.ThingworxMobileTokenAuthenticator"
+         description="Mobile App Builder Authenticator that validates against the Thingworx Mobile Tokens"
+         documentationContent=""
+         enabled="false"
+         homeMashup=""
+         name="ThingworxMobileTokenAuthenticator"
+         priority="150"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Authenticator>
+    </Authenticators>
+</Entities>

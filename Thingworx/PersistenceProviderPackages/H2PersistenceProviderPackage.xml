@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <PersistenceProviderPackages>
+        <PersistenceProviderPackage
+         aspect.isSystemObject="true"
+         className="com.thingworx.persistence.h2.H2PersistenceProviderPackage"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="H2PersistenceProviderPackage"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </PersistenceProviderPackage>
+    </PersistenceProviderPackages>
+</Entities>

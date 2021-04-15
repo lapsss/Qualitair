@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="The metrics for a specific bin of a continuous goal"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsValidationBinError"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Minimum bin value"
+                 name="maxBinRange"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Maximum bin value"
+                 name="minBinRange"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Linear correlation between actual and predicted scores (-1 to 1, where 0 = no correlation and -1 or 1 = high correlation)"
+                 name="pearsonCorrelation"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Total number of records that fall into this bin"
+                 name="recordCount"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Root Mean Squared Error is the standard deviation of the differences between actual and predicted scores"
+                 name="rmse"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="RMSE with scores normalized between 0 and 1"
+                 name="rmseNormalized"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

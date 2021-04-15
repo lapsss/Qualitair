@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Parameters for upsampling and downsampling a boolean goal"
+         documentationContent=""
+         homeMashup=""
+         name="AnalyticsSamplingParams"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The factor to sample by. (0,1) is downsampling, (1,inf] is upsampling."
+                 name="samplingFactor"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="The type of sampling (NONE, UPSAMPLE, DOWNSAMPLE)"
+                 name="samplingStrategy"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="BOOLEAN"
+                 description="The values of the boolean goal to sample (TRUE, FALSE)"
+                 name="valueToSample"
+                 ordinal="2"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="DataShape used for Vec3 BaseTypes."
+         documentationContent=""
+         homeMashup=""
+         name="Vec3DataShape"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.defaultValue="0.0"
+                 baseType="NUMBER"
+                 description=""
+                 name="x"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="0.0"
+                 baseType="NUMBER"
+                 description=""
+                 name="y"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue="0.0"
+                 baseType="NUMBER"
+                 description=""
+                 name="z"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

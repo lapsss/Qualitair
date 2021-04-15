@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Datashape for Entity Dependencies"
+         documentationContent=""
+         homeMashup=""
+         name="EntityDependency"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="STRING"
+                 description="Dependent entity container name"
+                 name="containerName"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="STRING"
+                 description="State of dependent entity container"
+                 name="containerState"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="STRING"
+                 description="Dependent entity container type"
+                 name="containerType"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="STRING"
+                 description="Dependent entity container version"
+                 name="containerVersion"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="DATETIME"
+                 description="Dependent entity last modified"
+                 name="dependentEntityLastModified"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Dependent entity name"
+                 name="dependentEntityName"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Dependent entity last modified date"
+                 name="dependentEntityType"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Entity name"
+                 name="entityName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Entity type"
+                 name="entityType"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="JSON"
+                 description="Used-In information of dependent entity"
+                 name="whereUsed"
+                 ordinal="9"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,903 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className="com.thingworx.collaboration.blogs.BlogThing"
+         description="Blog shape"
+         documentationContent=""
+         homeMashup=""
+         name="Blog"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="BlogEntries"
+                 description="Add a new blog entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddBlogEntry">
+                    <ResultType
+                     baseType="STRING"
+                     description="New blog entry ID"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry content"
+                         name="content"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location"
+                         name="location"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the blog entry"
+                         name="source"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Time of the blog entry"
+                         name="timestamp"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry title"
+                         name="title"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Add a comment to a specific blog entry or blog comment"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddComment">
+                    <ResultType
+                     baseType="STRING"
+                     description="Created blog comment ID"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Existing blog comment ID"
+                         name="blogCommentId"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry ID"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for blog entry"
+                         name="timestamp"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="BlogEntries"
+                 description="Delete a blog entry given a specific blog entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteBlogEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry id"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Delete a blog comment given a specific blog comment ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteComment">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog comment id"
+                         name="blogCommentId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category=""
+                 description="Retrieve a list of all blog entries by month"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetBlogActivityHistory">
+                    <ResultType
+                     aspect.dataShape="BlogHistory"
+                     baseType="INFOTABLE"
+                     description="Count of blog entries by month"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve a list of all blog entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetBlogEntries">
+                    <ResultType
+                     aspect.dataShape="BlogEntry"
+                     baseType="INFOTABLE"
+                     description="All blog entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Sort Order (Newest, HighestRated, MostActive)"
+                         name="sortOrder"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve a list of all blog entries with comments"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetBlogEntriesWithComments">
+                    <ResultType
+                     aspect.dataShape="BlogEntryWithComments"
+                     baseType="INFOTABLE"
+                     description="All blog entries with comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Sort Order (Newest, HighestRated, MostActive)"
+                         name="sortOrder"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="BlogEntries"
+                 description="Retrieve a blog entry given a specific blog entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetBlogEntry">
+                    <ResultType
+                     aspect.dataShape="BlogEntry"
+                     baseType="INFOTABLE"
+                     description="Blog entry"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry id"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve a blog entry given a specific blog entry ID, with comments"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetBlogEntryWithComments">
+                    <ResultType
+                     aspect.dataShape="BlogEntryWithComments"
+                     baseType="INFOTABLE"
+                     description="Blog entry"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry id"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Retrieve a blog comment given a specific blog comment ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetComment">
+                    <ResultType
+                     aspect.dataShape="Comment"
+                     baseType="INFOTABLE"
+                     description="Blog comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog comment id"
+                         name="blogCommentId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Retrieve a list of blog comments given a specific blog entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetComments">
+                    <ResultType
+                     aspect.dataShape="Comment"
+                     baseType="INFOTABLE"
+                     description="Blog comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry id"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Maintenance"
+                 description="Purge blog entries for a specified date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="PurgeBlogEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve a list of all blog entries filtered tags, source, and optional an date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryBlogEntries">
+                    <ResultType
+                     aspect.dataShape="BlogEntry"
+                     baseType="INFOTABLE"
+                     description="All blog entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Sort Order (Newest, HighestRated, MostActive)"
+                         name="sortOrder"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of this entry (optional)"
+                         name="source"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve a list of all blog entries filtered tags, source, and optional an date range - with all comments"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryBlogEntriesWithComments">
+                    <ResultType
+                     aspect.dataShape="BlogEntryWithComments"
+                     baseType="INFOTABLE"
+                     description="All blog entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Sort Order (Newest, HighestRated, MostActive)"
+                         name="sortOrder"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of this entry (optional)"
+                         name="source"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Rating"
+                 description="Rate an entry given a specific entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="RateContent">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Rating"
+                     name="Rating"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Entry id"
+                         name="entryId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Rating"
+                         name="rating"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve a list of all blog entries filtered by keyword query and optional date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SearchBlogEntries">
+                    <ResultType
+                     aspect.dataShape="BlogEntry"
+                     baseType="INFOTABLE"
+                     description="Matching entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Search expression"
+                         name="searchExpression"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Sort Order (Newest, HighestRated, MostActive)"
+                         name="sortOrder"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category=""
+                 description="Retrieve a list of all blog entries filtered by keyword query and optional date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SearchBlogEntriesWithComments">
+                    <ResultType
+                     aspect.dataShape="BlogEntryWithComments"
+                     baseType="INFOTABLE"
+                     description="Matching entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Search expression"
+                         name="searchExpression"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Sort Order (Newest, HighestRated, MostActive)"
+                         name="sortOrder"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="BlogEntries"
+                 description="Update the sticky status for a blog entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SetStickyStatus">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry id"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Sticky status"
+                         name="isSticky"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="BlogEntries"
+                 description="Update a blog entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateBlogEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry id"
+                         name="blogEntryId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for blog entry"
+                         name="timestamp"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Blog entry title"
+                         name="title"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Update a comment for a specific blog comment id"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateComment">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Existing blog comment ID"
+                         name="blogCommentId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for comment entry"
+                         name="timestamp"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings>
+                <ServiceMapping
+                 deleteService="DeleteBlogEntry"
+                 description="Entries"
+                 listService="GetBlogEntries"
+                 name="BlogEntries"
+                 queryService="GetBlogEntry"></ServiceMapping>
+                <ServiceMapping
+                 deleteService="DeleteComment"
+                 description="Comments"
+                 listService=""
+                 name="Comments"
+                 queryService="GetComment"></ServiceMapping>
+            </ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Add a new blog entry"
+                 handlerName="Reflection"
+                 name="AddBlogEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add a comment to a specific blog entry or blog comment"
+                 handlerName="Reflection"
+                 name="AddComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete a blog entry given a specific blog entry ID"
+                 handlerName="Reflection"
+                 name="DeleteBlogEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete a blog comment given a specific blog comment ID"
+                 handlerName="Reflection"
+                 name="DeleteComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries by month"
+                 handlerName="Reflection"
+                 name="GetBlogActivityHistory">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries"
+                 handlerName="Reflection"
+                 name="GetBlogEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries with comments"
+                 handlerName="Reflection"
+                 name="GetBlogEntriesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a blog entry given a specific blog entry ID"
+                 handlerName="Reflection"
+                 name="GetBlogEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a blog entry given a specific blog entry ID, with comments"
+                 handlerName="Reflection"
+                 name="GetBlogEntryWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a blog comment given a specific blog comment ID"
+                 handlerName="Reflection"
+                 name="GetComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of blog comments given a specific blog entry ID"
+                 handlerName="Reflection"
+                 name="GetComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Purge blog entries for a specified date range"
+                 handlerName="Reflection"
+                 name="PurgeBlogEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries filtered tags, source, and optional an date range"
+                 handlerName="Reflection"
+                 name="QueryBlogEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries filtered tags, source, and optional an date range - with all comments"
+                 handlerName="Reflection"
+                 name="QueryBlogEntriesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Rate an entry given a specific entry ID"
+                 handlerName="Reflection"
+                 name="RateContent">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries filtered by keyword query and optional date range"
+                 handlerName="Reflection"
+                 name="SearchBlogEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of all blog entries filtered by keyword query and optional date range"
+                 handlerName="Reflection"
+                 name="SearchBlogEntriesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update the sticky status for a blog entry"
+                 handlerName="Reflection"
+                 name="SetStickyStatus">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update a blog entry"
+                 handlerName="Reflection"
+                 name="UpdateBlogEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update a comment for a specific blog comment id"
+                 handlerName="Reflection"
+                 name="UpdateComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

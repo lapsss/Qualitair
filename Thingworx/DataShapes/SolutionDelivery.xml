@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Datashape for Solution Deliveries"
+         documentationContent=""
+         homeMashup=""
+         name="SolutionDelivery"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Solution Delivery Creator"
+                 name="createdBy"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 baseType="DATETIME"
+                 description="Solution Delivery creation date"
+                 name="creationDate"
+                 ordinal="9"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Description of Solution Delivery"
+                 name="description"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Display name of Solution Delivery"
+                 name="displayName"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Download URL"
+                 name="downloadURL"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="URL to Solution in Solution Central"
+                 name="href"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="DATETIME"
+                 description="Solution Delivery last updated"
+                 name="lastUpdateDate"
+                 ordinal="10"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Solution Delivery Id"
+                 name="solutionDeliveryId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Solution Id"
+                 name="solutionId"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="State of the Solution Delivery"
+                 name="state"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Version"
+                 name="version"
+                 ordinal="4"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

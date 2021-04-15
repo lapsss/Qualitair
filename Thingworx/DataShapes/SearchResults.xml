@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Search results"
+         documentationContent=""
+         homeMashup=""
+         name="SearchResults"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.dataShape="CollaborationFacets"
+                 baseType="INFOTABLE"
+                 description="Collaboration facets"
+                 name="collaborationFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="CollaborationSearchResult"
+                 baseType="INFOTABLE"
+                 description="Collaboration results"
+                 name="collaborationResults"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="CommonFacets"
+                 baseType="INFOTABLE"
+                 description="Common facets"
+                 name="commonFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntitySearchResult"
+                 baseType="INFOTABLE"
+                 description="Common results"
+                 name="commonResults"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="DataFacets"
+                 baseType="INFOTABLE"
+                 description="Data facets"
+                 name="dataFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntitySearchResult"
+                 baseType="INFOTABLE"
+                 description="Data results"
+                 name="dataResults"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="JSON"
+                 description="Filters for this query"
+                 name="filters"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="MashupFacets"
+                 baseType="INFOTABLE"
+                 description="Mashup facets"
+                 name="mashupFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntitySearchResult"
+                 baseType="INFOTABLE"
+                 description="Mashup results"
+                 name="mashupResults"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="PeopleFacets"
+                 baseType="INFOTABLE"
+                 description="People facets"
+                 name="peopleFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntitySearchResult"
+                 baseType="INFOTABLE"
+                 description="People results"
+                 name="peopleResults"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="TagFacets"
+                 baseType="INFOTABLE"
+                 description="Tag facets"
+                 name="tagFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntitySearchResult"
+                 baseType="INFOTABLE"
+                 description="Tag results"
+                 name="tagResults"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="ThingFacets"
+                 baseType="INFOTABLE"
+                 description="Thing facets"
+                 name="thingFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="EntitySearchResult"
+                 baseType="INFOTABLE"
+                 description="Thing results"
+                 name="thingResults"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

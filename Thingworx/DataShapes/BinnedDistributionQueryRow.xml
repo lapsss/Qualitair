@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="The results of a binned distribution query"
+         documentationContent=""
+         homeMashup=""
+         name="BinnedDistributionQueryRow"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The average value of the goal field among the records in a bin"
+                 name="averageGoal"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Range definition for a bin"
+                 name="bin"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 baseType="LONG"
+                 description="The number of records that fall into a bin"
+                 name="count"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The observed maximum value in a bin"
+                 name="max"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The observed minimum value in a bin"
+                 name="min"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 baseType="NUMBER"
+                 description="The sum of the goal field values among the records in a bin"
+                 name="totalGoal"
+                 ordinal="4"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="GAV of Dependent Solution"
+         documentationContent=""
+         homeMashup=""
+         name="SolutionDependency"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="ArtifactId of dependency"
+                 name="artifactId"
+                 ordinal="3"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="BOOLEAN"
+                 description="Deploy status of the Solution on this instance"
+                 name="deployStatus"
+                 ordinal="8"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Solution name"
+                 name="displayName"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Artifactory download URL of dependency"
+                 name="downloadURL"
+                 ordinal="5"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="GroupId of dependency"
+                 name="groupId"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="STRING"
+                 description="URL of the dependency in Solution Central"
+                 name="href"
+                 ordinal="7"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="false"
+                 baseType="DATETIME"
+                 description="Last modified date of the dependency"
+                 name="lastModifiedDate"
+                 ordinal="6"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Solution Id of dependency"
+                 name="solutionId"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Version of dependency"
+                 name="version"
+                 ordinal="4"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

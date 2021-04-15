@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Datashape for Solution Deliveries"
+         documentationContent=""
+         homeMashup=""
+         name="EntityDependencyAvailability"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Availability of this container in Solution Central"
+                 name="availability"
+                 ordinal="4"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Dependent entity container name"
+                 name="containerName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Dependent entity container type"
+                 name="containerType"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Dependent entity container version"
+                 name="containerVersion"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isRequired="true"
+                 baseType="STRING"
+                 description="Computed Solution ID that this container would have"
+                 name="id"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

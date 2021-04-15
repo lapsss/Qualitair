@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="RemoteThing"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="StatisticalCalculationMicroserver"
+         projectName=""
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateBinnedDataDistributionForBinSize"
+                 sourceName="CalculateBinnedDataDistributionForBinSize"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateBinnedDataDistributionForNumberOfBins"
+                 sourceName="CalculateBinnedDataDistributionForNumberOfBins"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateConfidenceIntervalValues"
+                 sourceName="CalculateConfidenceIntervalValues"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateFiveNumberPropertyValues"
+                 sourceName="CalculateFiveNumberPropertyValues"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateFourierTransform"
+                 sourceName="CalculateFourierTransform"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateMaximumValue"
+                 sourceName="CalculateMaximumValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateMeanValue"
+                 sourceName="CalculateMeanValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateMedianValue"
+                 sourceName="CalculateMedianValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateMinimumValue"
+                 sourceName="CalculateMinimumValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateModeValue"
+                 sourceName="CalculateModeValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateRangeValue"
+                 sourceName="CalculateRangeValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateRateOfChange"
+                 sourceName="CalculateRateOfChange"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateSamplingFrequencyValues"
+                 sourceName="CalculateSamplingFrequencyValues"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CalculateStandardDeviationValue"
+                 sourceName="CalculateStandardDeviationValue"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="VersionInfo"
+                 sourceName="VersionInfo"
+                 timeout="0"></RemoteServiceBinding>
+            </RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the binned distribution of data points based on the desired bin size, the minimum value (optional), and maximum value (optional)."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateBinnedDataDistributionForBinSize">
+                        <ResultType
+                         aspect.dataShape="AnalyticsDataDistributionBin"
+                         baseType="INFOTABLE"
+                         description="List of bins, each containing the lower and upper boundaries and the count of data points within that range."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The width of the bin. Must be a positive number."
+                             name="binSize"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="(Optional) The maximum value that should be included in the distribution"
+                             name="max"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="(Optional) The minimum value that should be included in the distribution"
+                             name="min"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the binned distribution of data points based on the desired number of bins, the minimum value (optional), and maximum value (optional)."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateBinnedDataDistributionForNumberOfBins">
+                        <ResultType
+                         aspect.dataShape="AnalyticsDataDistributionBin"
+                         baseType="INFOTABLE"
+                         description="List of bins, each containing the lower and upper boundaries and the count of data points within that range."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="(Optional) The maximum value that should be included in the distribution"
+                             name="max"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="(Optional) The minimum value that should be included in the distribution"
+                             name="min"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description="The number of bins. Must be a positive number."
+                             name="numBins"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Based on the specified confidence interval percentage, calculate the minimum, median, and maximum interval values."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateConfidenceIntervalValues">
+                        <ResultType
+                         aspect.dataShape="AnalyticsConfidenceIntervalResult"
+                         baseType="INFOTABLE"
+                         description="The confidence interval values for the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="The confidence interval percentage"
+                             name="percentage"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the five number values (min, lower quartile, median, upper quartile, max)."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateFiveNumberPropertyValues">
+                        <ResultType
+                         aspect.dataShape="AnalyticsFiveNumberSummaryResult"
+                         baseType="INFOTABLE"
+                         description="The five number summary for the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the results of running the fast Fourier transform on the specified values."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateFourierTransform">
+                        <ResultType
+                         aspect.dataShape="AnalyticsFourierTransformResult"
+                         baseType="INFOTABLE"
+                         description="The result of running an FFT on the values from the provided infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the maximum property value in the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateMaximumValue">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The largest property value in the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the mean property value in the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateMeanValue">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The mean property value in the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the median property value in the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateMedianValue">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The median property value in the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the minimum property value from the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateMinimumValue">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The smallest property value in the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the mode values from the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateModeValue">
+                        <ResultType
+                         aspect.dataShape="NumberArrayElement"
+                         baseType="INFOTABLE"
+                         description="The mode values for the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the range of values in the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateRangeValue">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The range of values in the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the percentage of difference between two specified values"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateRateOfChange">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The rate of change between the previous value and the current value, expressed as a percentage."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="current value"
+                             name="currentValue"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="NUMBER"
+                             description="previous value"
+                             name="previousValue"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the sampling frequency values (min, median and max)"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateSamplingFrequencyValues">
+                        <ResultType
+                         aspect.dataShape="AnalyticsSamplingFrequencyResult"
+                         baseType="INFOTABLE"
+                         description="The sampling frequency for the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Calculate the standard deviation value from the provided infotable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CalculateStandardDeviationValue">
+                        <ResultType
+                         baseType="NUMBER"
+                         description="The standard deviation value for the given infotable."
+                         name="result"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsTimedValue"
+                             baseType="INFOTABLE"
+                             description="The list of timed values"
+                             name="timedValues"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve version of the microservice"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="VersionInfo">
+                        <ResultType
+                         baseType="STRING"
+                         description="Platform version followed by microservice version"
+                         name="version"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

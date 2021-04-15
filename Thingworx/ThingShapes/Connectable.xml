@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className=""
+         description="Connected device"
+         documentationContent=""
+         homeMashup=""
+         name="Connectable"
+         projectName=""
+         tags="">
+            <PropertyDefinitions>
+                <PropertyDefinition
+                 aspect.defaultValue="false"
+                 aspect.isPersistent="false"
+                 aspect.isReadOnly="true"
+                 baseType="BOOLEAN"
+                 category="ConnectionStatus"
+                 description="Flag indicating if connected or not"
+                 isLocalOnly="true"
+                 name="isConnected"
+                 ordinal="0"></PropertyDefinition>
+                <PropertyDefinition
+                 aspect.defaultValue="1970-01-01T00:00:00.000Z"
+                 aspect.isPersistent="true"
+                 aspect.isReadOnly="true"
+                 baseType="DATETIME"
+                 category="ConnectionStatus"
+                 description="Last connection time"
+                 isLocalOnly="true"
+                 name="lastConnection"
+                 ordinal="0"></PropertyDefinition>
+            </PropertyDefinitions>
+            <ServiceDefinitions></ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations></ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

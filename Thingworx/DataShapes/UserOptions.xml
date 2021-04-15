@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Options used in user CRUD operations"
+         documentationContent=""
+         homeMashup=""
+         name="UserOptions"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Reason to delete the user"
+                 name="deleteReason"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Description of the user"
+                 name="description"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="DesignTimePermissions"
+                 baseType="INFOTABLE"
+                 description="The design time permissions for the user"
+                 name="designTimePermissions"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="Group"
+                 baseType="INFOTABLE"
+                 description="Groups that user belong to"
+                 name="groups"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="MASHUPNAME"
+                 description="The name of the home mashup for the user"
+                 name="homeMashupName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.defaultValue=""
+                 baseType="STRING"
+                 description="Primary language"
+                 name="language"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="MASHUPNAME"
+                 description="The name of the Mobile Mashup for the user"
+                 name="mobileMashupName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="PASSWORD"
+                 description="The password for the user"
+                 name="password"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="PROJECTNAME"
+                 description="Project that user belongs to"
+                 name="projectName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="RunTimePermissions"
+                 baseType="INFOTABLE"
+                 description="The runtime permissions for the user"
+                 name="runTimePermissions"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="TAGS"
+                 description="Collection of tags applied to the user"
+                 name="tags"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="USERNAME"
+                 description="The name of user to create"
+                 name="userName"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="Permissions"
+                 baseType="INFOTABLE"
+                 description="The visibility permissions for the user"
+                 name="visibilityPermissions"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

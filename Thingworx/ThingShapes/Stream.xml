@@ -1,0 +1,756 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className="com.thingworx.streams.StreamThing"
+         description="Stream shape"
+         documentationContent=""
+         homeMashup=""
+         name="Stream"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="StreamEntries"
+                 description="Add multiple stream entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddStreamEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.dataShape="StreamEntryWithValues"
+                         baseType="INFOTABLE"
+                         description="Stream entry values"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="StreamEntries"
+                 description="Add a new stream entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddStreamEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the event"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (User,Thing)"
+                         name="sourceType"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags (optional)"
+                         name="tags"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Event time (optional)"
+                         name="timestamp"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="5"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Values"
+                 description="Create an empty info table of the correct datashape for this stream"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="CreateValues">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Created Infotable"
+                     name="Values"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Values"
+                 description="Create an info table of the correct datashape for this stream and include data values"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="CreateValuesWithData">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Created Infotable"
+                     name="Values"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="JSON"
+                         description="Data values (JSON Object)"
+                         name="values"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="StreamEntries"
+                 description="Delete a specific stream entry given a stream entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteStreamEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Stream entry ID"
+                         name="streamEntryId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataShape"
+                 description="Get the currently assigned data shape"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetDataShape">
+                    <ResultType
+                     baseType="DATASHAPENAME"
+                     description="Data shape name"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Fields"
+                 description="Retrieve a list of field names for the data shape associated with this stream"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetFieldNames">
+                    <ResultType
+                     aspect.dataShape="EntityList"
+                     baseType="INFOTABLE"
+                     description="Field names"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Fields"
+                 description="Retrieve a list of field names for the data shape associated with this stream, of a specific type"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetFieldNamesByType">
+                    <ResultType
+                     aspect.dataShape="EntityList"
+                     baseType="INFOTABLE"
+                     description="Field names"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="BASETYPENAME"
+                         description="Base type name"
+                         name="type"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Get all stream data (no entry detail)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetStreamData">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Search/sort from oldest to newest"
+                         name="oldestFirst"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Get all stream entries (without data)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetStreamEntries">
+                    <ResultType
+                     aspect.isStreamEntry="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Search/sort from oldest to newest"
+                         name="oldestFirst"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Get all stream entries (with data)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetStreamEntriesWithData">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     aspect.isStreamEntry="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Search/sort from oldest to newest"
+                         name="oldestFirst"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="StreamEntries"
+                 description="Retrieve a specific stream entry given a stream entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetStreamEntry">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     aspect.isStreamEntry="true"
+                     baseType="INFOTABLE"
+                     description="Stream entry"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Stream entry ID"
+                         name="streamEntryId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="StreamEntries"
+                 description="Retrieve a count of stream entries"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetStreamEntryCount">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Stream entry count"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Maintenance"
+                 description="Purge stream entries for a specified date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="PurgeStreamEntries">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="false"
+                         baseType="BOOLEAN"
+                         description="Delete immediately"
+                         name="immediate"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Query stream data (no stream entry details), along with filter and sort criteria"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryStreamData">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Search/sort from oldest to newest"
+                         name="oldestFirst"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of this entry (optional)"
+                         name="source"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Query stream entries (without data), along with filter and sort criteria"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryStreamEntries">
+                    <ResultType
+                     aspect.isStreamEntry="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Search/sort from oldest to newest"
+                         name="oldestFirst"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of this entry (optional)"
+                         name="source"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Query stream entries (with data), along with filter and sort criteria"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryStreamEntriesWithData">
+                    <ResultType
+                     aspect.isEntityDataShape="true"
+                     aspect.isStreamEntry="true"
+                     baseType="INFOTABLE"
+                     description="Table entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="BOOLEAN"
+                         description="Search/sort from oldest to newest"
+                         name="oldestFirst"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="QUERY"
+                         description="Query definition"
+                         name="query"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of this entry (optional)"
+                         name="source"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="DataShape"
+                 description="Sets the currently assigned data shape"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SetDataShape">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATASHAPENAME"
+                         description="Data shape name"
+                         name="name"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="StreamEntries"
+                 description="Update an existing stream entry"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateStreamEntry">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry (optional)"
+                         name="location"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the event"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Stream entry ID"
+                         name="streamEntryId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags (optional)"
+                         name="tags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.isEntityDataShape="true"
+                         baseType="INFOTABLE"
+                         description="Data values"
+                         name="values"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings>
+                <ServiceMapping
+                 deleteService="DeleteStreamEntry"
+                 description="Mapped services for stream entries"
+                 listService="GetStreamEntriesWithData"
+                 name="StreamEntries"
+                 queryService="GetStreamEntry"></ServiceMapping>
+                <ServiceMapping
+                 deleteService=""
+                 description="Mapped service for stream entry count"
+                 listService="GetStreamEntryCount"
+                 name="StreamEntryCount"
+                 queryService=""></ServiceMapping>
+            </ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Add multiple stream entries"
+                 handlerName="Reflection"
+                 name="AddStreamEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add a new stream entry"
+                 handlerName="Reflection"
+                 name="AddStreamEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Create an empty info table of the correct datashape for this stream"
+                 handlerName="Reflection"
+                 name="CreateValues">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Create an info table of the correct datashape for this stream and include data values"
+                 handlerName="Reflection"
+                 name="CreateValuesWithData">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete a specific stream entry given a stream entry ID"
+                 handlerName="Reflection"
+                 name="DeleteStreamEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get the currently assigned data shape"
+                 handlerName="Reflection"
+                 name="GetDataShape">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of field names for the data shape associated with this stream"
+                 handlerName="Reflection"
+                 name="GetFieldNames">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a list of field names for the data shape associated with this stream, of a specific type"
+                 handlerName="Reflection"
+                 name="GetFieldNamesByType">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get all stream data (no entry detail)"
+                 handlerName="Reflection"
+                 name="GetStreamData">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get all stream entries (without data)"
+                 handlerName="Reflection"
+                 name="GetStreamEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get all stream entries (with data)"
+                 handlerName="Reflection"
+                 name="GetStreamEntriesWithData">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a specific stream entry given a stream entry ID"
+                 handlerName="Reflection"
+                 name="GetStreamEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a count of stream entries"
+                 handlerName="Reflection"
+                 name="GetStreamEntryCount">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Purge stream entries for a specified date range"
+                 handlerName="Reflection"
+                 name="PurgeStreamEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Query stream data (no stream entry details), along with filter and sort criteria"
+                 handlerName="Reflection"
+                 name="QueryStreamData">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Query stream entries (without data), along with filter and sort criteria"
+                 handlerName="Reflection"
+                 name="QueryStreamEntries">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Query stream entries (with data), along with filter and sort criteria"
+                 handlerName="Reflection"
+                 name="QueryStreamEntriesWithData">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Sets the currently assigned data shape"
+                 handlerName="Reflection"
+                 name="SetDataShape">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update an existing stream entry"
+                 handlerName="Reflection"
+                 name="UpdateStreamEntry">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

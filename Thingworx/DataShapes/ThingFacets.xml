@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Thing facets"
+         documentationContent=""
+         homeMashup=""
+         name="ThingFacets"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INTEGER"
+                 description="Count"
+                 name="count"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="MultilevelFacets"
+                 baseType="INFOTABLE"
+                 description="Model tag facets"
+                 name="modelTagFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="NamedFacets"
+                 baseType="INFOTABLE"
+                 description="Network facets"
+                 name="networkFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="FieldDefinition"
+                 baseType="INFOTABLE"
+                 description="Property value facets"
+                 name="propertyValueFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="NamedFacets"
+                 baseType="INFOTABLE"
+                 description="Thing shape facets"
+                 name="thingShapeFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="NamedFacets"
+                 baseType="INFOTABLE"
+                 description="Thing template facets"
+                 name="thingTemplateFacets"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.dataShape="NamedFacets"
+                 baseType="INFOTABLE"
+                 description="Type facets"
+                 name="typeFacets"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

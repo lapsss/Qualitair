@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ScriptFunctionLibraries>
+        <ScriptFunctionLibrary
+         aspect.isSystemObject="true"
+         className="com.thingworx.dsl.functions.EncryptionFunctions"
+         description="Encryption function library"
+         documentationContent=""
+         homeMashup=""
+         name="EncryptionFunctions"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FunctionDefinitions>
+                <FunctionDefinition
+                 description="Base 64 decode a string into a byte array"
+                 name="base64DecodeBytes">
+                    <ResultType
+                     baseType="JSON"
+                     description="Decoded value as JSON array"
+                     name="decodedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Base 64 decode a string"
+                 name="base64DecodeString">
+                    <ResultType
+                     baseType="STRING"
+                     description="Decoded value"
+                     name="decodedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Base 64 encode bytes"
+                 name="base64EncodeBytes">
+                    <ResultType
+                     baseType="STRING"
+                     description="Encoded value"
+                     name="encodedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="JSON"
+                         description="Array value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Base 64 encode a string"
+                 name="base64EncodeString">
+                    <ResultType
+                     baseType="STRING"
+                     description="Encoded value"
+                     name="encodedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Decrypt a string with a user provided key"
+                 name="decryptStringWithkey">
+                    <ResultType
+                     baseType="STRING"
+                     description="Encrypted value"
+                     name="encryptedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Encryption key (56 hex chars)"
+                         name="key"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Encrypt a property value"
+                 name="encryptPropertyValue">
+                    <ResultType
+                     baseType="STRING"
+                     description="Encrypted value"
+                     name="encryptedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Encrypt a string"
+                 name="encryptString">
+                    <ResultType
+                     baseType="STRING"
+                     description="Encrypted value"
+                     name="encryptedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+                <FunctionDefinition
+                 description="Encrypt a string with a user provided key"
+                 name="encryptStringWithKey">
+                    <ResultType
+                     baseType="STRING"
+                     description="Encrypted value"
+                     name="encryptedValue"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Encryption key (56 hex chars)"
+                         name="key"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="String value"
+                         name="value"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </FunctionDefinition>
+            </FunctionDefinitions>
+        </ScriptFunctionLibrary>
+    </ScriptFunctionLibraries>
+</Entities>

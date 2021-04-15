@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Mashups>
+        <Mashup
+         aspect.isSystemObject="true"
+         aspect.mashupType="thingshape"
+         aspect.thingTemplate="clob7: 'DataTable'"
+         columns="0.0"
+         description=""
+         documentationContent=""
+         homeMashup=""
+         name="DataTableMashup"
+         projectName=""
+         rows="0.0"
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Mashup Mobile Settings"
+                 isHidden="true"
+                 isMultiRow="false"
+                 name="MobileSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Disable Zoom"
+                             baseType="BOOLEAN"
+                             description="Disables zooming in and out within the mashup"
+                             name="disableZoom"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Full Screen Mode"
+                             baseType="BOOLEAN"
+                             description="Open the mashup in full screen mode"
+                             name="fullScreenMode"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Height"
+                             baseType="STRING"
+                             description="The height of the mashup page"
+                             name="height"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-height"
+                             aspect.friendlyName="Height Type"
+                             baseType="STRING"
+                             description="Use the height of the device display, or a custom height (in px)"
+                             name="heightType"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="1.0"
+                             aspect.friendlyName="Initial Scale"
+                             baseType="NUMBER"
+                             description="The initial zoom scale when the mashup is loaded for the first time"
+                             name="initialScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Shortcut Icon Title"
+                             baseType="STRING"
+                             description="A title for the mashup shortcut on the iOS home screen"
+                             name="iosShortcutIconTitle"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="black-translucent"
+                             aspect.friendlyName="Status Bar Appearance"
+                             baseType="STRING"
+                             description="The style of the iOS status bar"
+                             name="iosStatusBarAppearance"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10.0"
+                             aspect.friendlyName="Maximum Scale"
+                             baseType="NUMBER"
+                             description="The maximum scale that users can zoom out to"
+                             name="maximumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="0.1"
+                             aspect.friendlyName="Minimum Scale"
+                             baseType="NUMBER"
+                             description="The minimum scale that users can zoom out to"
+                             name="minimumScale"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Width"
+                             baseType="STRING"
+                             description="The width of the mashup page"
+                             name="width"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="device-width"
+                             aspect.friendlyName="Width Type"
+                             baseType="STRING"
+                             description="Use the width of the device display, or a custom width (in px)"
+                             name="widthType"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <disableZoom>false</disableZoom>
+                            <fullScreenMode>true</fullScreenMode>
+                            <height></height>
+                            <heightType>
+                            <![CDATA[
+                            device-height
+                            ]]>
+                            </heightType>
+                            <initialScale>1.0</initialScale>
+                            <iosShortcutIconTitle></iosShortcutIconTitle>
+                            <iosStatusBarAppearance>
+                            <![CDATA[
+                            black-translucent
+                            ]]>
+                            </iosStatusBarAppearance>
+                            <maximumScale>10.0</maximumScale>
+                            <minimumScale>0.1</minimumScale>
+                            <width></width>
+                            <widthType>
+                            <![CDATA[
+                            device-width
+                            ]]>
+                            </widthType>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <ParameterDefinitions>
+                <FieldDefinition
+                 aspect.ordinal="1"
+                 baseType="TAGS"
+                 description="if set, restricts the mashup to showing items with these tags"
+                 name="DataTags"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="THINGNAME"
+                 description="The thing to display"
+                 name="Entity"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="2"
+                 baseType="STRING"
+                 description="if set, restricts the mashup to showing items that match this search expression"
+                 name="SearchExpression"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.ordinal="0"
+                 baseType="STRING"
+                 description="If set, restricts the mashup to showing items from this source"
+                 name="Source"
+                 ordinal="0"></FieldDefinition>
+            </ParameterDefinitions>
+            <Things></Things>
+            <ThingShapes>
+                <ThingShape>DataTable</ThingShape>
+            </ThingShapes>
+            <ThingTemplates></ThingTemplates>
+            <mashupContent>
+            <![CDATA[
+            {
+              "Data" : {
+                "DynamicThingShapes_DataTable" : {
+                  "DataName" : "DynamicThingShapes_DataTable",
+                  "EntityName" : "DataTable",
+                  "EntityType" : "DynamicThingShapes",
+                  "Id" : "101327209970924",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "841327420488427",
+                    "Name" : "SearchDataTableEntries",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "SearchDataTableEntries"
+                  } ]
+                },
+                "Session" : {
+                  "DataName" : "Session",
+                  "EntityName" : "",
+                  "EntityType" : "Session",
+                  "Id" : "session",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "SessionInterface",
+                    "Name" : "GetGlobalSessionValues",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetGlobalSessionValues"
+                  } ]
+                },
+                "UserExtensions" : {
+                  "DataName" : "UserExtensions",
+                  "EntityName" : "",
+                  "EntityType" : "UserExtensions",
+                  "Id" : "UserExtensions",
+                  "Services" : [ {
+                    "APIMethod" : "post",
+                    "Characteristic" : "Services",
+                    "Id" : "UserExtensionInterface",
+                    "Name" : "GetCurrentUserExtensionProperties",
+                    "Parameters" : { },
+                    "RefreshInterval" : 0,
+                    "Target" : "GetCurrentUserExtensionProperties"
+                  } ]
+                }
+              },
+              "DataBindings" : [ {
+                "Id" : "921327210057834",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Entity",
+                  "SourcePropertyBaseType" : "THINGNAME",
+                  "TargetProperty" : "value",
+                  "TargetPropertyBaseType" : "THINGNAME",
+                  "TargetPropertyType" : "Entity"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "EntityName",
+                "TargetSection" : "DynamicThingShapes_DataTable"
+              }, {
+                "Id" : "91327445072320",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "SearchDataTableEntries",
+                "SourceSection" : "DynamicThingShapes_DataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "Grid-1",
+                "TargetSection" : ""
+              }, {
+                "Id" : "861327445078200",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "",
+                  "SourcePropertyBaseType" : "INFOTABLE",
+                  "SourcePropertyType" : "InfoTable",
+                  "TargetProperty" : "Data",
+                  "TargetPropertyBaseType" : "INFOTABLE",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Data",
+                "SourceDetails" : "AllData",
+                "SourceId" : "SearchDataTableEntries",
+                "SourceSection" : "DynamicThingShapes_DataTable",
+                "TargetArea" : "UI",
+                "TargetId" : "DataFilter-2",
+                "TargetSection" : ""
+              }, {
+                "Id" : "821327445113221",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Query",
+                  "SourcePropertyBaseType" : "QUERY",
+                  "TargetProperty" : "query",
+                  "TargetPropertyBaseType" : "QUERY",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "DataFilter-2",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "SearchDataTableEntries",
+                "TargetSection" : "DynamicThingShapes_DataTable"
+              }, {
+                "Id" : "241327497155554",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "DataTags",
+                  "SourcePropertyBaseType" : "TAGS",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Tags",
+                  "TargetPropertyBaseType" : "TAGS",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "TagPicker-5",
+                "TargetSection" : ""
+              }, {
+                "Id" : "471327497178498",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "SearchExpression",
+                  "SourcePropertyBaseType" : "STRING",
+                  "SourcePropertyType" : "Property",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "property"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-7",
+                "TargetSection" : ""
+              }, {
+                "Id" : "701327497184445",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "searchExpression",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-7",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "SearchDataTableEntries",
+                "TargetSection" : "DynamicThingShapes_DataTable"
+              }, {
+                "Id" : "761327497191373",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Tags",
+                  "SourcePropertyBaseType" : "TAGS",
+                  "TargetProperty" : "dataTags",
+                  "TargetPropertyBaseType" : "TAGS",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "TagPicker-5",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "SearchDataTableEntries",
+                "TargetSection" : "DynamicThingShapes_DataTable"
+              }, {
+                "Id" : "281327956280190",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Source",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "Text",
+                  "TargetPropertyBaseType" : "STRING"
+                } ],
+                "SourceArea" : "Mashup",
+                "SourceId" : "mashup-root",
+                "SourceSection" : "",
+                "TargetArea" : "UI",
+                "TargetId" : "Textbox-12",
+                "TargetSection" : ""
+              }, {
+                "Id" : "921327956294942",
+                "PropertyMaps" : [ {
+                  "SourceProperty" : "Text",
+                  "SourcePropertyBaseType" : "STRING",
+                  "TargetProperty" : "source",
+                  "TargetPropertyBaseType" : "STRING",
+                  "TargetPropertyType" : "Parameter"
+                } ],
+                "SourceArea" : "UI",
+                "SourceId" : "Textbox-12",
+                "SourceSection" : "",
+                "TargetArea" : "Data",
+                "TargetId" : "SearchDataTableEntries",
+                "TargetSection" : "DynamicThingShapes_DataTable"
+              } ],
+              "Events" : [ {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_DataTable",
+                "EventHandlerService" : "SearchDataTableEntries",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Changed",
+                "EventTriggerId" : "DataFilter-2",
+                "EventTriggerSection" : "",
+                "Id" : "721327445101017"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_DataTable",
+                "EventHandlerService" : "SearchDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "Loaded",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "881327445251799"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_DataTable",
+                "EventHandlerService" : "SearchDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "EntityChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "351327445254824"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_DataTable",
+                "EventHandlerService" : "SearchDataTableEntries",
+                "EventTriggerArea" : "Mashup",
+                "EventTriggerEvent" : "SourceChanged",
+                "EventTriggerId" : "mashup-root",
+                "EventTriggerSection" : "",
+                "Id" : "911327445264428"
+              }, {
+                "EventHandlerArea" : "Data",
+                "EventHandlerId" : "DynamicThingShapes_DataTable",
+                "EventHandlerService" : "SearchDataTableEntries",
+                "EventTriggerArea" : "UI",
+                "EventTriggerEvent" : "Clicked",
+                "EventTriggerId" : "Button-6",
+                "EventTriggerSection" : "",
+                "Id" : "91327497256621"
+              } ],
+              "UI" : {
+                "Properties" : {
+                  "Area" : "Mashup",
+                  "Height" : 450,
+                  "Id" : "mashup-root",
+                  "Left" : 0,
+                  "MinHeight" : 0,
+                  "MinWidth" : 0,
+                  "ResponsiveLayout" : false,
+                  "ShowDataLoading" : true,
+                  "Style" : "DefaultMashupStyle",
+                  "ThingShape" : "DataTable",
+                  "Top" : 0,
+                  "Type" : "thingshapemashup",
+                  "Visible" : true,
+                  "Width" : 700,
+                  "Z-index" : 10,
+                  "__TypeDisplayName" : "ThingShape Mashup",
+                  "_currentParameterDefs" : [ {
+                    "BaseType" : "STRING",
+                    "Description" : "If set, restricts the mashup to showing items from this source",
+                    "ParameterName" : "Source"
+                  }, {
+                    "BaseType" : "TAGS",
+                    "Description" : "if set, restricts the mashup to showing items with these tags",
+                    "ParameterName" : "DataTags"
+                  }, {
+                    "BaseType" : "STRING",
+                    "Description" : "if set, restricts the mashup to showing items that match this search expression",
+                    "ParameterName" : "SearchExpression"
+                  } ],
+                  "id_index" : 12
+                },
+                "Widgets" : [ {
+                  "Properties" : {
+                    "AlignHeader" : false,
+                    "Area" : "UI",
+                    "AutoSelectFirstRow" : false,
+                    "CellTextWrapping" : false,
+                    "ColumnFormat" : {
+                      "formatInfo" : [ {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "key",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "[[key]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "location",
+                        "FormatOptions" : {
+                          "FormatString" : "0.0000",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "LOCATION"
+                        },
+                        "Title" : "[[location]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "source",
+                        "FormatOptions" : {
+                          "FormatString" : "full",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "STRING"
+                        },
+                        "Title" : "[[source]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "tags",
+                        "FormatOptions" : {
+                          "FormatString" : "plain",
+                          "formatText" : "View",
+                          "renderer" : "TAGS"
+                        },
+                        "Title" : "[[tags]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      }, {
+                        "Align" : "left",
+                        "AllowEdit" : false,
+                        "FieldName" : "timestamp",
+                        "FormatOptions" : {
+                          "FormatString" : "yyyy-MM-dd HH:mm:ss",
+                          "formatInfo" : {
+                            "FieldName" : "",
+                            "StateDefinition" : "",
+                            "StateDefinitionType" : "fixed",
+                            "StateFormats" : [ {
+                              "state" : "",
+                              "stateName" : "fixed"
+                            } ]
+                          },
+                          "formatText" : "View",
+                          "renderer" : "DATETIME"
+                        },
+                        "Title" : "[[timestamp]]",
+                        "ValidationExpression" : "",
+                        "ValidationMessage" : "",
+                        "Width" : "auto"
+                      } ]
+                    },
+                    "CurrentScrollTop" : 0,
+                    "FocusStyle" : "DefaultFocusStyle",
+                    "GridBackgroundStyle" : "DefaultGridBackgroundStyle",
+                    "GridEditableFieldStyle" : "DefaultGridEditableFieldStyle",
+                    "GridHeaderStyle" : "DefaultGridHeaderStyle",
+                    "GridHeaderTextCase" : "none",
+                    "GridInvalidFieldStyle" : "DefaultGridInvalidFieldStyle",
+                    "Height" : 375,
+                    "Id" : "Grid-1",
+                    "IsEditable" : false,
+                    "IsPrintLayout" : false,
+                    "Left" : 0,
+                    "MultiSelect" : false,
+                    "ResponsiveLayout" : false,
+                    "RowAlternateBackgroundStyle" : "DefaultRowAlternateBackgroundStyle",
+                    "RowBackgroundStyle" : "DefaultRowBackgroundStyle",
+                    "RowFormat_StateParameters" : [ ],
+                    "RowHeight" : 30,
+                    "RowHoverStyle" : "DefaultRowHoverStyle",
+                    "RowSelectedStyle" : "DefaultRowSelectedStyle",
+                    "ScrollTop" : 0,
+                    "ShowAllColumns" : true,
+                    "ShowDataLoading" : true,
+                    "TabSequence" : 0,
+                    "Top" : 75,
+                    "Type" : "dhxgrid",
+                    "Visible" : true,
+                    "Width" : 700,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Grid"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AddButtonStyle" : "DefaultDataFilterAddButtonStyle",
+                    "Area" : "UI",
+                    "BarStyle" : "DefaultDataFilterStyle",
+                    "FocusStyle" : "DefaultButtonFocusStyle",
+                    "Height" : 30,
+                    "Horizontal" : false,
+                    "Id" : "DataFilter-2",
+                    "Left" : 0,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TabSequence" : 0,
+                    "Top" : 45,
+                    "Type" : "datafilter",
+                    "Visible" : true,
+                    "Width" : 700,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Data Filter"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-3",
+                    "Left" : 12,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultLabelStyle",
+                    "Text" : "[[search]]",
+                    "ToolTipField" : "",
+                    "Top" : 7,
+                    "Type" : "label",
+                    "Visible" : true,
+                    "Width" : 45,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "Height" : 18,
+                    "Id" : "TagPicker-5",
+                    "Left" : 492,
+                    "MultiSelect" : true,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "TagType" : "DataTags",
+                    "Top" : 10,
+                    "Type" : "tagpicker",
+                    "Visible" : true,
+                    "VocabularyRestriction" : "",
+                    "Width" : 35,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Tag Picker"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "ActiveStyle" : "DefaultButtonActiveStyle",
+                    "Area" : "UI",
+                    "CancelConfirmationButton" : "button2",
+                    "ConfirmationButton1Label" : "[[confirmationOptionYes]]",
+                    "ConfirmationButton2Label" : "[[confirmationOptionNo]]",
+                    "ConfirmationPrompt" : "[[doAction]]",
+                    "ConfirmationRequired" : false,
+                    "ConfirmationTitle" : "[[confirmAction]]",
+                    "ContextId" : "",
+                    "DefaultConfirmationButton" : "button1",
+                    "Disabled" : false,
+                    "DisabledStyle" : "DefaultButtonDisabledStyle",
+                    "FocusStyle" : "DefaultButtonFocusStyle",
+                    "Height" : 22,
+                    "HoverStyle" : "DefaultButtonHoverStyle",
+                    "IconAlignment" : "left",
+                    "Id" : "Button-6",
+                    "Label" : "[[search]]",
+                    "Left" : 590,
+                    "ResponsiveLayout" : false,
+                    "RoundedCorners" : true,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultButtonStyle",
+                    "TabSequence" : 0,
+                    "ToolTipField" : "",
+                    "Top" : 8,
+                    "Type" : "button",
+                    "Visible" : true,
+                    "Width" : 75,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Button"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CursorPosition" : 0,
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "Height" : 24,
+                    "Id" : "Textbox-7",
+                    "InnerShadow" : true,
+                    "Label" : "",
+                    "LabelAlignment" : "left",
+                    "Left" : 60,
+                    "MaskInputCharacters" : false,
+                    "PlaceholderText" : "",
+                    "ReadOnly" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultTextBoxStyle",
+                    "TabSequence" : 0,
+                    "Text" : "",
+                    "TextAlign" : "left",
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ToolTipField" : "",
+                    "Top" : 6,
+                    "Type" : "textbox",
+                    "Visible" : true,
+                    "Width" : 195,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "BorderStyle" : "DefaultImageBorderStyle",
+                    "Height" : 38,
+                    "Id" : "Image-8",
+                    "Left" : 0,
+                    "PreventCaching" : false,
+                    "ResponsiveLayout" : false,
+                    "Scaling" : "width",
+                    "ShowDataLoading" : true,
+                    "SourceURL" : "/Thingworx/MediaEntities/WhiteGlossGradientBar",
+                    "ToolTipField" : "",
+                    "Top" : 0,
+                    "Type" : "image",
+                    "Visible" : true,
+                    "Width" : 700,
+                    "Z-index" : 9,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "BorderStyle" : "DefaultImageBorderStyle",
+                    "Height" : 6,
+                    "Id" : "Image-9",
+                    "Left" : 0,
+                    "PreventCaching" : false,
+                    "ResponsiveLayout" : false,
+                    "Scaling" : "width",
+                    "ShowDataLoading" : true,
+                    "SourceURL" : "/Thingworx/MediaEntities/HorizontalShadowDown",
+                    "ToolTipField" : "",
+                    "Top" : 38,
+                    "Type" : "image",
+                    "Visible" : true,
+                    "Width" : 700,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "AlternateText" : "",
+                    "Area" : "UI",
+                    "BorderStyle" : "DefaultImageBorderStyle",
+                    "Height" : 38,
+                    "Id" : "Image-10",
+                    "Left" : 530,
+                    "PreventCaching" : false,
+                    "ResponsiveLayout" : false,
+                    "Scaling" : "width",
+                    "ShowDataLoading" : true,
+                    "SourceURL" : "/Thingworx/MediaEntities/SearchButtonBackground",
+                    "ToolTipField" : "",
+                    "Top" : 0,
+                    "Type" : "image",
+                    "Visible" : true,
+                    "Width" : 170,
+                    "Z-index" : 9,
+                    "__TypeDisplayName" : "Image"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Alignment" : "left",
+                    "Area" : "UI",
+                    "Height" : 22,
+                    "Id" : "Label-11",
+                    "Left" : 285,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultLabelStyle",
+                    "Text" : "[[source]]",
+                    "ToolTipField" : "",
+                    "Top" : 7,
+                    "Type" : "label",
+                    "Visible" : true,
+                    "Width" : 45,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Label"
+                  },
+                  "Widgets" : [ ]
+                }, {
+                  "Properties" : {
+                    "Area" : "UI",
+                    "CursorPosition" : 0,
+                    "DefaultTextboxFocusStyle" : "DefaultFocusStyle",
+                    "Height" : 24,
+                    "Id" : "Textbox-12",
+                    "InnerShadow" : true,
+                    "Label" : "",
+                    "LabelAlignment" : "left",
+                    "Left" : 341,
+                    "MaskInputCharacters" : false,
+                    "PlaceholderText" : "",
+                    "ReadOnly" : false,
+                    "ResponsiveLayout" : false,
+                    "ShowDataLoading" : true,
+                    "Style" : "DefaultTextBoxStyle",
+                    "TabSequence" : 0,
+                    "Text" : "",
+                    "TextAlign" : "left",
+                    "TextboxLabelStyle" : "DefaultWidgetLabelStyle",
+                    "ToolTipField" : "",
+                    "Top" : 6,
+                    "Type" : "textbox",
+                    "Visible" : true,
+                    "Width" : 140,
+                    "Z-index" : 10,
+                    "__TypeDisplayName" : "Textbox",
+                    "__supportsLabel" : true
+                  },
+                  "Widgets" : [ ]
+                } ]
+              },
+              "mashupType" : "thingshape"
+            }
+            ]]>
+            </mashupContent>
+            <preview></preview>
+        </Mashup>
+    </Mashups>
+</Entities>

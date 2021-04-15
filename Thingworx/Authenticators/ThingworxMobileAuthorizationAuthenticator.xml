@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Authenticators>
+        <Authenticator
+         aspect.isEditableSystemObject="true"
+         className="com.thingworx.security.authentication.ThingworxMobileAuthorizationAuthenticator"
+         description="Mobile App Builder Authenticator that validates against the Thingworx User/Passwords"
+         documentationContent=""
+         enabled="false"
+         homeMashup=""
+         name="ThingworxMobileAuthorizationAuthenticator"
+         priority="350"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Authenticator Configuration"
+                 isMultiRow="false"
+                 name="AuthenticatorConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Return generated tokens to client"
+                             baseType="BOOLEAN"
+                             description="Return generated tokens"
+                             name="generateTokens"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="2592000"
+                             aspect.friendlyName="Token Lifetime (sec)"
+                             baseType="LONG"
+                             description="Token Lifetime in seconds, default 30 days"
+                             name="tokenLifeTime"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <generateTokens>true</generateTokens>
+                            <tokenLifeTime>2592000</tokenLifeTime>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Authenticator>
+    </Authenticators>
+</Entities>

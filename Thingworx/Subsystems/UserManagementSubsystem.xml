@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.users.UserManagementSubsystem"
+         dependsOn=""
+         description="User Management"
+         documentationContent=""
+         enabled="true"
+         friendlyName="User Management"
+         homeMashup=""
+         name="UserManagementSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Session Management Settings"
+                 isMultiRow="false"
+                 name="SessionTimeout"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Restrict the number of concurrent logged in user sessions"
+                             baseType="BOOLEAN"
+                             description="Restrict the number of concurrent logged in user sessions"
+                             name="restrictConcurrentUserSessions"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="30.0"
+                             aspect.friendlyName="Idle Session Timeout (min)"
+                             baseType="NUMBER"
+                             description="Number of minutes to keep a session alive with no activity"
+                             name="timeout"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Allow users to call services on their own User entity regardless of permissions"
+                             baseType="BOOLEAN"
+                             description="Allow users to call services on their own User entity regardless of permissions"
+                             name="userServiceSelfBypass"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <restrictConcurrentUserSessions>false</restrictConcurrentUserSessions>
+                            <timeout>30.0</timeout>
+                            <userServiceSelfBypass>true</userServiceSelfBypass>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="User session shape settings"
+                 isMultiRow="true"
+                 name="UserSessionShapes"
+                 ordinal="1">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="ThingShape Name"
+                             baseType="THINGSHAPENAME"
+                             description="Thing shape name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <name>
+                            <![CDATA[
+                            GlobalSessionProperties
+                            ]]>
+                            </name>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Password Hash Settings"
+                 isMultiRow="false"
+                 name="HashSettings"
+                 ordinal="2">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="PBKDF2WithHmacSHA512"
+                             aspect.friendlyName="Hashing algorithm"
+                             aspect.selectOptions="PBKDF2WithHmacSHA1:PBKDF2WithHmacSHA1|PBKDF2WithHmacSHA512:PBKDF2WithHmacSHA512"
+                             baseType="STRING"
+                             description="The hashing algorithm to use when generating hashes"
+                             name="hashAlgorithm"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="64"
+                             aspect.friendlyName="Hash size in bytes"
+                             aspect.selectOptions="24:24|48:48|64:64"
+                             baseType="INTEGER"
+                             description="The size of the hash in bytes"
+                             name="hashHashSizeInBytes"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="100000"
+                             aspect.friendlyName="Hashing iterations"
+                             baseType="INTEGER"
+                             description="The number of iterations to do when hashing, this is for slowness factor"
+                             name="hashIterationCount"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="64"
+                             aspect.friendlyName="Salt size in bytes"
+                             aspect.selectOptions="24:24|48:48|64:64"
+                             baseType="INTEGER"
+                             description="The salt size to use when generating hashes"
+                             name="hashSaltSizeInBytes"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <hashAlgorithm>
+                            <![CDATA[
+                            PBKDF2WithHmacSHA512
+                            ]]>
+                            </hashAlgorithm>
+                            <hashHashSizeInBytes>64</hashHashSizeInBytes>
+                            <hashIterationCount>100000</hashIterationCount>
+                            <hashSaltSizeInBytes>64</hashSaltSizeInBytes>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="ApplicationKey Settings"
+                 isMultiRow="false"
+                 name="ApplicationKeySettings"
+                 ordinal="3">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="86400"
+                             aspect.friendlyName="Application Key Lifetime (sec)"
+                             baseType="LONG"
+                             description="Number of seconds until an application key expires from its creation time"
+                             name="lifeTime"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <lifeTime>86400</lifeTime>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Authentication Settings"
+                 isMultiRow="false"
+                 name="AuthenticationSettings"
+                 ordinal="4">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Sets HTTP Form Authentication as the default fallback mechanism"
+                             baseType="BOOLEAN"
+                             description="Sets HTTP Form Authentication as the default fallback authentication mechanism"
+                             name="defaultToHttpFormAuth"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <defaultToHttpFormAuth>false</defaultToHttpFormAuth>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Login Lockout Settings"
+                 isMultiRow="false"
+                 name="LoginLockoutSettings"
+                 ordinal="5">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="5"
+                             aspect.friendlyName="Maximum Login Attempts"
+                             baseType="INTEGER"
+                             description="Number of times the user can attempt to log in before their account is locked"
+                             name="loginAttemptsMax"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5"
+                             aspect.friendlyName="Minutes to Attempt Login"
+                             baseType="INTEGER"
+                             description="Number of minutes the user has to make their maximum login attempts"
+                             name="loginAttemptsResetMinutes"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="15"
+                             aspect.friendlyName="Minutes Locked Out"
+                             baseType="INTEGER"
+                             description="Number of minutes user is locked out (0 = no limit)"
+                             name="loginLockedMinutes"
+                             ordinal="2"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <loginAttemptsMax>5</loginAttemptsMax>
+                            <loginAttemptsResetMinutes>5</loginAttemptsResetMinutes>
+                            <loginLockedMinutes>15</loginLockedMinutes>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Configurable password settings"
+                 isMultiRow="false"
+                 name="PasswordSettings"
+                 ordinal="6">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Password Blacklist Case Sensitive"
+                             baseType="BOOLEAN"
+                             description="Enabling will only flag password as invalid if string matches exact case of blacklist value"
+                             name="blackListCaseSensitive"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="Password Blacklist Partial Match"
+                             baseType="BOOLEAN"
+                             description="Enabling will check if any password includes a value match from the blacklist"
+                             name="blackListPartialMatch"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="14"
+                             aspect.friendlyName="Minimum Password Length"
+                             aspect.maximumValue="128"
+                             aspect.minimumValue="10"
+                             baseType="INTEGER"
+                             description="The configurable minimum password length, with the absolute minimum being 10 characters"
+                             name="passwordConfigurableMinLength"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <blackListCaseSensitive>false</blackListCaseSensitive>
+                            <blackListPartialMatch>false</blackListPartialMatch>
+                            <passwordConfigurableMinLength>14</passwordConfigurableMinLength>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Additional blacklist values to use when validating a potential user password"
+                 isMultiRow="true"
+                 name="CustomPasswordBlackList"
+                 ordinal="7">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Value"
+                             baseType="STRING"
+                             description="Blacklist value"
+                             name="value"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Permissions Management"
+                 isMultiRow="false"
+                 name="PermissionsManagement"
+                 ordinal="8">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="5"
+                             aspect.friendlyName="ThingGroup Direct Parents Cache Concurrency Level"
+                             baseType="INTEGER"
+                             description="ThingGroup Direct Parents Cache Concurrency Level"
+                             name="permissionsThingGroupDirectParentsCacheConcurrencyLevel"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="100000"
+                             aspect.friendlyName="ThingGroup Direct Parents Cache Max Size of entries"
+                             baseType="LONG"
+                             description="ThingGroup Direct Parents Cache Max Size of entries"
+                             name="permissionsThingGroupDirectParentsCacheMaxSize"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="5"
+                             aspect.friendlyName="ThingGroup Inherited Visibility Permissions Cache Concurrency Level"
+                             baseType="INTEGER"
+                             description="ThingGroup Inherited Visibility Permissions Cache Concurrency Level"
+                             name="permissionsThingGroupInheritedVisibilityPermissionsCacheConcurrencyLevel"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10000"
+                             aspect.friendlyName="ThingGroup Inherited Visibility Permissions Cache Max Size of entries"
+                             baseType="LONG"
+                             description="ThingGroup Inherited Visibility Permissions Cache Max Size of entries"
+                             name="permissionsThingGroupInheritedVisibilityPermissionsCacheMaxSize"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="false"
+                             aspect.friendlyName="ThingGroup Visibility Permission Delegation Enabled"
+                             baseType="BOOLEAN"
+                             description="ThingGroup Visibility Permission Delegation Enabled"
+                             name="permissionsThingGroupVisibilityDelegationEnabled"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <permissionsThingGroupDirectParentsCacheConcurrencyLevel>5</permissionsThingGroupDirectParentsCacheConcurrencyLevel>
+                            <permissionsThingGroupDirectParentsCacheMaxSize>100000</permissionsThingGroupDirectParentsCacheMaxSize>
+                            <permissionsThingGroupInheritedVisibilityPermissionsCacheConcurrencyLevel>5</permissionsThingGroupInheritedVisibilityPermissionsCacheConcurrencyLevel>
+                            <permissionsThingGroupInheritedVisibilityPermissionsCacheMaxSize>10000</permissionsThingGroupInheritedVisibilityPermissionsCacheMaxSize>
+                            <permissionsThingGroupVisibilityDelegationEnabled>false</permissionsThingGroupVisibilityDelegationEnabled>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

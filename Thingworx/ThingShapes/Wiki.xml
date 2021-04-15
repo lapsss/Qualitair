@@ -1,0 +1,1142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className="com.thingworx.collaboration.wikis.WikiThing"
+         description="Wiki shape"
+         documentationContent=""
+         homeMashup=""
+         name="Wiki"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Add a comment to an existing page or comment"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddComment">
+                    <ResultType
+                     baseType="STRING"
+                     description="Created wiki comment ID"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for wiki comment"
+                         name="timestamp"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Existing wiki comment ID (optional)"
+                         name="wikiCommentId"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiPages"
+                 description="Add or update a wiki page"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddOrUpdateWikiPage">
+                    <ResultType
+                     baseType="STRING"
+                     description="Created wiki page ID"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Parent Wiki Page ID"
+                         name="parentWikiPageId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for wiki entry"
+                         name="timestamp"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page title"
+                         name="title"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiPages"
+                 description="Add a new wiki page"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="AddWikiPage">
+                    <ResultType
+                     baseType="STRING"
+                     description="Created wiki page ID"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Parent Wiki Page ID"
+                         name="parentWikiPageId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for wiki entry"
+                         name="timestamp"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page title"
+                         name="title"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Delete a comment from an existing page with a specific comment ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteComment">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Existing wiki comment ID (optional)"
+                         name="wikiCommentId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiPages"
+                 description="Delete a wiki page (by name)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="DeleteWikiPage">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetChildWikiPages">
+                    <ResultType
+                     aspect.dataShape="WikiPage"
+                     baseType="INFOTABLE"
+                     description="Wiki pages"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Parent Wiki Page ID"
+                         name="parentWikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages with comments"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetChildWikiPagesWithComments">
+                    <ResultType
+                     aspect.dataShape="WikiPageWithComments"
+                     baseType="INFOTABLE"
+                     description="Wiki pages with comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Parent Wiki Page ID"
+                         name="parentWikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Retrieve a specific wiki comment (by id)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetComment">
+                    <ResultType
+                     aspect.dataShape="Comment"
+                     baseType="INFOTABLE"
+                     description="Wiki comment"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki comment id"
+                         name="wikiCommentId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Get a list of comments for a specific wiki page"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetComments">
+                    <ResultType
+                     aspect.dataShape="Comment"
+                     baseType="INFOTABLE"
+                     description="Wiki comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve the parent wiki page ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetParentWikiPage">
+                    <ResultType
+                     baseType="STRING"
+                     description="Parent wiki page id"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiHistory"
+                 description="Retrieve wiki history (all pages)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiHistory">
+                    <ResultType
+                     aspect.dataShape="WikiHistory"
+                     baseType="INFOTABLE"
+                     description="Wiki history"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiPages"
+                 description="Retrieve a specific wiki page"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiPage">
+                    <ResultType
+                     aspect.dataShape="WikiPage"
+                     baseType="INFOTABLE"
+                     description="Wiki page"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiHistory"
+                 description="Retrieve wiki history (all pages)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiPageHistory">
+                    <ResultType
+                     aspect.dataShape="WikiHistory"
+                     baseType="INFOTABLE"
+                     description="Wiki history"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiPages">
+                    <ResultType
+                     aspect.dataShape="WikiPage"
+                     baseType="INFOTABLE"
+                     description="Wiki pages"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages with comments"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiPagesWithComments">
+                    <ResultType
+                     aspect.dataShape="WikiPageWithComments"
+                     baseType="INFOTABLE"
+                     description="Wiki pages with comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki page titles"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiPageTitles">
+                    <ResultType
+                     aspect.dataShape="WikiPageList"
+                     baseType="INFOTABLE"
+                     description="Wiki page titles"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiPages"
+                 description="Retrieve a specific wiki page with comments"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetWikiPageWithComments">
+                    <ResultType
+                     aspect.dataShape="WikiPageWithComments"
+                     baseType="INFOTABLE"
+                     description="Wiki page with comments"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Maintenance"
+                 description="Purge all wiki pages"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="PurgeWikiPages">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages that were modified within an optional date/time range and/or contain a specific set of tags"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryWikiPages">
+                    <ResultType
+                     aspect.dataShape="WikiPage"
+                     baseType="INFOTABLE"
+                     description="Wiki pages"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Original source/author of the page"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="With content"
+                         name="withContent"
+                         ordinal="6"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages that were modified within an optional date/time range and/or contain a specific set of tags"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryWikiPagesWithComments">
+                    <ResultType
+                     aspect.dataShape="WikiPageWithComments"
+                     baseType="INFOTABLE"
+                     description="Wiki pages"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Original source/author of the page"
+                         name="source"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="With content"
+                         name="withContent"
+                         ordinal="6"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki page titles that were modified within an optional date/time range and/or contain a specific set of tags"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="QueryWikiPageTitles">
+                    <ResultType
+                     aspect.dataShape="WikiPageList"
+                     baseType="INFOTABLE"
+                     description="Wiki pages"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Rating"
+                 description="Rate an entry given a specific entry ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="RateContent">
+                    <ResultType
+                     baseType="NUMBER"
+                     description="Rating"
+                     name="Rating"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Entry id"
+                         name="entryId"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="Rating"
+                         name="rating"
+                         ordinal="1"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages based on a keyword/search expression and optional date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SearchWikiPages">
+                    <ResultType
+                     aspect.dataShape="WikiPage"
+                     baseType="INFOTABLE"
+                     description="Matching entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Search expression"
+                         name="searchExpression"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source"
+                         name="source"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="With content"
+                         name="withContent"
+                         ordinal="7"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Queries"
+                 description="Retrieve all wiki pages based on a keyword/search expression and optional date range"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SearchWikiPagesWithComments">
+                    <ResultType
+                     aspect.dataShape="WikiPageWithComments"
+                     baseType="INFOTABLE"
+                     description="Matching entries"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="End time"
+                         name="endDate"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500.0"
+                         baseType="NUMBER"
+                         description="Maximum number of items to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Search expression"
+                         name="searchExpression"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source"
+                         name="source"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="ModelTags"
+                         baseType="TAGS"
+                         description="Source Tags"
+                         name="sourceTags"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Start time"
+                         name="startDate"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags"
+                         name="tags"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="With content"
+                         name="withContent"
+                         ordinal="7"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="Comments"
+                 description="Update a comment with a specific comment ID"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateComment">
+                    <ResultType
+                     baseType="NOTHING"
+                     description="result"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for wiki comment"
+                         name="timestamp"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Existing wiki comment ID (optional)"
+                         name="wikiCommentId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="WikiPages"
+                 description="Update the wiki page (by name)"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="UpdateWikiPage">
+                    <ResultType
+                     baseType="STRING"
+                     description="Wiki Page ID"
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Content of the entry"
+                         name="content"
+                         ordinal="7"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="LOCATION"
+                         description="Location of the entry"
+                         name="location"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Parent Wiki Page ID"
+                         name="parentWikiPageId"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source of the entry (person/thing)"
+                         name="source"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Source type (optional)"
+                         name="sourceType"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.tagType="DataTags"
+                         baseType="TAGS"
+                         description="Tags for the entry"
+                         name="tags"
+                         ordinal="8"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="Date and time for wiki entry"
+                         name="timestamp"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki entry title"
+                         name="title"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Wiki page ID"
+                         name="wikiPageId"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings>
+                <ServiceMapping
+                 deleteService="DeleteComment"
+                 description="Comments"
+                 listService=""
+                 name="Comments"
+                 queryService="GetComment"></ServiceMapping>
+                <ServiceMapping
+                 deleteService="DeleteWikiPage"
+                 description="Entries"
+                 listService="GetWikiPages"
+                 name="WikiPages"
+                 queryService="GetWikiPage"></ServiceMapping>
+            </ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Add a comment to an existing page or comment"
+                 handlerName="Reflection"
+                 name="AddComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add or update a wiki page"
+                 handlerName="Reflection"
+                 name="AddOrUpdateWikiPage">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Add a new wiki page"
+                 handlerName="Reflection"
+                 name="AddWikiPage">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete a comment from an existing page with a specific comment ID"
+                 handlerName="Reflection"
+                 name="DeleteComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Delete a wiki page (by name)"
+                 handlerName="Reflection"
+                 name="DeleteWikiPage">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages"
+                 handlerName="Reflection"
+                 name="GetChildWikiPages">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages with comments"
+                 handlerName="Reflection"
+                 name="GetChildWikiPagesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a specific wiki comment (by id)"
+                 handlerName="Reflection"
+                 name="GetComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Get a list of comments for a specific wiki page"
+                 handlerName="Reflection"
+                 name="GetComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve the parent wiki page ID"
+                 handlerName="Reflection"
+                 name="GetParentWikiPage">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve wiki history (all pages)"
+                 handlerName="Reflection"
+                 name="GetWikiHistory">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a specific wiki page"
+                 handlerName="Reflection"
+                 name="GetWikiPage">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve wiki history (all pages)"
+                 handlerName="Reflection"
+                 name="GetWikiPageHistory">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages"
+                 handlerName="Reflection"
+                 name="GetWikiPages">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages with comments"
+                 handlerName="Reflection"
+                 name="GetWikiPagesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki page titles"
+                 handlerName="Reflection"
+                 name="GetWikiPageTitles">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve a specific wiki page with comments"
+                 handlerName="Reflection"
+                 name="GetWikiPageWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Purge all wiki pages"
+                 handlerName="Reflection"
+                 name="PurgeWikiPages">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages that were modified within an optional date/time range and/or contain a specific set of tags"
+                 handlerName="Reflection"
+                 name="QueryWikiPages">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages that were modified within an optional date/time range and/or contain a specific set of tags"
+                 handlerName="Reflection"
+                 name="QueryWikiPagesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki page titles that were modified within an optional date/time range and/or contain a specific set of tags"
+                 handlerName="Reflection"
+                 name="QueryWikiPageTitles">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Rate an entry given a specific entry ID"
+                 handlerName="Reflection"
+                 name="RateContent">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages based on a keyword/search expression and optional date range"
+                 handlerName="Reflection"
+                 name="SearchWikiPages">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Retrieve all wiki pages based on a keyword/search expression and optional date range"
+                 handlerName="Reflection"
+                 name="SearchWikiPagesWithComments">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update a comment with a specific comment ID"
+                 handlerName="Reflection"
+                 name="UpdateComment">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Update the wiki page (by name)"
+                 handlerName="Reflection"
+                 name="UpdateWikiPage">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

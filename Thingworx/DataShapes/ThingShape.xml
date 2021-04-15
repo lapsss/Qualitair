@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Thing shape definition"
+         documentationContent=""
+         homeMashup=""
+         name="ThingShape"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="Contained Thing Shapes"
+                 name="containedThingShapes"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="STRING"
+                 description="Description"
+                 name="description"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="Event definitions"
+                 name="eventDefinitions"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Name"
+                 name="name"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="Property definitions"
+                 name="propertyDefinitions"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="Service definitions"
+                 name="serviceDefinitions"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 baseType="INFOTABLE"
+                 description="Service implementations"
+                 name="serviceImplementations"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.tagType="ModelTags"
+                 baseType="TAGS"
+                 description="Tags"
+                 name="tags"
+                 ordinal="0"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

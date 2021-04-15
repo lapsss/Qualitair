@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="false"
+         className="com.thingworx.analytics.StatisticalMonitoringThingShape"
+         description="Provides a set of statistical monitoring services. To use these services, create a Thing and attach this ThingShape. This component is installed with ThingWorx but is not active until the DescriptiveAnalytics microservice is installed."
+         documentationContent=""
+         homeMashup=""
+         name="StatisticalMonitoringThingShape"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 category="AnalyticsStats"
+                 description="Monitor for the number of consecutive points in a series that remain inside or outside of a defined range."
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetNumberOfConsecutivePointsBasedOnARange">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="Maximum number of consecutive points in a series that remain inside or outside of a defined range."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The range max is inclusive (Default is True)"
+                         name="includeMax"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The range min is inclusive (Default is True)"
+                         name="includeMin"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The maximum value of the range."
+                         name="max"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The minimum value of the range."
+                         name="min"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="Number of data points to inspect."
+                         name="numberOfPoints"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Property Name."
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Calculate the number of points from INSIDE or OUTSIDE the range (inclusive)."
+                         name="regionOfInterest"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="AnalyticsStats"
+                 description="Monitor for the number of consecutive points in a series that are above or below a defined threshold."
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetNumberOfConsecutivePointsBeyondAThreshold">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="The number of consecutive points in a series that are below or above a threshold, inclusive."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Either ABOVE or BELOW the threshold (inclusive)."
+                         name="direction"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The threshold is inclusive (Default is True)"
+                         name="includeThreshold"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="Number of data points to inspect."
+                         name="numberOfPoints"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Property Name."
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The threshold to use for comparing points."
+                         name="threshold"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="AnalyticsStats"
+                 description="Monitor for the number of consecutive points in a series that are increasing, decreasing, or alternating direction."
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetNumberOfConsecutivePointsFollowingATrend">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="Maximum number of consecutive points in a series that are increasing, decreasing or alternating direction."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="Number of data points to inspect."
+                         name="numberOfPoints"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Property Name."
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Data trend to inspect."
+                         name="trend"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="AnalyticsStats"
+                 description="Monitor for the number of points in a series that remain inside or outside of a defined range."
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetNumberOfPointsBasedOnARange">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="Maximum number of points in a series that remain inside or outside of a defined range."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The range max is inclusive (Default is True)"
+                         name="includeMax"
+                         ordinal="6"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The range min is inclusive (Default is True)"
+                         name="includeMin"
+                         ordinal="5"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The maximum value of the range."
+                         name="max"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The minimum value of the range."
+                         name="min"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="Number of data points to inspect."
+                         name="numberOfPoints"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Property Name."
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Calculate the number of points from INSIDE or OUTSIDE the range (inclusive)."
+                         name="regionOfInterest"
+                         ordinal="4"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="AnalyticsStats"
+                 description="Monitor for the number of points in a series that are above or below a defined threshold."
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetNumberOfPointsBeyondAThreshold">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="The number of points in a series that are below or above a threshold, inclusive."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Either BELOW or ABOVE."
+                         name="direction"
+                         ordinal="2"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The threshold is inclusive (Default is True)"
+                         name="includeThreshold"
+                         ordinal="4"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="Number of data points to inspect."
+                         name="numberOfPoints"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Property Name."
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The threshold to use for comparing points."
+                         name="threshold"
+                         ordinal="3"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 category="AnalyticsStats"
+                 description="Monitor how many pairs of points in a series have a change rate outside the defined range."
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetNumberOfPointsWithChangeRateOutOfRange">
+                    <ResultType
+                     baseType="INTEGER"
+                     description="The number of pairs of consecutive points that have a change rate outside the defined range."
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="true"
+                         baseType="BOOLEAN"
+                         description="The threshold percentage is inclusive (Default is True)"
+                         name="includeThresholdPercentage"
+                         ordinal="3"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="INTEGER"
+                         description="The number of consecutive points in a series, counting back from the current point."
+                         name="numberOfPoints"
+                         ordinal="1"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Property name"
+                         name="propertyName"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="NUMBER"
+                         description="The rate of change threshold, expressed as a percentage. Cannot be a negative value"
+                         name="thresholdPercentage"
+                         ordinal="2"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations>
+                <ServiceImplementation
+                 description="Monitor for the number of consecutive points in a series that remain inside or outside of a defined range."
+                 handlerName="Reflection"
+                 name="GetNumberOfConsecutivePointsBasedOnARange">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Monitor for the number of consecutive points in a series that are above or below a defined threshold."
+                 handlerName="Reflection"
+                 name="GetNumberOfConsecutivePointsBeyondAThreshold">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Monitor for the number of consecutive points in a series that are increasing, decreasing, or alternating direction."
+                 handlerName="Reflection"
+                 name="GetNumberOfConsecutivePointsFollowingATrend">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Monitor for the number of points in a series that remain inside or outside of a defined range."
+                 handlerName="Reflection"
+                 name="GetNumberOfPointsBasedOnARange">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Monitor for the number of points in a series that are above or below a defined threshold."
+                 handlerName="Reflection"
+                 name="GetNumberOfPointsBeyondAThreshold">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+                <ServiceImplementation
+                 description="Monitor how many pairs of points in a series have a change rate outside the defined range."
+                 handlerName="Reflection"
+                 name="GetNumberOfPointsWithChangeRateOutOfRange">
+                    <ConfigurationTables></ConfigurationTables>
+                </ServiceImplementation>
+            </ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>

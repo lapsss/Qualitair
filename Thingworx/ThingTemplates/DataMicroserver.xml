@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingTemplates>
+        <ThingTemplate
+         aspect.isSystemObject="true"
+         baseThingTemplate="AnalyticsJobServer"
+         description=""
+         documentationContent=""
+         effectiveThingPackage="RemoteThing"
+         homeMashup=""
+         inheritedValueStream=""
+         name="DataMicroserver"
+         projectName=""
+         tags=""
+         thingPackage=""
+         valueStream="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Reporting Settings"
+                 isMultiRow="false"
+                 name="ReportingConfiguration"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="NotReporting"
+                             aspect.isPrimaryKey="true"
+                             aspect.isReadOnly="false"
+                             aspect.thingTemplate="ReportingStrategy"
+                             baseType="THINGNAME"
+                             description="Strategy to determine health"
+                             name="reportingStrategy"
+                             ordinal="1"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <reportingStrategy>
+                            <![CDATA[
+                            AlwaysOnReporting
+                            ]]>
+                            </reportingStrategy>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="AppendDataset"
+                 sourceName="AppendDataset"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="AppendDatasetWithDatasetRef"
+                 sourceName="AppendDatasetWithDatasetRef"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="BinnedDistributionQuery"
+                 sourceName="BinnedDistributionQuery"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="BinnedDistributionQuerySynchronous"
+                 sourceName="BinnedDistributionQuerySynchronous"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CreateDataset"
+                 sourceName="CreateDataset"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="CreateDatasetWithDatasetRef"
+                 sourceName="CreateDatasetWithDatasetRef"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="DetectMetadata"
+                 sourceName="DetectMetadata"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="DetectMetadataJSON"
+                 sourceName="DetectMetadataJSON"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="DistributionQuery"
+                 sourceName="DistributionQuery"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="DistributionQuerySynchronous"
+                 sourceName="DistributionQuerySynchronous"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="DistributionStatisticsQuery"
+                 sourceName="DistributionStatisticsQuery"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="DistributionStatisticsQuerySynchronous"
+                 sourceName="DistributionStatisticsQuerySynchronous"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="GetDatasetSchema"
+                 sourceName="GetDatasetSchema"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="ListCreatedDatasets"
+                 sourceName="ListCreatedDatasets"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveBinnedDistributionQuery"
+                 sourceName="RetrieveBinnedDistributionQuery"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveDistributionQuery"
+                 sourceName="RetrieveDistributionQuery"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="RetrieveDistributionStatistics"
+                 sourceName="RetrieveDistributionStatistics"
+                 timeout="0"></RemoteServiceBinding>
+                <RemoteServiceBinding
+                 enableQueue="false"
+                 name="ValidateDataAndOpTypes"
+                 sourceName="ValidateDataAndOpTypes"
+                 timeout="0"></RemoteServiceBinding>
+            </RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <ThingShape>
+                <PropertyDefinitions></PropertyDefinitions>
+                <ServiceDefinitions>
+                    <ServiceDefinition
+                     category=""
+                     description="Add data to an existing dataset"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AppendDataset">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="BOOLEAN"
+                             description="determines whether the CSV  file has a header"
+                             name="csvHasHeaders"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the CSV file"
+                             name="csvURI"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the existing dataset to append"
+                             name="datasetId"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the metadata JSON file"
+                             name="metadataURI"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="Optimize the dataset to improve the performance of subsequent jobs that use the dataset."
+                             name="optimize"
+                             ordinal="5"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="4"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Add data to an existing dataset from the specified DatasetRef InfoTable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="AppendDatasetWithDatasetRef">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the existing dataset to which the data in the specified AnalyticsDatasetRef InfoTable will be appended"
+                             name="datasetId"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the AnalyticsDatasetRef InfoTable for this job"
+                             name="datasetRef"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             baseType="BOOLEAN"
+                             description="Optimize the dataset to improve the performance of subsequent jobs that use the dataset."
+                             name="optimize"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Query the record count for specified bins of a continuous field in a dataset"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="BinnedDistributionQuery">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description="Number of bins to create"
+                             name="binCount"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="The continuous field to be queried"
+                             name="binnedField"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional - specify a continuous field to return the average and total values for each bin"
+                             name="goalField"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Run the BinnedDistributionQuery service synchronously, returning the results immediately upon job completion"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="BinnedDistributionQuerySynchronous">
+                        <ResultType
+                         aspect.dataShape="BinnedDistributionQueryRow"
+                         baseType="INFOTABLE"
+                         description="List of field bins. Includes record counts with average and total goal values"
+                         name="queryResults"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="INTEGER"
+                             description="Number of bins to create"
+                             name="binCount"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="The continuous field to be queried"
+                             name="binnedField"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional - specify a continuous field to return the average and total values for each bin"
+                             name="goalField"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Create a dataset from the specified CSV and metadata files"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateDataset">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="BOOLEAN"
+                             description="determines whether the CSV  file has a header"
+                             name="csvHasHeaders"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the CSV file"
+                             name="csvURI"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="URI to the metadata JSON file"
+                             name="metadataFileURI"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Create a dataset from the specified AnalyticsDatasetRef InfoTable."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="CreateDatasetWithDatasetRef">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the AnalyticsDatasetRef InfoTable for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Detect metadata from an input AnalyticsDatasetRef infotable by inferring the dataType and the opType for each field."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DetectMetadata">
+                        <ResultType
+                         aspect.dataShape="AnalyticsDatasetMetadata"
+                         baseType="INFOTABLE"
+                         description="Metadata of a dataset, inferred by the detectMetadata service."
+                         name="AnalyticsDatasetMetadata"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Detect metadata from an input AnalyticsDatasetRef infotable by inferring the dataType and the opType for each field."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DetectMetadataJSON">
+                        <ResultType
+                         baseType="STRING"
+                         description="Metadata of a dataset in json string, inferred by the detectMetadata service."
+                         name="AnalyticsDatasetMetadata"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Query the record count for specified fields in a dataset (non-continuous fields only)"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DistributionQuery">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional - specify a continuous field to return the average and total values for each grouping"
+                             name="goalField"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Non-continuous fields to query for their groupings"
+                             name="queryFields"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Run the DistributionQuery service synchronously, returning the results immediately upon job completion"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DistributionQuerySynchronous">
+                        <ResultType
+                         aspect.dataShape="DistributionQueryRow"
+                         baseType="INFOTABLE"
+                         description="List of groupings by specified fields. Includes record counts with average and total goal values"
+                         name="queryResults"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="Optional - specify a continuous field to return the average and total values for each grouping"
+                             name="goalField"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Non-continuous fields to query for their groupings"
+                             name="queryFields"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Query for the statistical distribution of the specified fields"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DistributionStatisticsQuery">
+                        <ResultType
+                         baseType="STRING"
+                         description="ID of the created job"
+                         name="jobId"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Fields to query for their distribution statistics"
+                             name="fields"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Run the DistributionStatisticsQuery service synchronously, returning the results immediately upon job completion"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="DistributionStatisticsQuerySynchronous">
+                        <ResultType
+                         aspect.dataShape="FieldDistributionStatistics"
+                         baseType="INFOTABLE"
+                         description="A collection of statistics describing the distribution of the queried field"
+                         name="statistics"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset for this job"
+                             name="datasetRef"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Fields to query for their distribution statistics"
+                             name="fields"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="GenericStringList"
+                             baseType="INFOTABLE"
+                             description="Queryable tags associated with this job"
+                             name="tags"
+                             ordinal="1"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieves the metadata from a dataset"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="GetDatasetSchema">
+                        <ResultType
+                         aspect.dataShape="AnalyticsDatasetMetadata"
+                         baseType="INFOTABLE"
+                         description="The schema of a dataset"
+                         name="metadata"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetRef"
+                             baseType="INFOTABLE"
+                             description="Reference to the dataset queried"
+                             name="dataSource"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieves the list of optimized dataset references created through this API"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="ListCreatedDatasets">
+                        <ResultType
+                         aspect.dataShape="AnalyticsDatasetRefWithTags"
+                         baseType="INFOTABLE"
+                         description="The list of dataset references created through this API"
+                         name="datasetRefs"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions></ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve results of a Binned Distribution Query job"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveBinnedDistributionQuery">
+                        <ResultType
+                         aspect.dataShape="BinnedDistributionQueryRow"
+                         baseType="INFOTABLE"
+                         description="List of field bins. Includes record counts with average and total goal values"
+                         name="queryResults"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job result to retrieve"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve results of a Distribution Query job"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveDistributionQuery">
+                        <ResultType
+                         aspect.dataShape="DistributionQueryRow"
+                         baseType="INFOTABLE"
+                         description="List of groupings by specified fields. Includes record counts with average and total goal values"
+                         name="queryResults"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job result to retrieve"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Retrieve results of a Distribution Statistics job"
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="RetrieveDistributionStatistics">
+                        <ResultType
+                         aspect.dataShape="FieldDistributionStatistics"
+                         baseType="INFOTABLE"
+                         description="A collection of statistics describing the distribution of the queried field"
+                         name="statistics"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             baseType="STRING"
+                             description="ID of the job result to retrieve"
+                             name="jobId"
+                             ordinal="0"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                    <ServiceDefinition
+                     category=""
+                     description="Validate the Op Type and Data Type combination of each metadata field."
+                     isAllowOverride="false"
+                     isLocalOnly="true"
+                     isOpen="false"
+                     isPrivate="false"
+                     name="ValidateDataAndOpTypes">
+                        <ResultType
+                         aspect.dataShape="GenericStringList"
+                         baseType="INFOTABLE"
+                         description="Message indicating whether the metadata is valid or contains errors"
+                         name="AnalyticsDatasetMetadataValidation"
+                         ordinal="0"></ResultType>
+                        <ParameterDefinitions>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetMetadata"
+                             baseType="INFOTABLE"
+                             description="Modified metadata for the dataset"
+                             name="editedMetadata"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.dataShape="AnalyticsDatasetMetadata"
+                             baseType="INFOTABLE"
+                             description="Inferred metadata for the dataset"
+                             name="inferredMetadata"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="BOOLEAN"
+                             description="If true, the metadata is inferred"
+                             name="isMetadataInferred"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             baseType="BOOLEAN"
+                             description="If true, the dataset contains timeseries data"
+                             name="isTimeSeries"
+                             ordinal="3"></FieldDefinition>
+                        </ParameterDefinitions>
+                    </ServiceDefinition>
+                </ServiceDefinitions>
+                <EventDefinitions></EventDefinitions>
+                <ServiceMappings></ServiceMappings>
+                <ServiceImplementations></ServiceImplementations>
+                <Subscriptions></Subscriptions>
+            </ThingShape>
+            <ImplementedShapes></ImplementedShapes>
+            <SharedConfigurationTables></SharedConfigurationTables>
+            <InstanceDesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </InstanceDesignTimePermissions>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+            <InstanceVisibilityPermissions>
+                <Visibility></Visibility>
+            </InstanceVisibilityPermissions>
+        </ThingTemplate>
+    </ThingTemplates>
+</Entities>

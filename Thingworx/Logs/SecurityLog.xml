@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Logs>
+        <Log
+         aspect.isCreatable="false"
+         aspect.isSystemObject="true"
+         description="Security Log"
+         documentationContent=""
+         homeMashup=""
+         logLevel="WARN"
+         name="SecurityLog"
+         projectName=""
+         tags="">
+            <avatar>
+            <![CDATA[
+            iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAACC0lEQVR4Xu2ZTStEYRiGJ5YiSSIx
+            ZaEsxA8461kof8CGhWThL1hZyJpCKfIHKFsbGyWSKEtmYTcb30l03I85L6d7nnPmvGfqNep96mpi
+            no/rrvlICmEYFuLkraBU6gELYA/cgg8QRo/y8370fC/PZi12/fat+YVlQWgA7ID3SLgeEkj6i7yr
+            XrFrwwEgMQdeFMksvIJ53plW7Jo7AA63gDVFKg+boJVvaMWujQRYVUQaYZ1vaMWuuQLg2IwioPEG
+            7qJHfk5jlm9xsat1ABzpAw/KccMzWAajNDcGVoL098sT6I/PcbFrngBpr/uTegJ4vghOlVnDBs/E
+            i12tAmB5R1D95OCjwjlo4xmt0NcOLpQdgrzcOnnGFLvaBphSDgry+T/M/WmF/pHg94uOmeZ+U+xq
+            G2BLOSZsc2+Wwtyusit1H7vaBjhWjgkT3JulMDep7BLOuNcUu9oGuFGOCYPcm6UwN6TsEsrca4pd
+            bQOUlWNC4psurWRO2SXcc68pdvUBfIDaXT4Az/zUvwmABV1gERwG1a98Q9JfXFfUlxWZ413CJ/Ud
+            gSXQza5JAS6Vpc3ANbsmBeDBpoFdfQDXsKsP4Bp29QFcw64+gGvY1QdwDbv6AK5hVx/ANezqA7iG
+            XX0A17CrD+AadvUBXMOuPoBr2DUpQIUHm4QKuyYFkH9KH4BHZclfIB7iM86uwhc0aNJfcVm/sgAA
+            AABJRU5ErkJggg==
+            ]]>
+            </avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+        </Log>
+    </Logs>
+</Entities>

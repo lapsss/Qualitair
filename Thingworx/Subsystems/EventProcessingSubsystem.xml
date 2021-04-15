@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.eventprocessing.EventProcessingSubsystem"
+         dependsOn=""
+         description="Handles Event Processing throughout the platform"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Event Processing"
+         homeMashup=""
+         name="EventProcessingSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Event Queue Processing Settings"
+                 isMultiRow="false"
+                 name="EventQueueProcessorSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="200000.0"
+                             aspect.friendlyName="Max Queue Entries Before Adding New Working Thread"
+                             baseType="NUMBER"
+                             description="Maximum number of event entries to queue before adding an additional worker thread to the pool"
+                             name="maximumQueueSize"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="500.0"
+                             aspect.friendlyName="Max threads allocated to event processing pool"
+                             baseType="NUMBER"
+                             description="Maximum number of threads allocated to the event processing thread pool"
+                             name="maximumThreadPoolSize"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="16.0"
+                             aspect.friendlyName="Min threads allocated to event processing pool"
+                             baseType="NUMBER"
+                             description="Minimum number of threads allocated to the event processing thread pool"
+                             name="minimumThreadPoolSize"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <maximumQueueSize>200000.0</maximumQueueSize>
+                            <maximumThreadPoolSize>500.0</maximumThreadPoolSize>
+                            <minimumThreadPoolSize>16.0</minimumThreadPoolSize>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

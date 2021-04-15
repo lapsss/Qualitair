@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <DataShapes>
+        <DataShape
+         aspect.isSystemObject="true"
+         baseDataShape=""
+         description="Persistence Schema Metadata"
+         documentationContent=""
+         homeMashup=""
+         name="PersistenceSchemaMetadata"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <FieldDefinitions>
+                <FieldDefinition
+                 aspect.friendlyName="DataSchemaVersion"
+                 baseType="STRING"
+                 description="The data schema version of the persistence provider package"
+                 name="dataSchemaVersion"
+                 ordinal="1"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="ModelSchemaVersion"
+                 baseType="STRING"
+                 description="The model schema version of the persistence provider package"
+                 name="modelSchemaVersion"
+                 ordinal="2"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="PersistenceProviderPackage"
+                 aspect.isPrimaryKey="true"
+                 baseType="STRING"
+                 description="Name of the persistence provider package used by the persistence provider"
+                 name="persistenceProviderPackage"
+                 ordinal="0"></FieldDefinition>
+                <FieldDefinition
+                 aspect.friendlyName="PropertySchemaVersion"
+                 baseType="STRING"
+                 description="The property schema version of the persistence provider package"
+                 name="propertySchemaVersion"
+                 ordinal="3"></FieldDefinition>
+            </FieldDefinitions>
+        </DataShape>
+    </DataShapes>
+</Entities>

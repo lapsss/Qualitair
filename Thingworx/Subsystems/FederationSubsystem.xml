@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <Subsystems>
+        <Subsystem
+         aspect.isCreatable="false"
+         aspect.isEditableSystemObject="true"
+         autoStart="true"
+         className="com.thingworx.system.subsystems.federation.FederationSubsystem"
+         dependsOn=""
+         description="Handles Federation of Things between ThingWorx Servers"
+         documentationContent=""
+         enabled="true"
+         friendlyName="Federation"
+         homeMashup=""
+         name="FederationSubsystem"
+         projectName=""
+         tags="">
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Server identification"
+                 isMultiRow="false"
+                 name="ServerIdentification"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="My Server Description"
+                             baseType="STRING"
+                             description="My server description"
+                             name="description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="My Server Name"
+                             baseType="STRING"
+                             description="My server name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <description></description>
+                            <name></name>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Server settings"
+                 isMultiRow="false"
+                 name="ServerSettings"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.defaultValue="100"
+                             aspect.friendlyName="Update Interval"
+                             baseType="INTEGER"
+                             description="Flush/send interval for property and event updates (milliseconds)"
+                             name="updateInterval"
+                             ordinal="0"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows>
+                        <Row>
+                            <updateInterval>100</updateInterval>
+                        </Row>
+                    </Rows>
+                </ConfigurationTable>
+                <ConfigurationTable
+                 dataShapeName=""
+                 description="Federation subscribers this server publishes to"
+                 isMultiRow="true"
+                 name="Subscribers"
+                 ordinal="0">
+                    <DataShape>
+                        <FieldDefinitions>
+                            <FieldDefinition
+                             aspect.friendlyName="Application Key"
+                             baseType="PASSWORD"
+                             description="Application key required to access subscriber server"
+                             name="applicationKey"
+                             ordinal="4"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Logical Server Description"
+                             baseType="STRING"
+                             description="Logical Server Description"
+                             name="description"
+                             ordinal="1"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="true"
+                             aspect.friendlyName="Enable Publishing"
+                             baseType="BOOLEAN"
+                             description="Enable or disable publishing to this federated server"
+                             name="enabled"
+                             ordinal="2"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Logical Server Name"
+                             baseType="STRING"
+                             description="Logical Server name"
+                             name="name"
+                             ordinal="0"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="10"
+                             aspect.friendlyName="Pipe Count"
+                             baseType="INTEGER"
+                             description="Pipe count"
+                             name="pipeCount"
+                             ordinal="6"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="60"
+                             aspect.friendlyName="Reconnection Interval (seconds)"
+                             baseType="INTEGER"
+                             description="Reconnect interval"
+                             name="reconnectInterval"
+                             ordinal="7"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="60000.0"
+                             aspect.friendlyName="Request Timout (milliseconds)"
+                             baseType="NUMBER"
+                             description="Timeout (milliseconds) to execute a request"
+                             name="timeout"
+                             ordinal="8"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.defaultValue="wss://127.0.0.1:443/Thingworx/WS"
+                             aspect.friendlyName="Server URI"
+                             baseType="STRING"
+                             description="Server URI"
+                             name="uri"
+                             ordinal="3"></FieldDefinition>
+                            <FieldDefinition
+                             aspect.friendlyName="Publish As User"
+                             baseType="USERNAME"
+                             description="User name/account whose entities are published based on visibility"
+                             name="userName"
+                             ordinal="5"></FieldDefinition>
+                        </FieldDefinitions>
+                    </DataShape>
+                    <Rows></Rows>
+                </ConfigurationTable>
+            </ConfigurationTables>
+        </Subsystem>
+    </Subsystems>
+</Entities>

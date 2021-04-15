@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Entities
+ majorVersion="9"
+ minorVersion="1"
+ universal="">
+    <ThingShapes>
+        <ThingShape
+         aspect.isSystemObject="true"
+         aspect.isSystemShape="true"
+         className=""
+         description="Logging Services"
+         documentationContent=""
+         homeMashup=""
+         name="LogProvider"
+         projectName=""
+         tags="">
+            <PropertyDefinitions></PropertyDefinitions>
+            <ServiceDefinitions>
+                <ServiceDefinition
+                 aspect.isRemote="true"
+                 category="Logging"
+                 description="Get log entries in the specified log"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetLogEntries">
+                    <ResultType
+                     aspect.dataShape="LogEntry"
+                     baseType="INFOTABLE"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="(optional) end datetime"
+                         name="end"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="ApplicationLog"
+                         baseType="STRING"
+                         description="Log type"
+                         name="logType"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="500"
+                         baseType="INTEGER"
+                         description="maximum log entries to return"
+                         name="maxItems"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="false"
+                         baseType="BOOLEAN"
+                         description="return oldest log entries first"
+                         name="oldestFirst"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         baseType="DATETIME"
+                         description="(optional) start datetime"
+                         name="start"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isRemote="true"
+                 category="Logging"
+                 description="Get current logging level in specified log"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetLogLevel">
+                    <ResultType
+                     baseType="STRING"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         aspect.defaultValue="ApplicationLog"
+                         baseType="STRING"
+                         description="Log type"
+                         name="logType"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="com.thingworx"
+                         baseType="STRING"
+                         description="Sublogger to set log level on"
+                         name="subLogger"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isRemote="true"
+                 category="Logging"
+                 description="Get support log types"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="GetLogTypes">
+                    <ResultType
+                     aspect.dataShape="EntityList"
+                     baseType="INFOTABLE"
+                     description=""
+                     name="result"
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions></ParameterDefinitions>
+                </ServiceDefinition>
+                <ServiceDefinition
+                 aspect.isRemote="true"
+                 category="Logging"
+                 description="Set logging level in specified log"
+                 isAllowOverride="false"
+                 isLocalOnly="false"
+                 isOpen="false"
+                 isPrivate="false"
+                 name="SetLogLevel">
+                    <ResultType
+                     baseType="NOTHING"
+                     description=""
+                     name=""
+                     ordinal="0"></ResultType>
+                    <ParameterDefinitions>
+                        <FieldDefinition
+                         baseType="STRING"
+                         description="Log level"
+                         name="level"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="ApplicationLog"
+                         baseType="STRING"
+                         description="Log type"
+                         name="logType"
+                         ordinal="0"></FieldDefinition>
+                        <FieldDefinition
+                         aspect.defaultValue="com.thingworx"
+                         baseType="STRING"
+                         description="Sublogger to set log level on"
+                         name="subLogger"
+                         ordinal="0"></FieldDefinition>
+                    </ParameterDefinitions>
+                </ServiceDefinition>
+            </ServiceDefinitions>
+            <EventDefinitions></EventDefinitions>
+            <ServiceMappings></ServiceMappings>
+            <ServiceImplementations></ServiceImplementations>
+            <Subscriptions></Subscriptions>
+            <avatar></avatar>
+            <DesignTimePermissions>
+                <Create></Create>
+                <Read></Read>
+                <Update></Update>
+                <Delete></Delete>
+                <Metadata></Metadata>
+            </DesignTimePermissions>
+            <RunTimePermissions></RunTimePermissions>
+            <VisibilityPermissions>
+                <Visibility></Visibility>
+            </VisibilityPermissions>
+            <ConfigurationTableDefinitions></ConfigurationTableDefinitions>
+            <ConfigurationTables></ConfigurationTables>
+            <PropertyBindings></PropertyBindings>
+            <RemotePropertyBindings></RemotePropertyBindings>
+            <RemoteServiceBindings></RemoteServiceBindings>
+            <RemoteEventBindings></RemoteEventBindings>
+            <AlertConfigurations></AlertConfigurations>
+            <InstanceRunTimePermissions></InstanceRunTimePermissions>
+        </ThingShape>
+    </ThingShapes>
+</Entities>
