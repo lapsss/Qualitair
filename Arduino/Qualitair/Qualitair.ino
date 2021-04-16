@@ -1,4 +1,3 @@
-
 /**
   Qualit'Air Project
   AMU - MIAGE 2021
@@ -19,23 +18,29 @@
 // WiFi Configurations //
 //  TO CHANGE         //
 ///////////////////////
-const char WiFiSSID[] = "Jube"; // WiFi access point SSID
-const char WiFiPSK[] = "supermotdepasse"; // WiFi password - empty string for open access points
+const char WiFiSSID[] = "wifissid"; // WiFi access point SSID
+const char WiFiPSK[] = "wifipassword"; // WiFi password - empty string for open access points
 
 //////////////////////////////////////////////
 // ThingWorx server definitions            //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const char TWPlatformBaseURL[] = "http://ec2-15-237-75-188.eu-west-3.compute.amazonaws.com:8080";
-const char APP_KEY[] = "29cd186c-7214-4739-b0c0-fb9382a761a0";
-const char THING_NAME[] = "HMW.Sensor001";
+const char TWPlatformBaseURL[] = "http://192.168.1.36:8080";
+const char APP_KEY[] = "ddd5c2a6-b9a9-4d11-a736-f872b64d7a03";
 const int INTERVAL = 5000; //refresh interval
+const char THING_NAME[] = "Sensor01";
+const char CO2_PROPERTY[] = "CO2";                 //Thing property name
+const char TVOC_PROPERTY[] = "AirQuality";         //Thing property name
+const char HUMIDITY_PROPERTY[] = "Humidity";       //Thing property name
+const char TEMPERATURE_PROPERTY[] = "Temperature"; //Thing property name
+const char PRESSURE_PROPERTY[] = "Pressure";       //Thing property name
+
 
 //////////////////////////////////////////////
 // Program execution settings              //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const bool debug=false;
+const bool debug=true;
 
 
 //////////////////////////////////////////////////////////
@@ -555,11 +560,11 @@ void loop() {
         float hum = bme.readHumidity();
         float pres = bme.readPressure();
         // publish properties :
-        httpPutPropertry(thingName, "CO2", String(co2));
-        httpPutPropertry(thingName, "TVOC", String(tvoc));
-        httpPutPropertry(thingName, "Humidity", String(hum));
-        httpPutPropertry(thingName, "Temperature", String(temp));
-        httpPutPropertry(thingName, "Pressure", String(pres));
+        httpPutPropertry(thingName, String(CO2_PROPERTY), String(co2));
+        httpPutPropertry(thingName, String(TVOC_PROPERTY), String(tvoc));
+        httpPutPropertry(thingName, String(HUMIDITY_PROPERTY), String(hum));
+        httpPutPropertry(thingName, String(TEMPERATURE_PROPERTY), String(temp));
+        httpPutPropertry(thingName, String(PRESSURE_PROPERTY), String(pres));
         // Get Location from the GPS :
         while (gpsSerial.available() > 0)
           if (gps.encode(gpsSerial.read()))
