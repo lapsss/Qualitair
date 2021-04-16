@@ -1,4 +1,3 @@
-
 /**
   Qualit'Air Project
   AMU - MIAGE 2021
@@ -19,24 +18,30 @@
 // WiFi Configurations //
 //  TO CHANGE         //
 ///////////////////////
-const char WiFiSSID[] = "Jube"; // WiFi access point SSID
-const char WiFiPSK[] = "jube@simiane"; // WiFi password - empty string for open access points
+const char WiFiSSID[] = "wifissid"; // WiFi access point SSID
+const char WiFiPSK[] = "wifipassword"; // WiFi password - empty string for open access points
 
 //////////////////////////////////////////////
 // ThingWorx server definitions            //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const char TWPlatformBaseURL[] = "http://ec2-15-237-75-188.eu-west-3.compute.amazonaws.com:8080";
-const char APP_KEY[] = "29cd186c-7214-4739-b0c0-fb9382a761a0";
-const char THING_NAME[] = "HMW.Sensor001";
+const char TWPlatformBaseURL[] = "http://192.168.1.36:8080";
+const char APP_KEY[] = "ddd5c2a6-b9a9-4d11-a736-f872b64d7a03";
 const int INTERVAL = 5000; //refresh interval
+const char THING_NAME[] = "Sensor01";
+const char CO2_PROPERTY[] = "CO2";                 //Thing property name
+const char TVOC_PROPERTY[] = "AirQuality";         //Thing property name
+const char HUMIDITY_PROPERTY[] = "Humidity";       //Thing property name
+const char TEMPERATURE_PROPERTY[] = "Temperature"; //Thing property name
+const char PRESSURE_PROPERTY[] = "Pressure";       //Thing property name
+
 
 //////////////////////////////////////////////
 // Program execution settings              //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const bool debug=false; // Displays debug for comm to server
-const bool gpsdebug=true; // Displays debug for GPS
+const bool debug=true;
+
 
 //////////////////////////////////////////////////////////
 // Pin Definitions - board specific for Adafruit board //
@@ -331,17 +336,23 @@ String getUniqueDeviceName() {
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpGetPropertry(String thingName, String property) {
+  if (debug) Serial.println("[httpGetPropertry] begin");
+  
   HTTPClient https;
   int httpCode = -1;
   String response = "";
-  if (debug) Serial.print("[httpsGetPropertry] begin...");
+  if (debug) Serial.print("[httpsGetPropertry] begin... | ");
   String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/" + thingName + "/Properties/" + property ;
   https.begin(fullRequestURL);
   https.addHeader("Accept", ACCEPT_TYPE, false, false);
   https.addHeader("appKey", APP_KEY, false, false);
   if (debug) Serial.println("GET URL>" + fullRequestURL + "<");
+  
   // start connection and send HTTP header
   httpCode = https.GET();
+
+  if (debug) Serial.println("[httpGetPropertry] GET URL>" + fullRequestURL);
+
   // httpCode will be negative on error
   if (httpCode > 0) {
     response = https.getString();
@@ -350,6 +361,8 @@ int httpGetPropertry(String thingName, String property) {
   } else {
     Serial.printf("[httpGetPropertry] failed, error: %s\n\n", https.errorToString(httpCode).c_str());
   }
+
+  if (debug) Serial.println("[httpGetPropertry] end");
   https.end();
   return httpCode;
 
@@ -363,31 +376,36 @@ int httpGetPropertry(String thingName, String property) {
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpPutPropertry(String thingName, String property, String value) {
+  if (debug) Serial.println("[httpPutPropertry] begin");
+  
   HTTPClient httpClient;
   int httpCode = -1;
-  String response = "";
-  if (debug) Serial.print("[httpPutPropertry] begin...");
+  String response = "";  
   String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/" + thingName + "/Properties/" + property ; //+"?appKey=" + String(appKey);
   httpClient.begin(fullRequestURL);
   httpClient.addHeader("Accept", ACCEPT_TYPE, false, false);
   httpClient.addHeader("Content-Type", ACCEPT_TYPE, false, false);
   httpClient.addHeader("appKey", APP_KEY, false, false);
-  if (debug) Serial.println("PUT URL>" + fullRequestURL + "<");
+  
   // start connection and send HTTP header
   String putBody = "{\"" + property + "\":" + value + "}";
+  
+  if (debug) Serial.println("[httpPutPropertry] VALUES : " + putBody );
+  if (debug) Serial.println("[httpPutPropertry] PUT URL>" + fullRequestURL);
+  
   httpCode = httpClient.PUT(putBody);
-  if (debug) Serial.println(httpCode);
+  
   // httpCode will be negative on error
   if (httpCode > 0) {
     response = httpClient.getString();
-    if (debug) Serial.printf("[httpPutPropertry] response code:%d body>", httpCode);
-    if (debug) Serial.println(response + "<\n");
+    if (debug) Serial.printf("[httpPutPropertry] response code : %d | body : ", httpCode);
+    if (debug) Serial.println(response + "<");
   } else {
-    Serial.printf("[httpPutPropertry] failed, error: %s\n\n", httpClient.errorToString(httpCode).c_str());
+    Serial.printf("\n[httpPutPropertry] failed, error: %s\n\n", httpClient.errorToString(httpCode).c_str());
   }
   httpClient.end();
+  if (debug) Serial.println("[httpPutPropertry] end\n.");
   return httpCode;
-
 }
 
 
@@ -399,19 +417,24 @@ int httpPutPropertry(String thingName, String property, String value) {
 // returns HTTP response code from server
 ///////////////////////////////
 int postToThing(String nameOfThing, String endPoint, String postBody) {
+  if (debug) Serial.println("[postToThing] begin");
+  
   HTTPClient https;
   int httpCode = -1;
   String response = "";
-  if (debug) Serial.print("[postToThing] begin...");
   String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/" + nameOfThing + "/Services/" + endPoint;
   if (debug) Serial.println("URL>" + fullRequestURL + "<");
   https.begin(fullRequestURL);
   https.addHeader("Accept", "application/json", false, false);
   https.addHeader("Content-Type", "application/json", false, false);
   https.addHeader("appKey", APP_KEY, false, false);
-  if (debug) Serial.println("[postToThing] POST body>" + postBody + "<");
+   
+  if (debug) Serial.println("[postToThing] VALUES : " + postBody );
+  if (debug) Serial.println("[postToThing] URL>" + fullRequestURL);
+  
   // start connection and send HTTP header
   httpCode = https.POST(postBody);
+  
   // httpCode will be negative on error
   if (httpCode > 0) {
     response = https.getString();
@@ -422,6 +445,7 @@ int postToThing(String nameOfThing, String endPoint, String postBody) {
     Serial.printf("[postToThing] POST... failed, error: %s\n\n", https.errorToString(httpCode).c_str());
   }
   https.end();
+  if (debug) Serial.println("[httpPutPropertry] end\n.");
   return httpCode;
 }
 
@@ -536,15 +560,15 @@ void loop() {
         float hum = bme.readHumidity();
         float pres = bme.readPressure();
         // publish properties :
-        httpPutPropertry(thingName, "CO2", String(co2));
-        httpPutPropertry(thingName, "TVOC", String(tvoc));
-        httpPutPropertry(thingName, "Humidity", String(hum));
-        httpPutPropertry(thingName, "Temperature", String(temp));
-        httpPutPropertry(thingName, "Pressure", String(pres));
+        httpPutPropertry(thingName, String(CO2_PROPERTY), String(co2));
+        httpPutPropertry(thingName, String(TVOC_PROPERTY), String(tvoc));
+        httpPutPropertry(thingName, String(HUMIDITY_PROPERTY), String(hum));
+        httpPutPropertry(thingName, String(TEMPERATURE_PROPERTY), String(temp));
+        httpPutPropertry(thingName, String(PRESSURE_PROPERTY), String(pres));
         // Get Location from the GPS :
         while (gpsSerial.available() > 0)
           if (gps.encode(gpsSerial.read()))
-            if (gpsdebug) displayInfo();
+            displayInfo();
         httpPutPropertry(thingName, "Location", "{\"latitude\":\"" + String(gps.location.lat()) + "\",\"longitude\":\"" + gps.location.lng() + "\",\"units\":\"WGS84\"}");
       }
     }
@@ -556,4 +580,5 @@ void loop() {
   WiFi.disconnect(true);
   delay(10000);
   connectToWiFi(10);
+
 }
