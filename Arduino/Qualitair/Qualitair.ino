@@ -20,7 +20,7 @@
 //  TO CHANGE         //
 ///////////////////////
 const char WiFiSSID[] = "Jube"; // WiFi access point SSID
-const char WiFiPSK[] = "supermotdepasse"; // WiFi password - empty string for open access points
+const char WiFiPSK[] = "jube@simiane"; // WiFi password - empty string for open access points
 
 //////////////////////////////////////////////
 // ThingWorx server definitions            //
@@ -35,8 +35,8 @@ const int INTERVAL = 5000; //refresh interval
 // Program execution settings              //
 //  TO CHANGE                             //
 ///////////////////////////////////////////
-const bool debug=false;
-
+const bool debug=false; // Displays debug for comm to server
+const bool gpsdebug=true; // Displays debug for GPS
 
 //////////////////////////////////////////////////////////
 // Pin Definitions - board specific for Adafruit board //
@@ -544,7 +544,7 @@ void loop() {
         // Get Location from the GPS :
         while (gpsSerial.available() > 0)
           if (gps.encode(gpsSerial.read()))
-            displayInfo();
+            if (gpsdebug) displayInfo();
         httpPutPropertry(thingName, "Location", "{\"latitude\":\"" + String(gps.location.lat()) + "\",\"longitude\":\"" + gps.location.lng() + "\",\"units\":\"WGS84\"}");
       }
     }
