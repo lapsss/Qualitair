@@ -331,17 +331,23 @@ String getUniqueDeviceName() {
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpGetPropertry(String thingName, String property) {
+  if (debug) Serial.println("[httpGetPropertry] begin");
+  
   HTTPClient https;
   int httpCode = -1;
   String response = "";
-  if (debug) Serial.print("[httpsGetPropertry] begin...");
+  if (debug) Serial.print("[httpsGetPropertry] begin... | ");
   String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/" + thingName + "/Properties/" + property ;
   https.begin(fullRequestURL);
   https.addHeader("Accept", ACCEPT_TYPE, false, false);
   https.addHeader("appKey", APP_KEY, false, false);
   if (debug) Serial.println("GET URL>" + fullRequestURL + "<");
+  
   // start connection and send HTTP header
   httpCode = https.GET();
+
+  if (debug) Serial.println("[httpGetPropertry] GET URL>" + fullRequestURL);
+
   // httpCode will be negative on error
   if (httpCode > 0) {
     response = https.getString();
@@ -350,6 +356,8 @@ int httpGetPropertry(String thingName, String property) {
   } else {
     Serial.printf("[httpGetPropertry] failed, error: %s\n\n", https.errorToString(httpCode).c_str());
   }
+
+  if (debug) Serial.println("[httpGetPropertry] end");
   https.end();
   return httpCode;
 
@@ -363,31 +371,36 @@ int httpGetPropertry(String thingName, String property) {
 // returns HTTP response code from server and prints full response
 ///////////////////////////////
 int httpPutPropertry(String thingName, String property, String value) {
+  if (debug) Serial.println("[httpPutPropertry] begin");
+  
   HTTPClient httpClient;
   int httpCode = -1;
-  String response = "";
-  if (debug) Serial.print("[httpPutPropertry] begin...");
+  String response = "";  
   String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/" + thingName + "/Properties/" + property ; //+"?appKey=" + String(appKey);
   httpClient.begin(fullRequestURL);
   httpClient.addHeader("Accept", ACCEPT_TYPE, false, false);
   httpClient.addHeader("Content-Type", ACCEPT_TYPE, false, false);
   httpClient.addHeader("appKey", APP_KEY, false, false);
-  if (debug) Serial.println("PUT URL>" + fullRequestURL + "<");
+  
   // start connection and send HTTP header
   String putBody = "{\"" + property + "\":" + value + "}";
+  
+  if (debug) Serial.println("[httpPutPropertry] VALUES : " + putBody );
+  if (debug) Serial.println("[httpPutPropertry] PUT URL>" + fullRequestURL);
+  
   httpCode = httpClient.PUT(putBody);
-  if (debug) Serial.println(httpCode);
+  
   // httpCode will be negative on error
   if (httpCode > 0) {
     response = httpClient.getString();
-    if (debug) Serial.printf("[httpPutPropertry] response code:%d body>", httpCode);
-    if (debug) Serial.println(response + "<\n");
+    if (debug) Serial.printf("[httpPutPropertry] response code : %d | body : ", httpCode);
+    if (debug) Serial.println(response + "<");
   } else {
-    Serial.printf("[httpPutPropertry] failed, error: %s\n\n", httpClient.errorToString(httpCode).c_str());
+    Serial.printf("\n[httpPutPropertry] failed, error: %s\n\n", httpClient.errorToString(httpCode).c_str());
   }
   httpClient.end();
+  if (debug) Serial.println("[httpPutPropertry] end\n.");
   return httpCode;
-
 }
 
 
@@ -399,19 +412,24 @@ int httpPutPropertry(String thingName, String property, String value) {
 // returns HTTP response code from server
 ///////////////////////////////
 int postToThing(String nameOfThing, String endPoint, String postBody) {
+  if (debug) Serial.println("[postToThing] begin");
+  
   HTTPClient https;
   int httpCode = -1;
   String response = "";
-  if (debug) Serial.print("[postToThing] begin...");
   String fullRequestURL = String(TWPlatformBaseURL) + "/Thingworx/Things/" + nameOfThing + "/Services/" + endPoint;
   if (debug) Serial.println("URL>" + fullRequestURL + "<");
   https.begin(fullRequestURL);
   https.addHeader("Accept", "application/json", false, false);
   https.addHeader("Content-Type", "application/json", false, false);
   https.addHeader("appKey", APP_KEY, false, false);
-  if (debug) Serial.println("[postToThing] POST body>" + postBody + "<");
+   
+  if (debug) Serial.println("[postToThing] VALUES : " + postBody );
+  if (debug) Serial.println("[postToThing] URL>" + fullRequestURL);
+  
   // start connection and send HTTP header
   httpCode = https.POST(postBody);
+  
   // httpCode will be negative on error
   if (httpCode > 0) {
     response = https.getString();
@@ -422,6 +440,7 @@ int postToThing(String nameOfThing, String endPoint, String postBody) {
     Serial.printf("[postToThing] POST... failed, error: %s\n\n", https.errorToString(httpCode).c_str());
   }
   https.end();
+  if (debug) Serial.println("[httpPutPropertry] end\n.");
   return httpCode;
 }
 
